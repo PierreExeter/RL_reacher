@@ -7,13 +7,13 @@ import importlib
 import warnings
 from pprint import pprint
 from collections import OrderedDict
-import gym_envs
 
 # numpy warnings because of tensorflow
 warnings.filterwarnings("ignore", category=FutureWarning, module='tensorflow')
 warnings.filterwarnings("ignore", category=UserWarning, module='gym')
 
-import gym
+# from rlkit.envs.wrappers import NormalizedBoxEnv
+import gym, widowx_env
 import numpy as np
 import yaml
 # Optional dependencies
@@ -24,20 +24,20 @@ try:
 except ImportError:
     mpi4py = None
 
+from stable_baselines.bench import Monitor  # added by Pierre
 from stable_baselines.common import set_global_seeds
 from stable_baselines.common.cmd_util import make_atari_env
-from stable_baselines.common.vec_env import VecFrameStack, SubprocVecEnv, VecNormalize, DummyVecEnv, VecEnv
+from stable_baselines.common.vec_env import VecFrameStack, SubprocVecEnv, VecNormalize, DummyVecEnv
 from stable_baselines.common.noise import AdaptiveParamNoiseSpec, NormalActionNoise, OrnsteinUhlenbeckActionNoise
 from stable_baselines.common.schedules import constfn
 from stable_baselines.common.callbacks import CheckpointCallback, EvalCallback
-from stable_baselines.her import HERGoalEnvWrapper
-from stable_baselines.common.base_class import _UnvecWrapper
 
-from utils import make_env, ALGOS, linear_schedule, get_latest_run_id, get_wrapper_class
+from utils import make_env, ALGOS, linear_schedule, get_latest_run_id, get_wrapper_class, find_saved_model
 from utils.hyperparams_opt import hyperparam_optimization
 from utils.callbacks import SaveVecNormalizeCallback
 from utils.noise import LinearNormalActionNoise
 from utils.utils import StoreDict
+from stable_baselines.her import HERGoalEnvWrapper
 
 
 if __name__ == '__main__':
@@ -76,8 +76,6 @@ if __name__ == '__main__':
                         help='Overwrite hyperparameter (e.g. learning_rate:0.01 train_freq:10)')
     parser.add_argument('-uuid', '--uuid', action='store_true', default=False,
                         help='Ensure that the run has a unique ID')
-    parser.add_argument('--env-kwargs', type=str, nargs='+', action=StoreDict,
-                        help='Optional keyword argument to pass to the env constructor')
     args = parser.parse_args()
 
     # Going through custom gym packages to let them register in the global registory
@@ -224,22 +222,18 @@ if __name__ == '__main__':
         callbacks.append(CheckpointCallback(save_freq=args.save_freq,
                                             save_path=save_path, name_prefix='rl_model', verbose=1))
 
-    env_kwargs = {} if args.env_kwargs is None else args.env_kwargs
-
-    def create_env(n_envs, eval_env=False, no_log=False):
+    def create_env(n_envs, eval_env=False):
         """
         Create the environment and wrap it if necessary
         :param n_envs: (int)
         :param eval_env: (bool) Whether is it an environment used for evaluation or not
-        :param no_log: (bool) Do not log training when doing hyperparameter optim
-            (issue with writing the same file)
         :return: (Union[gym.Env, VecEnv])
+        :return: (gym.Env)
         """
         global hyperparams
-        global env_kwargs
 
         # Do not log eval env (issue with writing the same file)
-        log_dir = None if eval_env or no_log else save_path
+        log_dir = None if eval_env else save_path
 
         if is_atari:
             if args.verbose > 0:
@@ -250,68 +244,73 @@ if __name__ == '__main__':
         elif algo_ in ['dqn', 'ddpg']:
             if hyperparams.get('normalize', False):
                 print("WARNING: normalization not supported yet for DDPG/DQN")
-            env = gym.make(env_id, **env_kwargs)
+            env = gym.make(env_id)
             env.seed(args.seed)
+
+            # added by Pierre
+            log_file = os.path.join(log_dir, str(rank)) if log_dir is not None else None
+            env = Monitor(env, log_file)
+
             if env_wrapper is not None:
                 env = env_wrapper(env)
         else:
             if n_envs == 1:
-                env = DummyVecEnv([make_env(env_id, 0, args.seed, wrapper_class=env_wrapper, log_dir=log_dir, env_kwargs=env_kwargs)])
+                env = DummyVecEnv([make_env(env_id, 0, args.seed, wrapper_class=env_wrapper, log_dir=log_dir)])
             else:
                 # env = SubprocVecEnv([make_env(env_id, i, args.seed) for i in range(n_envs)])
                 # On most env, SubprocVecEnv does not help and is quite memory hungry
                 env = DummyVecEnv([make_env(env_id, i, args.seed, log_dir=log_dir,
-                                            wrapper_class=env_wrapper, env_kwargs=env_kwargs) for i in range(n_envs)])
+                                            wrapper_class=env_wrapper) for i in range(n_envs)])
             if normalize:
-                # Copy to avoid changing default values by reference
-                local_normalize_kwargs = normalize_kwargs.copy()
-                # Do not normalize reward for env used for evaluation
-                if eval_env:
-                    if len(local_normalize_kwargs) > 0:
-                        local_normalize_kwargs['norm_reward'] = False
-                    else:
-                        local_normalize_kwargs = {'norm_reward': False}
-
                 if args.verbose > 0:
-                    if len(local_normalize_kwargs) > 0:
-                        print("Normalization activated: {}".format(local_normalize_kwargs))
+                    if len(normalize_kwargs) > 0:
+                        print("Normalization activated: {}".format(normalize_kwargs))
                     else:
                         print("Normalizing input and reward")
-                env = VecNormalize(env, **local_normalize_kwargs)
-
+                env = VecNormalize(env, **normalize_kwargs)
         # Optional Frame-stacking
         if hyperparams.get('frame_stack', False):
             n_stack = hyperparams['frame_stack']
             env = VecFrameStack(env, n_stack)
             print("Stacking {} frames".format(n_stack))
-        if args.algo == 'her':
-            # Wrap the env if need to flatten the dict obs
-            if isinstance(env, VecEnv):
-                env = _UnvecWrapper(env)
+            del hyperparams['frame_stack']
+        if args.algo == 'her' and eval_env:
             env = HERGoalEnvWrapper(env)
         return env
 
-
     env = create_env(n_envs)
+    # env = HERGoalEnvWrapper(env)  # added by Pierre
+
     # Create test env if needed, do not normalize reward
     eval_env = None
-    if args.eval_freq > 0 and not args.optimize_hyperparameters:
+    if args.eval_freq > 0:
         # Account for the number of parallel environments
         args.eval_freq = max(args.eval_freq // n_envs, 1)
+
+        # Do not normalize the rewards of the eval env
+        old_kwargs = None
+        if normalize:
+            if len(normalize_kwargs) > 0:
+                old_kwargs = normalize_kwargs.copy()
+                normalize_kwargs['norm_reward'] = False
+            else:
+                normalize_kwargs = {'norm_reward': False}
 
         if args.verbose > 0:
             print("Creating test environment")
 
         save_vec_normalize = SaveVecNormalizeCallback(save_freq=1, save_path=params_path)
+
+        print("TRAINING ENV TYPE : ", env)
+
         eval_callback = EvalCallback(create_env(1, eval_env=True), callback_on_new_best=save_vec_normalize,
                                      best_model_save_path=save_path, n_eval_episodes=args.eval_episodes,
                                      log_path=save_path, eval_freq=args.eval_freq)
         callbacks.append(eval_callback)
 
-    # TODO: check for hyperparameters optimization
-    # TODO: check What happens with the eval env when using frame stack
-    if 'frame_stack' in hyperparams:
-        del hyperparams['frame_stack']
+        # Restore original kwargs
+        if old_kwargs is not None:
+            normalize_kwargs = old_kwargs.copy()
 
     # Stop env processes to free memory
     if args.optimize_hyperparameters and n_envs > 1:
@@ -319,6 +318,7 @@ if __name__ == '__main__':
 
     # Parse noise string for DDPG and SAC
     if algo_ in ['ddpg', 'sac', 'td3'] and hyperparams.get('noise_type') is not None:
+
         noise_type = hyperparams['noise_type'].strip()
         noise_std = hyperparams['noise_std']
         n_actions = env.action_space.shape[0]
@@ -350,6 +350,7 @@ if __name__ == '__main__':
         raise ValueError('{} requires MPI to be installed'.format(args.algo))
 
     if os.path.isfile(args.trained_agent):
+
         # Continue training
         print("Loading pretrained agent")
         # Policy should not be changed
@@ -369,18 +370,26 @@ if __name__ == '__main__':
                 env.load_running_average(exp_folder)
 
     elif args.optimize_hyperparameters:
-
         if args.verbose > 0:
             print("Optimizing hyperparameters")
+
 
         def create_model(*_args, **kwargs):
             """
             Helper to create a model with different hyperparameters
             """
-            return ALGOS[args.algo](env=create_env(n_envs, no_log=True), tensorboard_log=tensorboard_log,
+            return ALGOS[args.algo](env=create_env(n_envs), tensorboard_log=tensorboard_log,
                                     verbose=0, **kwargs)
 
-        data_frame = hyperparam_optimization(args.algo, create_model, create_env, n_trials=args.n_trials,
+
+        # data_frame = hyperparam_optimization(args.algo, create_model, create_env, n_trials=args.n_trials,
+        #                                      n_timesteps=n_timesteps, hyperparams=hyperparams,
+        #                                      n_jobs=args.n_jobs, seed=args.seed,
+        #                                      sampler_method=args.sampler, pruner_method=args.pruner,
+        #                                      verbose=args.verbose)
+
+        # Added by Pierre
+        data_frame, best_params = hyperparam_optimization(args.algo, create_model, create_env, n_trials=args.n_trials,
                                              n_timesteps=n_timesteps, hyperparams=hyperparams,
                                              n_jobs=args.n_jobs, seed=args.seed,
                                              sampler_method=args.sampler, pruner_method=args.pruner,
@@ -395,11 +404,31 @@ if __name__ == '__main__':
             print("Writing report to {}".format(log_path))
 
         os.makedirs(os.path.dirname(log_path), exist_ok=True)
-        data_frame.to_csv(log_path)
+        data_frame.to_csv(log_path, index=False)
+
+        # added by Pierre
+        # Save hyperparams
+        with open(os.path.join(params_path, 'tuned_hyperparams.yml'), 'w') as f:
+            yaml.dump(best_params, f)
+
+        # save config
+        with open(os.path.join(params_path, 'config.yml'), 'w') as f:
+            yaml.dump(saved_hyperparams, f)
+
+
+        all_params = {**saved_hyperparams, **best_params}  # join config and tuned param (note: values in saved_hyperparams will be overwritten if also present in best_params)
+        final_params = {}
+        final_params[env_id] = all_params
+
+        with open(os.path.join(params_path, 'final_params.yml'), 'w') as f:
+            yaml.dump(final_params, f, default_flow_style=False)
+
         exit()
     else:
         # Train an agent from scratch
+        # print("hyperparams: ++++++++", hyperparams)   ### TO FIX
         model = ALGOS[args.algo](env=env, tensorboard_log=tensorboard_log, verbose=args.verbose, **hyperparams)
+
 
     kwargs = {}
     if args.log_interval > -1:
@@ -418,9 +447,6 @@ if __name__ == '__main__':
         model.learn(n_timesteps, **kwargs)
     except KeyboardInterrupt:
         pass
-    finally:
-        # Release resources
-        env.close()
 
     # Only save worker of rank 0 when using mpi
     if rank == 0:

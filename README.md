@@ -10,18 +10,38 @@ git clone https://github.com/PierreExeter/RL_reacher.git
 cd RL_reacher/
 conda env create -f environment.yml
 conda activate reacher_link
-pip install -e .   # Install the Pybullet environment locally
+pip install -e .   # Install the Pybullet environments locally
 ```
 
 ## Test installation
 
 ```bash
 python test_reacher2D.py
-python train.py --algo ppo2 --env Reacher6Dof-v0
+python rl-baselines-zoo/train.py --algo ppo2 --env Reacher6Dof-v0
 ```
+
+## Optimise hyperparameters
+
+```bash
+./4_optimise_hyperparameters.sh
+```
+## Run experiments
+
+```bash
+./5_run_experiments.sh
+```
+
+## Evaluate trained policies
+
+```bash
+./6_get_results_exp.sh
+```
+
+
+TO DO NEXT: add evluation metrics (mean reward, success ratio and reach time)
 
 
 ## Tested on
 
+- python 3.7
 - conda 4.8.3
-- Python 3.7

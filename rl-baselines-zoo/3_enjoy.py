@@ -3,6 +3,7 @@ import sys
 import argparse
 import importlib
 import warnings
+import gym_envs
 
 # numpy warnings because of tensorflow
 warnings.filterwarnings("ignore", category=FutureWarning, module='tensorflow')

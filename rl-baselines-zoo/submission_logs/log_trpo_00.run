@@ -1,0 +1,438 @@
+WARNING:tensorflow:
+The TensorFlow contrib module will not be included in TensorFlow 2.0.
+For more information, please see:
+  * https://github.com/tensorflow/community/blob/master/rfcs/20180907-contrib-sunset.md
+  * https://github.com/tensorflow/addons
+  * https://github.com/tensorflow/io (for I/O related ops)
+If you depend on functionality not listed there, please file an issue.
+
+WARNING:tensorflow:From /home/pierre/bin/anaconda3/envs/reacher_link/lib/python3.7/site-packages/stable_baselines/common/misc_util.py:26: The name tf.set_random_seed is deprecated. Please use tf.compat.v1.set_random_seed instead.
+
+========== Reacher2Dof-v0 ==========
+Seed: 0
+OrderedDict([('n_timesteps', 1000000.0), ('policy', 'MlpPolicy')])
+Using 1 environments
+Overwriting n_timesteps with n=10000
+Creating test environment
+WARNING:tensorflow:From /home/pierre/bin/anaconda3/envs/reacher_link/lib/python3.7/site-packages/stable_baselines/common/tf_util.py:191: The name tf.ConfigProto is deprecated. Please use tf.compat.v1.ConfigProto instead.
+
+WARNING:tensorflow:From /home/pierre/bin/anaconda3/envs/reacher_link/lib/python3.7/site-packages/stable_baselines/common/tf_util.py:200: The name tf.Session is deprecated. Please use tf.compat.v1.Session instead.
+
+WARNING:tensorflow:From /home/pierre/bin/anaconda3/envs/reacher_link/lib/python3.7/site-packages/stable_baselines/common/policies.py:116: The name tf.variable_scope is deprecated. Please use tf.compat.v1.variable_scope instead.
+
+WARNING:tensorflow:From /home/pierre/bin/anaconda3/envs/reacher_link/lib/python3.7/site-packages/stable_baselines/common/input.py:25: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+WARNING:tensorflow:From /home/pierre/bin/anaconda3/envs/reacher_link/lib/python3.7/site-packages/stable_baselines/common/policies.py:561: flatten (from tensorflow.python.layers.core) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.flatten instead.
+WARNING:tensorflow:From /home/pierre/bin/anaconda3/envs/reacher_link/lib/python3.7/site-packages/tensorflow_core/python/layers/core.py:332: Layer.apply (from tensorflow.python.keras.engine.base_layer) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `layer.__call__` method instead.
+WARNING:tensorflow:From /home/pierre/bin/anaconda3/envs/reacher_link/lib/python3.7/site-packages/stable_baselines/common/tf_layers.py:123: The name tf.get_variable is deprecated. Please use tf.compat.v1.get_variable instead.
+
+WARNING:tensorflow:From /home/pierre/bin/anaconda3/envs/reacher_link/lib/python3.7/site-packages/stable_baselines/common/distributions.py:418: The name tf.random_normal is deprecated. Please use tf.random.normal instead.
+
+WARNING:tensorflow:From /home/pierre/bin/anaconda3/envs/reacher_link/lib/python3.7/site-packages/stable_baselines/common/tf_util.py:449: The name tf.get_collection is deprecated. Please use tf.compat.v1.get_collection instead.
+
+WARNING:tensorflow:From /home/pierre/bin/anaconda3/envs/reacher_link/lib/python3.7/site-packages/stable_baselines/common/tf_util.py:449: The name tf.GraphKeys is deprecated. Please use tf.compat.v1.GraphKeys instead.
+
+WARNING:tensorflow:From /home/pierre/bin/anaconda3/envs/reacher_link/lib/python3.7/site-packages/stable_baselines/common/tf_util.py:407: The name tf.assign is deprecated. Please use tf.compat.v1.assign instead.
+
+WARNING:tensorflow:From /home/pierre/bin/anaconda3/envs/reacher_link/lib/python3.7/site-packages/stable_baselines/trpo_mpi/trpo_mpi.py:192: The name tf.summary.scalar is deprecated. Please use tf.compat.v1.summary.scalar instead.
+
+WARNING:tensorflow:From /home/pierre/bin/anaconda3/envs/reacher_link/lib/python3.7/site-packages/stable_baselines/common/tf_util.py:241: The name tf.global_variables is deprecated. Please use tf.compat.v1.global_variables instead.
+
+WARNING:tensorflow:From /home/pierre/bin/anaconda3/envs/reacher_link/lib/python3.7/site-packages/stable_baselines/common/tf_util.py:242: The name tf.variables_initializer is deprecated. Please use tf.compat.v1.variables_initializer instead.
+
+WARNING:tensorflow:From /home/pierre/bin/anaconda3/envs/reacher_link/lib/python3.7/site-packages/stable_baselines/trpo_mpi/trpo_mpi.py:266: The name tf.summary.merge_all is deprecated. Please use tf.compat.v1.summary.merge_all instead.
+
+Log path: logs/train_10K_Reacher2Dof-v0/trpo/Reacher2Dof-v0_1
+/home/pierre/bin/anaconda3/envs/reacher_link/lib/python3.7/site-packages/stable_baselines/common/callbacks.py:287: UserWarning: Training and eval env are not of the same type<stable_baselines.common.base_class._UnvecWrapper object at 0x7f4e89dae4e0> != <stable_baselines.common.vec_env.dummy_vec_env.DummyVecEnv object at 0x7f4e89dae1d0>
+  "{} != {}".format(self.training_env, self.eval_env))
+********** Iteration 0 ************
+Optimizing Policy...
+sampling
+done in 0.645 seconds
+computegrad
+WARNING:tensorflow:From /home/pierre/bin/anaconda3/envs/reacher_link/lib/python3.7/site-packages/stable_baselines/trpo_mpi/trpo_mpi.py:364: The name tf.RunOptions is deprecated. Please use tf.compat.v1.RunOptions instead.
+
+done in 0.100 seconds
+conjugate_gradient
+      iter residual norm  soln norm
+         0     0.0213          0
+         1     0.0196     0.0255
+         2    0.00236     0.0841
+         3     0.0014       0.14
+         4    0.00128        0.2
+         5    0.00664      0.245
+         6   0.000985      0.279
+         7    0.00107      0.442
+         8    9.9e-05      0.606
+         9   9.43e-05      0.781
+        10   9.36e-05      0.782
+done in 0.156 seconds
+Expected: 0.023 Actual: 0.023
+Stepsize OK!
+vf
+done in 0.054 seconds
+-----------------------------------------
+| EpLenMean               | 150         |
+| EpRewMean               | -11.6       |
+| EpThisIter              | 6           |
+| EpisodesSoFar           | 6           |
+| TimeElapsed             | 1.03        |
+| TimestepsSoFar          | 1024        |
+| entloss                 | 0.0         |
+| entropy                 | 2.832316    |
+| explained_variance_t... | 0.0056      |
+| meankl                  | 0.008179186 |
+| optimgain               | 0.023471005 |
+| surrgain                | 0.023471005 |
+-----------------------------------------
+********** Iteration 1 ************
+Optimizing Policy...
+sampling
+done in 0.581 seconds
+computegrad
+done in 0.003 seconds
+conjugate_gradient
+      iter residual norm  soln norm
+         0     0.0178          0
+         1     0.0129     0.0897
+         2     0.0034     0.0959
+         3     0.0358      0.182
+         4    0.00409      0.241
+         5    0.00437      0.375
+         6    0.00233      0.602
+         7    0.00155      0.711
+         8     0.0171      0.876
+         9    0.00393      0.918
+        10     0.0101       1.04
+done in 0.013 seconds
+Expected: 0.031 Actual: 0.027
+Stepsize OK!
+vf
+done in 0.019 seconds
+-----------------------------------------
+| EpLenMean               | 150         |
+| EpRewMean               | -10.5       |
+| EpThisIter              | 7           |
+| EpisodesSoFar           | 13          |
+| TimeElapsed             | 1.65        |
+| TimestepsSoFar          | 2048        |
+| entloss                 | 0.0         |
+| entropy                 | 2.8246434   |
+| explained_variance_t... | 0.00831     |
+| meankl                  | 0.010218445 |
+| optimgain               | 0.027306287 |
+| surrgain                | 0.027306287 |
+-----------------------------------------
+********** Iteration 2 ************
+Optimizing Policy...
+sampling
+done in 0.575 seconds
+computegrad
+done in 0.003 seconds
+conjugate_gradient
+      iter residual norm  soln norm
+         0      0.044          0
+         1     0.0114     0.0124
+         2     0.0112     0.0746
+         3    0.00242     0.0838
+         4    0.00309       0.15
+         5    0.00278      0.376
+         6    0.00123      0.582
+         7    0.00227      0.643
+         8    0.00113      0.649
+         9    0.00259      0.711
+        10   0.000767       0.72
+done in 0.013 seconds
+Expected: 0.025 Actual: 0.019
+Stepsize OK!
+vf
+done in 0.019 seconds
+-----------------------------------------
+| EpLenMean               | 150         |
+| EpRewMean               | -11.5       |
+| EpThisIter              | 7           |
+| EpisodesSoFar           | 20          |
+| TimeElapsed             | 2.26        |
+| TimestepsSoFar          | 3072        |
+| entloss                 | 0.0         |
+| entropy                 | 2.8519895   |
+| explained_variance_t... | 0.0283      |
+| meankl                  | 0.011169277 |
+| optimgain               | 0.019270828 |
+| surrgain                | 0.019270828 |
+-----------------------------------------
+********** Iteration 3 ************
+Optimizing Policy...
+sampling
+done in 0.575 seconds
+computegrad
+done in 0.003 seconds
+conjugate_gradient
+      iter residual norm  soln norm
+         0     0.0458          0
+         1     0.0162     0.0146
+         2     0.0485     0.0796
+         3    0.00681      0.107
+         4    0.00694      0.306
+         5    0.00422      0.466
+         6     0.0035      0.638
+         7    0.00249      0.748
+         8    0.00694      0.762
+         9     0.0014      0.817
+        10     0.0249      0.865
+done in 0.013 seconds
+Expected: 0.033 Actual: 0.021
+Stepsize OK!
+vf
+done in 0.019 seconds
+-----------------------------------------
+| EpLenMean               | 150         |
+| EpRewMean               | -12         |
+| EpThisIter              | 7           |
+| EpisodesSoFar           | 27          |
+| TimeElapsed             | 2.88        |
+| TimestepsSoFar          | 4096        |
+| entloss                 | 0.0         |
+| entropy                 | 2.842593    |
+| explained_variance_t... | 0.0316      |
+| meankl                  | 0.009973614 |
+| optimgain               | 0.021168765 |
+| surrgain                | 0.021168765 |
+-----------------------------------------
+********** Iteration 4 ************
+Optimizing Policy...
+sampling
+done in 0.571 seconds
+computegrad
+done in 0.003 seconds
+conjugate_gradient
+      iter residual norm  soln norm
+         0     0.0203          0
+         1     0.0112      0.019
+         2     0.0055     0.0661
+         3    0.00713     0.0774
+         4    0.00452       0.21
+         5    0.00195      0.316
+         6    0.00505       0.49
+         7   0.000581      0.684
+         8    0.00102      0.746
+         9    0.00121      0.753
+        10   0.000829      0.788
+done in 0.013 seconds
+Expected: 0.026 Actual: 0.023
+Stepsize OK!
+vf
+done in 0.021 seconds
+-----------------------------------------
+| EpLenMean               | 150         |
+| EpRewMean               | -12         |
+| EpThisIter              | 7           |
+| EpisodesSoFar           | 34          |
+| TimeElapsed             | 3.49        |
+| TimestepsSoFar          | 5120        |
+| entloss                 | 0.0         |
+| entropy                 | 2.834147    |
+| explained_variance_t... | -0.00476    |
+| meankl                  | 0.007926672 |
+| optimgain               | 0.023192955 |
+| surrgain                | 0.023192955 |
+-----------------------------------------
+********** Iteration 5 ************
+Optimizing Policy...
+sampling
+done in 0.565 seconds
+computegrad
+done in 0.003 seconds
+conjugate_gradient
+      iter residual norm  soln norm
+         0     0.0461          0
+         1      0.102     0.0501
+         2     0.0145      0.107
+         3    0.00557      0.113
+         4    0.00975      0.238
+         5    0.00544      0.405
+         6    0.00589      0.532
+         7      0.002       0.85
+         8    0.00956      0.896
+         9    0.00187      0.912
+        10     0.0132      0.956
+done in 0.013 seconds
+Expected: 0.037 Actual: 0.032
+Stepsize OK!
+vf
+done in 0.019 seconds
+-----------------------------------------
+| EpLenMean               | 150         |
+| EpRewMean               | -11.1       |
+| EpThisIter              | 6           |
+| EpisodesSoFar           | 40          |
+| TimeElapsed             | 4.1         |
+| TimestepsSoFar          | 6144        |
+| entloss                 | 0.0         |
+| entropy                 | 2.8094373   |
+| explained_variance_t... | -0.00368    |
+| meankl                  | 0.008617327 |
+| optimgain               | 0.03243386  |
+| surrgain                | 0.03243386  |
+-----------------------------------------
+********** Iteration 6 ************
+Optimizing Policy...
+sampling
+done in 0.568 seconds
+computegrad
+done in 0.003 seconds
+conjugate_gradient
+      iter residual norm  soln norm
+         0     0.0202          0
+         1     0.0501     0.0275
+         2     0.0156     0.0882
+         3     0.0192     0.0994
+         4     0.0101        0.2
+         5    0.00451      0.366
+         6    0.00402      0.463
+         7    0.00434      0.561
+         8     0.0145      0.777
+         9     0.0055      0.796
+        10     0.0014      0.952
+done in 0.013 seconds
+Expected: 0.034 Actual: 0.029
+Stepsize OK!
+vf
+done in 0.019 seconds
+-----------------------------------------
+| EpLenMean               | 150         |
+| EpRewMean               | -11.4       |
+| EpThisIter              | 7           |
+| EpisodesSoFar           | 47          |
+| TimeElapsed             | 4.71        |
+| TimestepsSoFar          | 7168        |
+| entloss                 | 0.0         |
+| entropy                 | 2.8228562   |
+| explained_variance_t... | 0.0429      |
+| meankl                  | 0.012935502 |
+| optimgain               | 0.029280124 |
+| surrgain                | 0.029280124 |
+-----------------------------------------
+********** Iteration 7 ************
+Optimizing Policy...
+sampling
+done in 0.577 seconds
+computegrad
+done in 0.003 seconds
+conjugate_gradient
+      iter residual norm  soln norm
+         0     0.0298          0
+         1     0.0275     0.0329
+         2     0.0121     0.0806
+         3    0.00758     0.0955
+         4     0.0156      0.191
+         5    0.00713      0.426
+         6    0.00266      0.524
+         7    0.00306      0.572
+         8    0.00229      0.724
+         9    0.00119      0.764
+        10    0.00372      0.775
+done in 0.014 seconds
+Expected: 0.032 Actual: 0.032
+Stepsize OK!
+vf
+done in 0.020 seconds
+-----------------------------------------
+| EpLenMean               | 150         |
+| EpRewMean               | -10.9       |
+| EpThisIter              | 7           |
+| EpisodesSoFar           | 54          |
+| TimeElapsed             | 5.33        |
+| TimestepsSoFar          | 8192        |
+| entloss                 | 0.0         |
+| entropy                 | 2.8186543   |
+| explained_variance_t... | 0.0524      |
+| meankl                  | 0.008007724 |
+| optimgain               | 0.03154686  |
+| surrgain                | 0.03154686  |
+-----------------------------------------
+********** Iteration 8 ************
+Optimizing Policy...
+sampling
+done in 0.583 seconds
+computegrad
+done in 0.003 seconds
+conjugate_gradient
+      iter residual norm  soln norm
+         0     0.0443          0
+         1     0.0706     0.0325
+         2     0.0262      0.113
+         3     0.0478       0.14
+         4     0.0133      0.318
+         5    0.00804      0.404
+         6    0.00613      0.484
+         7    0.00259      0.569
+         8    0.00433      0.628
+         9     0.0243      0.679
+        10    0.00324      0.735
+done in 0.013 seconds
+Expected: 0.039 Actual: 0.036
+Stepsize OK!
+vf
+done in 0.019 seconds
+-----------------------------------------
+| EpLenMean               | 150         |
+| EpRewMean               | -10.2       |
+| EpThisIter              | 7           |
+| EpisodesSoFar           | 61          |
+| TimeElapsed             | 5.96        |
+| TimestepsSoFar          | 9216        |
+| entloss                 | 0.0         |
+| entropy                 | 2.8268154   |
+| explained_variance_t... | -0.0572     |
+| meankl                  | 0.007463589 |
+| optimgain               | 0.035609506 |
+| surrgain                | 0.035609506 |
+-----------------------------------------
+********** Iteration 9 ************
+Optimizing Policy...
+sampling
+Eval num_timesteps=9216, episode_reward=1.63 +/- 10.84
+Episode length: 150.00 +/- 0.00
+New best mean reward!
+done in 1.072 seconds
+computegrad
+done in 0.003 seconds
+conjugate_gradient
+      iter residual norm  soln norm
+         0     0.0332          0
+         1     0.0344     0.0254
+         2     0.0251     0.0838
+         3    0.00941       0.11
+         4     0.0101      0.178
+         5    0.00534      0.266
+         6    0.00554      0.348
+         7    0.00381      0.467
+         8    0.00534      0.669
+         9     0.0106      0.736
+        10     0.0016      0.761
+done in 0.013 seconds
+Expected: 0.032 Actual: 0.031
+Stepsize OK!
+vf
+done in 0.017 seconds
+-----------------------------------------
+| EpLenMean               | 150         |
+| EpRewMean               | -10.8       |
+| EpThisIter              | 7           |
+| EpisodesSoFar           | 68          |
+| TimeElapsed             | 7.07        |
+| TimestepsSoFar          | 10240       |
+| entloss                 | 0.0         |
+| entropy                 | 2.812805    |
+| explained_variance_t... | -0.038      |
+| meankl                  | 0.010421506 |
+| optimgain               | 0.031305686 |
+| surrgain                | 0.031305686 |
+-----------------------------------------
+Saving to logs/train_10K_Reacher2Dof-v0/trpo/Reacher2Dof-v0_1
+pybullet build time: Sep  9 2020 17:03:46
