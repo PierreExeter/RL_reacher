@@ -35,6 +35,6 @@ python 2_train.py --algo trpo --env ${env} -n ${nsteps} --log-folder ${log_dir} 
 # python3 2_train.py --algo her --env ${env_her} -n ${nsteps} --log-folder ${log_dir} -optimize --n-trials ${ntrials} --n-jobs ${njobs} --sampler ${sampler} --pruner ${pruner}  &> submission_logs/log_her_td3_opti.run
 
 
-# python clean_opti_params.py --folder ${log_dir}
-# python plot_opti_best.py
-# python plot_opti_report.py
+# python my_lib/clean_opti_params.py --folder ${log_dir}
+# python my_lib/plot_opti_best.py
+# python my_lib/plot_opti_report.py
