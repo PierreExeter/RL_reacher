@@ -134,3 +134,34 @@ ReacherBulletEnv-v0:
   lr_schedule: 'linear'
   gamma: 0.99
   learning_rate: 0.002
+
+
+Reacher1Dof-v0:
+  n_envs: 8
+  n_timesteps: !!float 1e6
+  policy: 'MlpPolicy'
+
+Reacher2Dof-v0:
+  n_envs: 8
+  n_timesteps: !!float 1e6
+  policy: 'MlpPolicy'
+
+Reacher3Dof-v0:
+  n_envs: 8
+  n_timesteps: !!float 1e6
+  policy: 'MlpPolicy'
+
+Reacher4Dof-v0:
+  n_envs: 8
+  n_timesteps: !!float 1e6
+  policy: 'MlpPolicy'
+
+Reacher5Dof-v0:
+  n_envs: 8
+  n_timesteps: !!float 1e6
+  policy: 'MlpPolicy'
+  
+Reacher6Dof-v0:
+  n_envs: 8
+  n_timesteps: !!float 1e6
+  policy: 'MlpPolicy'

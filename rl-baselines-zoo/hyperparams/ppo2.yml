@@ -342,16 +342,32 @@ MiniGrid-FourRooms-v0:
   learning_rate: 2.5e-4
   cliprange: 0.2
 
-Reacher6Dof-v0:
-  normalize: true
+Reacher1Dof-v0:
   n_envs: 8
-  n_timesteps: !!float 2e6
+  n_timesteps: !!float 1e6
   policy: 'MlpPolicy'
-  n_steps: 2048
-  nminibatches: 32
-  lam: 0.95
-  gamma: 0.99
-  noptepochs: 10
-  ent_coef: 0.0
-  learning_rate: 2.5e-4
-  cliprange: 0.2
+
+Reacher2Dof-v0:
+  n_envs: 8
+  n_timesteps: !!float 1e6
+  policy: 'MlpPolicy'
+
+Reacher3Dof-v0:
+  n_envs: 8
+  n_timesteps: !!float 1e6
+  policy: 'MlpPolicy'
+
+Reacher4Dof-v0:
+  n_envs: 8
+  n_timesteps: !!float 1e6
+  policy: 'MlpPolicy'
+
+Reacher5Dof-v0:
+  n_envs: 8
+  n_timesteps: !!float 1e6
+  policy: 'MlpPolicy'
+  
+Reacher6Dof-v0:
+  n_envs: 8
+  n_timesteps: !!float 1e6
+  policy: 'MlpPolicy'

@@ -172,3 +172,27 @@ BipedalWalkerHardcore-v3:
   lam: 0.95
   vf_iters: 5
   vf_stepsize: !!float 1e-3
+
+Reacher1Dof-v0:
+  n_timesteps: !!float 1e6
+  policy: 'MlpPolicy'
+
+Reacher2Dof-v0:
+  n_timesteps: !!float 1e6
+  policy: 'MlpPolicy'
+
+Reacher3Dof-v0:
+  n_timesteps: !!float 1e6
+  policy: 'MlpPolicy'
+
+Reacher4Dof-v0:
+  n_timesteps: !!float 1e6
+  policy: 'MlpPolicy'
+
+Reacher5Dof-v0:
+  n_timesteps: !!float 1e6
+  policy: 'MlpPolicy'
+  
+Reacher6Dof-v0:
+  n_timesteps: !!float 1e6
+  policy: 'MlpPolicy'

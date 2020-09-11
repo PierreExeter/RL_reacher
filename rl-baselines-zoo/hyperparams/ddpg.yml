@@ -84,3 +84,27 @@ HopperBulletEnv-v0:
   critic_lr: 0.00156
   normalize_observations: True
   normalize_returns: False
+
+Reacher1Dof-v0:
+  n_timesteps: !!float 1e6
+  policy: 'MlpPolicy'
+
+Reacher2Dof-v0:
+  n_timesteps: !!float 1e6
+  policy: 'MlpPolicy'
+
+Reacher3Dof-v0:
+  n_timesteps: !!float 1e6
+  policy: 'MlpPolicy'
+
+Reacher4Dof-v0:
+  n_timesteps: !!float 1e6
+  policy: 'MlpPolicy'
+
+Reacher5Dof-v0:
+  n_timesteps: !!float 1e6
+  policy: 'MlpPolicy'
+  
+Reacher6Dof-v0:
+  n_timesteps: !!float 1e6
+  policy: 'MlpPolicy'
