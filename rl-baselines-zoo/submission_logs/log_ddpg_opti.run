@@ -15,7 +15,7 @@ Using 1 environments
 Overwriting n_timesteps with n=1000
 Optimizing hyperparameters
 Sampler: tpe - Pruner: median
-[I 2020-09-11 23:25:03,343] A new study created in memory with name: no-name-f2b68c8e-455a-425d-a263-4119e4417766
+[I 2020-09-12 13:08:26,949] A new study created in memory with name: no-name-f6a7254a-3808-4d4c-a957-101065dc9b3b
 WARNING:tensorflow:From /home/pierre/bin/anaconda3/envs/reacher_link/lib/python3.7/site-packages/stable_baselines/common/tf_util.py:191: The name tf.ConfigProto is deprecated. Please use tf.compat.v1.ConfigProto instead.
 
 WARNING:tensorflow:From /home/pierre/bin/anaconda3/envs/reacher_link/lib/python3.7/site-packages/stable_baselines/common/tf_util.py:200: The name tf.Session is deprecated. Please use tf.compat.v1.Session instead.
@@ -58,23 +58,24 @@ WARNING:tensorflow:From /home/pierre/bin/anaconda3/envs/reacher_link/lib/python3
 
 WARNING:tensorflow:From /home/pierre/bin/anaconda3/envs/reacher_link/lib/python3.7/site-packages/stable_baselines/ddpg/ddpg.py:452: The name tf.summary.merge_all is deprecated. Please use tf.compat.v1.summary.merge_all instead.
 
-/home/pierre/bin/anaconda3/envs/reacher_link/lib/python3.7/site-packages/stable_baselines/common/callbacks.py:287: UserWarning: Training and eval env are not of the same type<TimeLimit<ReacherBulletEnv2<Reacher2Dof-v0>>> != <stable_baselines.common.vec_env.dummy_vec_env.DummyVecEnv object at 0x7fa6c8741c50>
+/home/pierre/bin/anaconda3/envs/reacher_link/lib/python3.7/site-packages/stable_baselines/common/callbacks.py:287: UserWarning: Training and eval env are not of the same type<TimeLimit<ReacherBulletEnv2<Reacher2Dof-v0>>> != <stable_baselines.common.vec_env.dummy_vec_env.DummyVecEnv object at 0x7fe9f42c96a0>
   "{} != {}".format(self.training_env, self.eval_env))
-/home/pierre/bin/anaconda3/envs/reacher_link/lib/python3.7/site-packages/stable_baselines/common/callbacks.py:287: UserWarning: Training and eval env are not of the same type<TimeLimit<ReacherBulletEnv2<Reacher2Dof-v0>>> != <stable_baselines.common.vec_env.dummy_vec_env.DummyVecEnv object at 0x7fa6c8550cc0>
+/home/pierre/bin/anaconda3/envs/reacher_link/lib/python3.7/site-packages/stable_baselines/common/callbacks.py:287: UserWarning: Training and eval env are not of the same type<TimeLimit<ReacherBulletEnv2<Reacher2Dof-v0>>> != <stable_baselines.common.vec_env.dummy_vec_env.DummyVecEnv object at 0x7fe9f40e5eb8>
   "{} != {}".format(self.training_env, self.eval_env))
-[I 2020-09-11 23:25:22,006] Trial 1 finished with value: 72.27479553222656 and parameters: {'gamma': 0.95, 'lr': 0.0016382404979544559, 'batch_size': 256, 'memory_limit': 1000000, 'noise_type': 'normal', 'noise_std': 0.970027216348324, 'normalize_observations': True, 'normalize_returns': False}. Best is trial 1 with value: 72.27479553222656.
-[I 2020-09-11 23:25:23,560] Trial 0 finished with value: 91.03327178955078 and parameters: {'gamma': 0.995, 'lr': 0.006403546115682319, 'batch_size': 32, 'memory_limit': 10000, 'noise_type': 'adaptive-param', 'noise_std': 0.1949192000384532, 'normalize_observations': True, 'normalize_returns': False}. Best is trial 1 with value: 72.27479553222656.
+[I 2020-09-12 13:08:45,124] Trial 0 finished with value: 38.297237396240234 and parameters: {'gamma': 0.9999, 'lr': 0.0009556962779065655, 'batch_size': 32, 'memory_limit': 100000, 'noise_type': 'ornstein-uhlenbeck', 'noise_std': 0.9516298987982656, 'normalize_observations': True, 'normalize_returns': False}. Best is trial 0 with value: 38.297237396240234.
+[I 2020-09-12 13:08:47,001] Trial 1 finished with value: 115.27530670166016 and parameters: {'gamma': 0.9999, 'lr': 0.00012634689639299913, 'batch_size': 32, 'memory_limit': 10000, 'noise_type': 'adaptive-param', 'noise_std': 0.17594889478405706, 'normalize_observations': True, 'normalize_returns': False}. Best is trial 0 with value: 38.297237396240234.
 Number of finished trials:  2
 Best trial:
-Value:  72.27479553222656
+Value:  38.297237396240234
 Params: 
-    gamma: 0.95
-    lr: 0.0016382404979544559
-    batch_size: 256
-    memory_limit: 1000000
-    noise_type: normal
-    noise_std: 0.970027216348324
+    gamma: 0.9999
+    lr: 0.0009556962779065655
+    batch_size: 32
+    memory_limit: 100000
+    noise_type: ornstein-uhlenbeck
+    noise_std: 0.9516298987982656
     normalize_observations: True
     normalize_returns: False
-Writing report to logs/opti_2t_1K_Reacher2Dof-v0/ddpg/report_Reacher2Dof-v0_2-trials-1000-tpe-median_1599859523.csv
+best params:  {'gamma': 0.9999, 'lr': 0.0009556962779065655, 'batch_size': 32, 'memory_limit': 100000, 'noise_type': 'ornstein-uhlenbeck', 'noise_std': 0.9516298987982656, 'normalize_observations': True, 'normalize_returns': False}
+Writing report to logs/opti_2t_1K_Reacher2Dof-v0/ddpg/report_Reacher2Dof-v0_2-trials-1000-tpe-median_1599908927.csv
 pybullet build time: Sep  9 2020 17:03:46

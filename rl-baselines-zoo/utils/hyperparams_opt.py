@@ -89,7 +89,8 @@ def hyperparam_optimization(algo, model_fn, env_fn, n_trials=10, n_timesteps=500
             trial.model_class = hyperparams['model_class']
 
         # Hack to use DDPG/TD3 noise sampler
-        if algo in ['ddpg', 'td3'] or trial.model_class in ['ddpg', 'td3']:
+        # if algo in ['ddpg', 'td3'] or trial.model_class in ['ddpg', 'td3']:
+        if algo in ['ddpg', 'td3'] or trial.model_class in [DDPG, TD3]:  # bug to report: changed by Pierre
             trial.n_actions = env_fn(n_envs=1).action_space.shape[0]
         kwargs.update(algo_sampler(trial))
 
@@ -142,7 +143,18 @@ def hyperparam_optimization(algo, model_fn, env_fn, n_trials=10, n_timesteps=500
     for key, value in trial.params.items():
         print('    {}: {}'.format(key, value))
 
-    return study.trials_dataframe()
+    ######## added by pierre
+    best_params = trial.params
+    print("best params: ", best_params)
+    # print("best value: ", study.best_value)
+    # print("best best trial: ", study.best_trial)
+
+    # with open('hyperparameter.yml', 'w') as outfile:
+        # yaml.dump(best_params, outfile)
+    ########
+
+    return study.trials_dataframe(), best_params
+    # return study.trials_dataframe()
 
 
 def sample_ppo2_params(trial):

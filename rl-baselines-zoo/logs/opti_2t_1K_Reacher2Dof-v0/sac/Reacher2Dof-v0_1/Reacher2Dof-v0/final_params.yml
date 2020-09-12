@@ -1,0 +1,11 @@
+Reacher2Dof-v0:
+  batch_size: 64
+  buffer_size: 1000000
+  ent_coef: 0.0001
+  gamma: 0.98
+  learning_starts: 1000
+  lr: 0.15862044077320953
+  n_timesteps: 1000000.0
+  net_arch: small
+  policy: MlpPolicy
+  train_freq: 100

@@ -17,7 +17,7 @@ Using 8 environments
 Overwriting n_timesteps with n=1000
 Optimizing hyperparameters
 Sampler: tpe - Pruner: median
-[I 2020-09-11 23:25:26,087] A new study created in memory with name: no-name-a53b6228-e459-4012-8408-0c296f15f31c
+[I 2020-09-12 13:08:49,606] A new study created in memory with name: no-name-6c92adac-71f3-4009-b03f-a1239f59a94d
 WARNING:tensorflow:From /home/pierre/bin/anaconda3/envs/reacher_link/lib/python3.7/site-packages/stable_baselines/common/tf_util.py:191: The name tf.ConfigProto is deprecated. Please use tf.compat.v1.ConfigProto instead.
 
 WARNING:tensorflow:From /home/pierre/bin/anaconda3/envs/reacher_link/lib/python3.7/site-packages/stable_baselines/common/tf_util.py:200: The name tf.Session is deprecated. Please use tf.compat.v1.Session instead.
@@ -49,19 +49,20 @@ WARNING:tensorflow:From /home/pierre/bin/anaconda3/envs/reacher_link/lib/python3
 
 WARNING:tensorflow:From /home/pierre/bin/anaconda3/envs/reacher_link/lib/python3.7/site-packages/stable_baselines/ppo2/ppo2.py:242: The name tf.summary.merge_all is deprecated. Please use tf.compat.v1.summary.merge_all instead.
 
-[I 2020-09-11 23:25:27,155] Trial 0 finished with value: inf and parameters: {'batch_size': 256, 'n_steps': 2048, 'gamma': 0.9, 'lr': 0.00013307499401611034, 'ent_coef': 0.009354103497307514, 'cliprange': 0.2, 'noptepochs': 1, 'lambda': 0.99}. Best is trial 0 with value: inf.
-[I 2020-09-11 23:25:27,163] Trial 1 finished with value: inf and parameters: {'batch_size': 256, 'n_steps': 256, 'gamma': 0.95, 'lr': 0.6752771729027095, 'ent_coef': 1.2214458164506773e-05, 'cliprange': 0.3, 'noptepochs': 20, 'lambda': 1.0}. Best is trial 0 with value: inf.
+[I 2020-09-12 13:08:50,695] Trial 1 finished with value: inf and parameters: {'batch_size': 32, 'n_steps': 512, 'gamma': 0.99, 'lr': 0.006323051291783757, 'ent_coef': 6.32003423057695e-08, 'cliprange': 0.1, 'noptepochs': 10, 'lambda': 0.9}. Best is trial 1 with value: inf.
+[I 2020-09-12 13:08:50,711] Trial 0 finished with value: inf and parameters: {'batch_size': 32, 'n_steps': 1024, 'gamma': 0.9999, 'lr': 1.9339212097600702e-05, 'ent_coef': 8.545019951487603e-06, 'cliprange': 0.4, 'noptepochs': 30, 'lambda': 0.95}. Best is trial 1 with value: inf.
 Number of finished trials:  2
 Best trial:
 Value:  inf
 Params: 
-    batch_size: 256
-    n_steps: 2048
-    gamma: 0.9
-    lr: 0.00013307499401611034
-    ent_coef: 0.009354103497307514
-    cliprange: 0.2
-    noptepochs: 1
-    lambda: 0.99
-Writing report to logs/opti_2t_1K_Reacher2Dof-v0/ppo2/report_Reacher2Dof-v0_2-trials-1000-tpe-median_1599859527.csv
+    batch_size: 32
+    n_steps: 512
+    gamma: 0.99
+    lr: 0.006323051291783757
+    ent_coef: 6.32003423057695e-08
+    cliprange: 0.1
+    noptepochs: 10
+    lambda: 0.9
+best params:  {'batch_size': 32, 'n_steps': 512, 'gamma': 0.99, 'lr': 0.006323051291783757, 'ent_coef': 6.32003423057695e-08, 'cliprange': 0.1, 'noptepochs': 10, 'lambda': 0.9}
+Writing report to logs/opti_2t_1K_Reacher2Dof-v0/ppo2/report_Reacher2Dof-v0_2-trials-1000-tpe-median_1599908930.csv
 pybullet build time: Sep  9 2020 17:03:46

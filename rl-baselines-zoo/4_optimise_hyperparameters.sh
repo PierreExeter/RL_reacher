@@ -31,8 +31,8 @@ python 2_train.py --algo td3 --env ${env} -n ${nsteps} --log-folder ${log_dir} -
 echo "TRPO OPTI"
 python 2_train.py --algo trpo --env ${env} -n ${nsteps} --log-folder ${log_dir} -optimize --n-trials ${ntrials} --n-jobs 1 --sampler ${sampler} --pruner ${pruner}  &> submission_logs/log_trpo_opti.run
 
-# echo "HER OPTI"
-# python3 2_train.py --algo her --env ${env_her} -n ${nsteps} --log-folder ${log_dir} -optimize --n-trials ${ntrials} --n-jobs ${njobs} --sampler ${sampler} --pruner ${pruner}  &> submission_logs/log_her_td3_opti.run
+echo "HER OPTI"
+python3 2_train.py --algo her --env ${env_her} -n ${nsteps} --log-folder ${log_dir} -optimize --n-trials ${ntrials} --n-jobs ${njobs} --sampler ${sampler} --pruner ${pruner}  &> submission_logs/log_her_td3_opti.run
 
 
 # python my_lib/clean_opti_params.py --folder ${log_dir}

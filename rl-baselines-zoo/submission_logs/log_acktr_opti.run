@@ -17,7 +17,7 @@ Using 8 environments
 Overwriting n_timesteps with n=1000
 Optimizing hyperparameters
 Sampler: tpe - Pruner: median
-[I 2020-09-11 23:24:57,549] A new study created in memory with name: no-name-6be1aff0-77a0-40f6-8394-7e82c6737159
+[I 2020-09-12 13:08:12,200] A new study created in memory with name: no-name-48038851-50be-48f2-ba13-ae545e0d62e0
 WARNING:tensorflow:From /home/pierre/bin/anaconda3/envs/reacher_link/lib/python3.7/site-packages/stable_baselines/common/tf_util.py:191: The name tf.ConfigProto is deprecated. Please use tf.compat.v1.ConfigProto instead.
 
 WARNING:tensorflow:From /home/pierre/bin/anaconda3/envs/reacher_link/lib/python3.7/site-packages/stable_baselines/common/tf_util.py:200: The name tf.Session is deprecated. Please use tf.compat.v1.Session instead.
@@ -69,17 +69,18 @@ WARNING:tensorflow:From /home/pierre/bin/anaconda3/envs/reacher_link/lib/python3
 
 WARNING:tensorflow:From /home/pierre/bin/anaconda3/envs/reacher_link/lib/python3.7/site-packages/stable_baselines/acktr/acktr.py:319: The name tf.variables_initializer is deprecated. Please use tf.compat.v1.variables_initializer instead.
 
-[I 2020-09-11 23:25:00,883] Trial 1 finished with value: inf and parameters: {'gamma': 0.99, 'n_steps': 256, 'lr_schedule': 'constant', 'lr': 0.3427999028826516, 'ent_coef': 0.00034350943631195405, 'vf_coef': 0.9881115690717435}. Best is trial 1 with value: inf.
-[I 2020-09-11 23:25:00,883] Trial 0 finished with value: inf and parameters: {'gamma': 0.999, 'n_steps': 512, 'lr_schedule': 'constant', 'lr': 0.09602914107173333, 'ent_coef': 2.686661934221142e-06, 'vf_coef': 0.6677156504388658}. Best is trial 1 with value: inf.
+[I 2020-09-12 13:08:15,495] Trial 1 finished with value: inf and parameters: {'gamma': 0.9, 'n_steps': 128, 'lr_schedule': 'linear', 'lr': 0.19562683609595183, 'ent_coef': 1.1847397983925118e-08, 'vf_coef': 0.871054263093223}. Best is trial 1 with value: inf.
+[I 2020-09-12 13:08:24,519] Trial 0 finished with value: -4.328743934631348 and parameters: {'gamma': 0.999, 'n_steps': 16, 'lr_schedule': 'constant', 'lr': 0.0004705233746312844, 'ent_coef': 5.483573114765248e-06, 'vf_coef': 0.8067838931247773}. Best is trial 0 with value: -4.328743934631348.
 Number of finished trials:  2
 Best trial:
-Value:  inf
+Value:  -4.328743934631348
 Params: 
-    gamma: 0.99
-    n_steps: 256
+    gamma: 0.999
+    n_steps: 16
     lr_schedule: constant
-    lr: 0.3427999028826516
-    ent_coef: 0.00034350943631195405
-    vf_coef: 0.9881115690717435
-Writing report to logs/opti_2t_1K_Reacher2Dof-v0/acktr/report_Reacher2Dof-v0_2-trials-1000-tpe-median_1599859500.csv
+    lr: 0.0004705233746312844
+    ent_coef: 5.483573114765248e-06
+    vf_coef: 0.8067838931247773
+best params:  {'gamma': 0.999, 'n_steps': 16, 'lr_schedule': 'constant', 'lr': 0.0004705233746312844, 'ent_coef': 5.483573114765248e-06, 'vf_coef': 0.8067838931247773}
+Writing report to logs/opti_2t_1K_Reacher2Dof-v0/acktr/report_Reacher2Dof-v0_2-trials-1000-tpe-median_1599908904.csv
 pybullet build time: Sep  9 2020 17:03:46

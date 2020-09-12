@@ -1,0 +1,20 @@
+WARNING:tensorflow:
+The TensorFlow contrib module will not be included in TensorFlow 2.0.
+For more information, please see:
+  * https://github.com/tensorflow/community/blob/master/rfcs/20180907-contrib-sunset.md
+  * https://github.com/tensorflow/addons
+  * https://github.com/tensorflow/io (for I/O related ops)
+If you depend on functionality not listed there, please file an issue.
+
+usage: 2_train.py [-h] [--env ENV] [-tb TENSORBOARD_LOG] [-i TRAINED_AGENT]
+                  [--algo {a2c,acer,acktr,dqn,ddpg,her,sac,ppo2,trpo,td3}]
+                  [-n N_TIMESTEPS] [--log-interval LOG_INTERVAL]
+                  [--eval-freq EVAL_FREQ] [--eval-episodes EVAL_EPISODES]
+                  [--save-freq SAVE_FREQ] [-f LOG_FOLDER] [--seed SEED]
+                  [--n-trials N_TRIALS] [-optimize] [--n-jobs N_JOBS]
+                  [--sampler {random,tpe,skopt}]
+                  [--pruner {halving,median,none}] [--verbose VERBOSE]
+                  [--gym-packages GYM_PACKAGES [GYM_PACKAGES ...]]
+                  [-params HYPERPARAMS [HYPERPARAMS ...]] [-uuid]
+                  [--env-kwargs ENV_KWARGS [ENV_KWARGS ...]]
+2_train.py: error: argument --env: expected one argument

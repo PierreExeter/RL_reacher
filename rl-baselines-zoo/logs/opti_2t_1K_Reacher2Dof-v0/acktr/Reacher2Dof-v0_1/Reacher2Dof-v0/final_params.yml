@@ -1,0 +1,10 @@
+Reacher2Dof-v0:
+  ent_coef: 5.483573114765248e-06
+  gamma: 0.999
+  lr: 0.0004705233746312844
+  lr_schedule: constant
+  n_envs: 8
+  n_steps: 16
+  n_timesteps: 1000000.0
+  policy: MlpPolicy
+  vf_coef: 0.8067838931247773

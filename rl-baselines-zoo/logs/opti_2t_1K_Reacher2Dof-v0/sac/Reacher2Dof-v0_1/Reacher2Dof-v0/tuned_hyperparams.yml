@@ -1,0 +1,8 @@
+batch_size: 64
+buffer_size: 1000000
+ent_coef: 0.0001
+gamma: 0.98
+learning_starts: 1000
+lr: 0.15862044077320953
+net_arch: small
+train_freq: 100

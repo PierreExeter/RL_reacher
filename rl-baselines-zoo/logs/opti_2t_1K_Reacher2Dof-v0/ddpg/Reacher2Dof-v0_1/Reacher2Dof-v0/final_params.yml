@@ -1,0 +1,11 @@
+Reacher2Dof-v0:
+  batch_size: 32
+  gamma: 0.9999
+  lr: 0.0009556962779065655
+  memory_limit: 100000
+  n_timesteps: 1000000.0
+  noise_std: 0.9516298987982656
+  noise_type: ornstein-uhlenbeck
+  normalize_observations: true
+  normalize_returns: false
+  policy: MlpPolicy

@@ -1,0 +1,12 @@
+Reacher2Dof-v0:
+  batch_size: 32
+  cliprange: 0.1
+  ent_coef: 6.32003423057695e-08
+  gamma: 0.99
+  lambda: 0.9
+  lr: 0.006323051291783757
+  n_envs: 8
+  n_steps: 512
+  n_timesteps: 1000000.0
+  noptepochs: 10
+  policy: MlpPolicy

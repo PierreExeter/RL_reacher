@@ -15,7 +15,7 @@ Using 1 environments
 Overwriting n_timesteps with n=1000
 Optimizing hyperparameters
 Sampler: tpe - Pruner: median
-[I 2020-09-11 23:25:29,672] A new study created in memory with name: no-name-7af6c460-9bb5-48cf-a42b-16b43fc01cd1
+[I 2020-09-12 13:08:53,188] A new study created in memory with name: no-name-6a109f9c-9fea-4fbd-a580-5ce4e06f4e87
 WARNING:tensorflow:From /home/pierre/bin/anaconda3/envs/reacher_link/lib/python3.7/site-packages/stable_baselines/common/tf_util.py:191: The name tf.ConfigProto is deprecated. Please use tf.compat.v1.ConfigProto instead.
 
 WARNING:tensorflow:From /home/pierre/bin/anaconda3/envs/reacher_link/lib/python3.7/site-packages/stable_baselines/common/tf_util.py:200: The name tf.Session is deprecated. Please use tf.compat.v1.Session instead.
@@ -37,8 +37,6 @@ WARNING:tensorflow:From /home/pierre/bin/anaconda3/envs/reacher_link/lib/python3
 
 WARNING:tensorflow:From /home/pierre/bin/anaconda3/envs/reacher_link/lib/python3.7/site-packages/stable_baselines/sac/policies.py:63: The name tf.log is deprecated. Please use tf.math.log instead.
 
-WARNING:tensorflow:From /home/pierre/bin/anaconda3/envs/reacher_link/lib/python3.7/site-packages/stable_baselines/sac/sac.py:196: The name tf.get_variable is deprecated. Please use tf.compat.v1.get_variable instead.
-
 WARNING:tensorflow:From /home/pierre/bin/anaconda3/envs/reacher_link/lib/python3.7/site-packages/stable_baselines/sac/sac.py:254: The name tf.train.AdamOptimizer is deprecated. Please use tf.compat.v1.train.AdamOptimizer instead.
 
 WARNING:tensorflow:From /home/pierre/bin/anaconda3/envs/reacher_link/lib/python3.7/site-packages/stable_baselines/common/tf_util.py:449: The name tf.get_collection is deprecated. Please use tf.compat.v1.get_collection instead.
@@ -56,24 +54,24 @@ WARNING:tensorflow:From /home/pierre/bin/anaconda3/envs/reacher_link/lib/python3
 
 WARNING:tensorflow:From /home/pierre/bin/anaconda3/envs/reacher_link/lib/python3.7/site-packages/stable_baselines/sac/sac.py:314: The name tf.summary.merge_all is deprecated. Please use tf.compat.v1.summary.merge_all instead.
 
-/home/pierre/bin/anaconda3/envs/reacher_link/lib/python3.7/site-packages/stable_baselines/common/callbacks.py:287: UserWarning: Training and eval env are not of the same type<stable_baselines.common.base_class._UnvecWrapper object at 0x7f37a6705710> != <stable_baselines.common.vec_env.dummy_vec_env.DummyVecEnv object at 0x7f378c7e4048>
+/home/pierre/bin/anaconda3/envs/reacher_link/lib/python3.7/site-packages/stable_baselines/common/callbacks.py:287: UserWarning: Training and eval env are not of the same type<stable_baselines.common.base_class._UnvecWrapper object at 0x7f904959f6a0> != <stable_baselines.common.vec_env.dummy_vec_env.DummyVecEnv object at 0x7f90480ae550>
   "{} != {}".format(self.training_env, self.eval_env))
-/home/pierre/bin/anaconda3/envs/reacher_link/lib/python3.7/site-packages/stable_baselines/common/callbacks.py:287: UserWarning: Training and eval env are not of the same type<stable_baselines.common.base_class._UnvecWrapper object at 0x7f37a6702c18> != <stable_baselines.common.vec_env.dummy_vec_env.DummyVecEnv object at 0x7f378c779a90>
+/home/pierre/bin/anaconda3/envs/reacher_link/lib/python3.7/site-packages/stable_baselines/common/callbacks.py:287: UserWarning: Training and eval env are not of the same type<stable_baselines.common.base_class._UnvecWrapper object at 0x7f904959f240> != <stable_baselines.common.vec_env.dummy_vec_env.DummyVecEnv object at 0x7f904809f4e0>
   "{} != {}".format(self.training_env, self.eval_env))
-[I 2020-09-11 23:25:46,230] Trial 1 finished with value: 37.862091064453125 and parameters: {'gamma': 0.98, 'lr': 7.420429730521695e-05, 'batch_size': 128, 'buffer_size': 10000, 'learning_starts': 10000, 'train_freq': 10, 'ent_coef': 0.1, 'net_arch': 'small'}. Best is trial 1 with value: 37.862091064453125.
-[I 2020-09-11 23:25:46,704] Trial 0 finished with value: 21.262344360351562 and parameters: {'gamma': 0.9999, 'lr': 0.00044161304244992697, 'batch_size': 32, 'buffer_size': 1000000, 'learning_starts': 20000, 'train_freq': 1, 'ent_coef': 'auto', 'net_arch': 'big', 'target_entropy': -100}. Best is trial 0 with value: 21.262344360351562.
+[I 2020-09-12 13:09:10,698] Trial 0 finished with value: 69.69486236572266 and parameters: {'gamma': 0.95, 'lr': 0.005110187540795649, 'batch_size': 32, 'buffer_size': 100000, 'learning_starts': 1000, 'train_freq': 300, 'ent_coef': 0.5, 'net_arch': 'big'}. Best is trial 0 with value: 69.69486236572266.
+[I 2020-09-12 13:09:10,739] Trial 1 finished with value: -2.348376989364624 and parameters: {'gamma': 0.98, 'lr': 0.15862044077320953, 'batch_size': 64, 'buffer_size': 1000000, 'learning_starts': 1000, 'train_freq': 100, 'ent_coef': 0.0001, 'net_arch': 'small'}. Best is trial 1 with value: -2.348376989364624.
 Number of finished trials:  2
 Best trial:
-Value:  21.262344360351562
+Value:  -2.348376989364624
 Params: 
-    gamma: 0.9999
-    lr: 0.00044161304244992697
-    batch_size: 32
+    gamma: 0.98
+    lr: 0.15862044077320953
+    batch_size: 64
     buffer_size: 1000000
-    learning_starts: 20000
-    train_freq: 1
-    ent_coef: auto
-    net_arch: big
-    target_entropy: -100
-Writing report to logs/opti_2t_1K_Reacher2Dof-v0/sac/report_Reacher2Dof-v0_2-trials-1000-tpe-median_1599859546.csv
+    learning_starts: 1000
+    train_freq: 100
+    ent_coef: 0.0001
+    net_arch: small
+best params:  {'gamma': 0.98, 'lr': 0.15862044077320953, 'batch_size': 64, 'buffer_size': 1000000, 'learning_starts': 1000, 'train_freq': 100, 'ent_coef': 0.0001, 'net_arch': 'small'}
+Writing report to logs/opti_2t_1K_Reacher2Dof-v0/sac/report_Reacher2Dof-v0_2-trials-1000-tpe-median_1599908950.csv
 pybullet build time: Sep  9 2020 17:03:46
