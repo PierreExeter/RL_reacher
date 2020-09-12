@@ -47,392 +47,392 @@ WARNING:tensorflow:From /home/pierre/bin/anaconda3/envs/reacher_link/lib/python3
 WARNING:tensorflow:From /home/pierre/bin/anaconda3/envs/reacher_link/lib/python3.7/site-packages/stable_baselines/trpo_mpi/trpo_mpi.py:266: The name tf.summary.merge_all is deprecated. Please use tf.compat.v1.summary.merge_all instead.
 
 Log path: logs/train_10K_Reacher2Dof-v0/trpo/Reacher2Dof-v0_2
-/home/pierre/bin/anaconda3/envs/reacher_link/lib/python3.7/site-packages/stable_baselines/common/callbacks.py:287: UserWarning: Training and eval env are not of the same type<stable_baselines.common.base_class._UnvecWrapper object at 0x7f0c7d5114a8> != <stable_baselines.common.vec_env.dummy_vec_env.DummyVecEnv object at 0x7f0c7d5110b8>
+/home/pierre/bin/anaconda3/envs/reacher_link/lib/python3.7/site-packages/stable_baselines/common/callbacks.py:287: UserWarning: Training and eval env are not of the same type<stable_baselines.common.base_class._UnvecWrapper object at 0x7f15c4f362e8> != <stable_baselines.common.vec_env.dummy_vec_env.DummyVecEnv object at 0x7f15c4f36278>
   "{} != {}".format(self.training_env, self.eval_env))
 ********** Iteration 0 ************
 Optimizing Policy...
 sampling
-done in 0.649 seconds
+done in 0.683 seconds
 computegrad
 WARNING:tensorflow:From /home/pierre/bin/anaconda3/envs/reacher_link/lib/python3.7/site-packages/stable_baselines/trpo_mpi/trpo_mpi.py:364: The name tf.RunOptions is deprecated. Please use tf.compat.v1.RunOptions instead.
 
-done in 0.099 seconds
+done in 0.105 seconds
 conjugate_gradient
       iter residual norm  soln norm
-         0     0.0637          0
-         1      0.018     0.0298
-         2    0.00144     0.0829
-         3    0.00169      0.187
-         4   0.000975      0.265
-         5    0.00124        0.3
-         6    0.00156       0.31
-         7   0.000817      0.494
-         8   0.000153      0.585
-         9   0.000125      0.737
-        10   0.000212      0.825
-done in 0.157 seconds
-Expected: 0.026 Actual: 0.026
+         0     0.0565          0
+         1     0.0127     0.0218
+         2    0.00659      0.119
+         3    0.00613        0.3
+         4    0.00432       0.48
+         5     0.0152      0.556
+         6    0.00265      0.594
+         7   0.000916      0.764
+         8   0.000666      0.848
+         9   0.000169       1.21
+        10   0.000525       1.22
+done in 0.178 seconds
+Expected: 0.036 Actual: 0.038
 Stepsize OK!
 vf
-done in 0.054 seconds
-------------------------------------------
-| EpLenMean               | 150          |
-| EpRewMean               | -13.2        |
-| EpThisIter              | 6            |
-| EpisodesSoFar           | 6            |
-| TimeElapsed             | 1.03         |
-| TimestepsSoFar          | 1024         |
-| entloss                 | 0.0          |
-| entropy                 | 2.8582757    |
-| explained_variance_t... | 0.00628      |
-| meankl                  | 0.0082490705 |
-| optimgain               | 0.025877208  |
-| surrgain                | 0.025877208  |
-------------------------------------------
+done in 0.055 seconds
+-----------------------------------------
+| EpLenMean               | 150         |
+| EpRewMean               | -18         |
+| EpThisIter              | 6           |
+| EpisodesSoFar           | 6           |
+| TimeElapsed             | 1.1         |
+| TimestepsSoFar          | 1024        |
+| entloss                 | 0.0         |
+| entropy                 | 2.8537595   |
+| explained_variance_t... | -0.000578   |
+| meankl                  | 0.007863039 |
+| optimgain               | 0.038255677 |
+| surrgain                | 0.038255677 |
+-----------------------------------------
 ********** Iteration 1 ************
 Optimizing Policy...
 sampling
-done in 0.580 seconds
+done in 0.597 seconds
 computegrad
-done in 0.003 seconds
+done in 0.005 seconds
 conjugate_gradient
       iter residual norm  soln norm
-         0     0.0183          0
-         1     0.0375     0.0654
-         2    0.00334     0.0891
-         3      0.015      0.104
-         4    0.00218      0.165
-         5    0.00292      0.285
-         6    0.00224      0.484
-         7   0.000978      0.578
-         8    0.00913      0.606
-         9   0.000721      0.671
-        10    0.00287      0.704
-done in 0.013 seconds
-Expected: 0.026 Actual: 0.026
+         0     0.0893          0
+         1     0.0297     0.0228
+         2     0.0208      0.105
+         3    0.00445      0.117
+         4    0.00271      0.162
+         5     0.0041      0.388
+         6     0.0028       0.52
+         7    0.00152      0.618
+         8     0.0124      0.791
+         9    0.00215      0.824
+        10     0.0043      0.892
+done in 0.017 seconds
+Expected: 0.033 Actual: 0.027
 Stepsize OK!
 vf
-done in 0.021 seconds
-------------------------------------------
-| EpLenMean               | 150          |
-| EpRewMean               | -15.1        |
-| EpThisIter              | 7            |
-| EpisodesSoFar           | 13           |
-| TimeElapsed             | 1.66         |
-| TimestepsSoFar          | 2048         |
-| entloss                 | 0.0          |
-| entropy                 | 2.8209925    |
-| explained_variance_t... | -0.0201      |
-| meankl                  | 0.0149935605 |
-| optimgain               | 0.02568912   |
-| surrgain                | 0.02568912   |
-------------------------------------------
+done in 0.023 seconds
+-----------------------------------------
+| EpLenMean               | 150         |
+| EpRewMean               | -19.5       |
+| EpThisIter              | 7           |
+| EpisodesSoFar           | 13          |
+| TimeElapsed             | 1.75        |
+| TimestepsSoFar          | 2048        |
+| entloss                 | 0.0         |
+| entropy                 | 2.875081    |
+| explained_variance_t... | -0.0202     |
+| meankl                  | 0.011983184 |
+| optimgain               | 0.027124383 |
+| surrgain                | 0.027124383 |
+-----------------------------------------
 ********** Iteration 2 ************
 Optimizing Policy...
 sampling
-done in 0.588 seconds
+done in 0.659 seconds
 computegrad
-done in 0.003 seconds
+done in 0.004 seconds
 conjugate_gradient
       iter residual norm  soln norm
-         0      0.126          0
-         1     0.0213     0.0165
-         2     0.0429     0.0413
-         3    0.00424     0.0898
-         4    0.00352      0.178
-         5     0.0018      0.237
-         6    0.00207      0.322
-         7     0.0203      0.352
-         8    0.00139      0.456
-         9    0.00246      0.464
-        10   0.000645      0.522
-done in 0.014 seconds
-Expected: 0.027 Actual: 0.026
+         0     0.0645          0
+         1     0.0114     0.0294
+         2    0.00959      0.064
+         3    0.00391     0.0783
+         4    0.00268      0.156
+         5    0.00208      0.214
+         6    0.00197      0.303
+         7    0.00303      0.409
+         8     0.0021      0.709
+         9    0.00551      0.815
+        10    0.00111      0.847
+done in 0.015 seconds
+Expected: 0.027 Actual: 0.021
 Stepsize OK!
 vf
-done in 0.022 seconds
+done in 0.021 seconds
 -----------------------------------------
 | EpLenMean               | 150         |
-| EpRewMean               | -17.2       |
+| EpRewMean               | -18.1       |
 | EpThisIter              | 7           |
 | EpisodesSoFar           | 20          |
-| TimeElapsed             | 2.29        |
+| TimeElapsed             | 2.45        |
 | TimestepsSoFar          | 3072        |
 | entloss                 | 0.0         |
-| entropy                 | 2.797446    |
-| explained_variance_t... | 0.0367      |
-| meankl                  | 0.010072967 |
-| optimgain               | 0.02608918  |
-| surrgain                | 0.02608918  |
+| entropy                 | 2.8496313   |
+| explained_variance_t... | -0.00407    |
+| meankl                  | 0.005889199 |
+| optimgain               | 0.020586163 |
+| surrgain                | 0.020586163 |
 -----------------------------------------
 ********** Iteration 3 ************
 Optimizing Policy...
 sampling
-done in 0.587 seconds
+done in 0.630 seconds
 computegrad
-done in 0.003 seconds
+done in 0.005 seconds
 conjugate_gradient
       iter residual norm  soln norm
-         0     0.0307          0
-         1     0.0171     0.0112
-         2    0.00779      0.108
-         3     0.0174      0.114
-         4    0.00254      0.224
-         5     0.0042      0.315
-         6    0.00425      0.416
-         7    0.00384      0.547
-         8     0.0187      0.573
-         9      0.029      0.666
-        10    0.00242       0.71
-done in 0.013 seconds
-Expected: 0.028 Actual: 0.016
+         0      0.017          0
+         1     0.0138     0.0628
+         2    0.00214     0.0774
+         3    0.00517      0.101
+         4    0.00297      0.122
+         5    0.00319       0.28
+         6    0.00151       0.39
+         7    0.00146      0.459
+         8   0.000744      0.521
+         9   0.000436      0.558
+        10    0.00475      0.616
+done in 0.016 seconds
+Expected: 0.023 Actual: 0.023
 Stepsize OK!
 vf
-done in 0.020 seconds
+done in 0.024 seconds
 -----------------------------------------
 | EpLenMean               | 150         |
 | EpRewMean               | -16.3       |
 | EpThisIter              | 7           |
 | EpisodesSoFar           | 27          |
-| TimeElapsed             | 2.92        |
+| TimeElapsed             | 3.13        |
 | TimestepsSoFar          | 4096        |
 | entloss                 | 0.0         |
-| entropy                 | 2.797036    |
-| explained_variance_t... | -0.0367     |
-| meankl                  | 0.012988325 |
-| optimgain               | 0.015964556 |
-| surrgain                | 0.015964556 |
+| entropy                 | 2.8169637   |
+| explained_variance_t... | -0.00252    |
+| meankl                  | 0.009486989 |
+| optimgain               | 0.023486163 |
+| surrgain                | 0.023486163 |
 -----------------------------------------
 ********** Iteration 4 ************
 Optimizing Policy...
 sampling
-done in 0.575 seconds
+done in 0.636 seconds
 computegrad
-done in 0.003 seconds
+done in 0.004 seconds
 conjugate_gradient
       iter residual norm  soln norm
-         0      0.068          0
-         1     0.0191     0.0116
-         2     0.0737     0.0535
-         3    0.00849      0.108
-         4    0.00952      0.304
-         5    0.00586      0.435
-         6    0.00267       0.52
-         7     0.0143       0.58
-         8    0.00256      0.593
-         9     0.0168      0.632
-        10    0.00104       0.66
-done in 0.013 seconds
-Expected: 0.032 Actual: 0.016
+         0     0.0379          0
+         1     0.0172     0.0188
+         2    0.00223     0.0695
+         3    0.00322     0.0726
+         4    0.00306      0.143
+         5    0.00252      0.264
+         6    0.00337      0.445
+         7   0.000959      0.555
+         8    0.00147      0.633
+         9    0.00469      0.654
+        10   0.000824      0.698
+done in 0.014 seconds
+Expected: 0.024 Actual: 0.016
 Stepsize OK!
 vf
 done in 0.021 seconds
------------------------------------------
-| EpLenMean               | 150         |
-| EpRewMean               | -16.5       |
-| EpThisIter              | 7           |
-| EpisodesSoFar           | 34          |
-| TimeElapsed             | 3.54        |
-| TimestepsSoFar          | 5120        |
-| entloss                 | 0.0         |
-| entropy                 | 2.8080418   |
-| explained_variance_t... | -0.0252     |
-| meankl                  | 0.008381998 |
-| optimgain               | 0.016121332 |
-| surrgain                | 0.016121332 |
------------------------------------------
+------------------------------------------
+| EpLenMean               | 150          |
+| EpRewMean               | -14.9        |
+| EpThisIter              | 7            |
+| EpisodesSoFar           | 34           |
+| TimeElapsed             | 3.82         |
+| TimestepsSoFar          | 5120         |
+| entloss                 | 0.0          |
+| entropy                 | 2.8011272    |
+| explained_variance_t... | -0.039       |
+| meankl                  | 0.0115748495 |
+| optimgain               | 0.016438529  |
+| surrgain                | 0.016438529  |
+------------------------------------------
 ********** Iteration 5 ************
 Optimizing Policy...
 sampling
-done in 0.582 seconds
+done in 0.575 seconds
 computegrad
-done in 0.003 seconds
+done in 0.004 seconds
 conjugate_gradient
       iter residual norm  soln norm
-         0      0.195          0
-         1     0.0331     0.0193
-         2      0.117     0.0573
-         3    0.00538      0.146
-         4    0.00406      0.215
-         5    0.00294      0.336
-         6    0.00396      0.503
-         7     0.0254      0.612
-         8     0.0044      0.648
-         9     0.0212      0.689
-        10    0.00161      0.784
-done in 0.012 seconds
-Expected: 0.035 Actual: 0.027
+         0     0.0265          0
+         1     0.0156     0.0117
+         2     0.0332     0.0869
+         3    0.00271      0.104
+         4    0.00246      0.158
+         5    0.00172      0.277
+         6    0.00348      0.547
+         7     0.0128      0.794
+         8    0.00105      0.821
+         9    0.00277      0.934
+        10   0.000207      0.939
+done in 0.013 seconds
+Expected: 0.028 Actual: 0.027
+Stepsize OK!
+vf
+done in 0.023 seconds
+-----------------------------------------
+| EpLenMean               | 150         |
+| EpRewMean               | -13.9       |
+| EpThisIter              | 6           |
+| EpisodesSoFar           | 40          |
+| TimeElapsed             | 4.44        |
+| TimestepsSoFar          | 6144        |
+| entloss                 | 0.0         |
+| entropy                 | 2.82029     |
+| explained_variance_t... | 0.00312     |
+| meankl                  | 0.009332495 |
+| optimgain               | 0.026857309 |
+| surrgain                | 0.026857309 |
+-----------------------------------------
+********** Iteration 6 ************
+Optimizing Policy...
+sampling
+done in 0.598 seconds
+computegrad
+done in 0.004 seconds
+conjugate_gradient
+      iter residual norm  soln norm
+         0     0.0517          0
+         1     0.0172     0.0128
+         2     0.0212     0.0584
+         3    0.00185     0.0685
+         4    0.00193      0.118
+         5    0.00144      0.168
+         6    0.00164      0.294
+         7    0.00105      0.354
+         8    0.00729      0.371
+         9    0.00162       0.45
+        10    0.00152      0.457
+done in 0.014 seconds
+Expected: 0.021 Actual: 0.021
 Stepsize OK!
 vf
 done in 0.022 seconds
 -----------------------------------------
 | EpLenMean               | 150         |
-| EpRewMean               | -16.4       |
-| EpThisIter              | 6           |
-| EpisodesSoFar           | 40          |
-| TimeElapsed             | 4.16        |
-| TimestepsSoFar          | 6144        |
-| entloss                 | 0.0         |
-| entropy                 | 2.8275754   |
-| explained_variance_t... | 0.0194      |
-| meankl                  | 0.010738538 |
-| optimgain               | 0.027354382 |
-| surrgain                | 0.027354382 |
------------------------------------------
-********** Iteration 6 ************
-Optimizing Policy...
-sampling
-done in 0.578 seconds
-computegrad
-done in 0.003 seconds
-conjugate_gradient
-      iter residual norm  soln norm
-         0      0.108          0
-         1     0.0308     0.0203
-         2    0.00635        0.1
-         3     0.0319      0.113
-         4    0.00686      0.188
-         5    0.00512      0.287
-         6    0.00312      0.429
-         7    0.00148      0.512
-         8     0.0243      0.575
-         9    0.00526      0.632
-        10     0.0132       0.66
-done in 0.014 seconds
-Expected: 0.032 Actual: 0.028
-Stepsize OK!
-vf
-done in 0.021 seconds
------------------------------------------
-| EpLenMean               | 150         |
-| EpRewMean               | -16.1       |
+| EpRewMean               | -12.8       |
 | EpThisIter              | 7           |
 | EpisodesSoFar           | 47          |
-| TimeElapsed             | 4.79        |
+| TimeElapsed             | 5.08        |
 | TimestepsSoFar          | 7168        |
 | entloss                 | 0.0         |
-| entropy                 | 2.8254976   |
-| explained_variance_t... | 0.0129      |
-| meankl                  | 0.008822693 |
-| optimgain               | 0.027723448 |
-| surrgain                | 0.027723448 |
+| entropy                 | 2.7931206   |
+| explained_variance_t... | 0.012       |
+| meankl                  | 0.009822154 |
+| optimgain               | 0.020886816 |
+| surrgain                | 0.020886816 |
 -----------------------------------------
 ********** Iteration 7 ************
 Optimizing Policy...
 sampling
-done in 0.583 seconds
+done in 0.575 seconds
 computegrad
-done in 0.003 seconds
+done in 0.004 seconds
 conjugate_gradient
       iter residual norm  soln norm
-         0      0.111          0
-         1      0.149     0.0619
-         2     0.0118      0.134
-         3     0.0107      0.138
-         4    0.00661      0.181
-         5     0.0032      0.322
-         6      0.001      0.385
-         7    0.00316       0.43
-         8    0.00347      0.625
-         9    0.00765      0.653
-        10    0.00339      0.741
+         0     0.0337          0
+         1     0.0724     0.0344
+         2    0.00968     0.0984
+         3     0.0162      0.106
+         4    0.00548      0.187
+         5    0.00254      0.263
+         6    0.00343      0.394
+         7    0.00211      0.538
+         8     0.0151      0.571
+         9    0.00154      0.609
+        10     0.0158      0.652
+done in 0.014 seconds
+Expected: 0.030 Actual: 0.027
+Stepsize OK!
+vf
+done in 0.020 seconds
+-----------------------------------------
+| EpLenMean               | 150         |
+| EpRewMean               | -10.6       |
+| EpThisIter              | 7           |
+| EpisodesSoFar           | 54          |
+| TimeElapsed             | 5.71        |
+| TimestepsSoFar          | 8192        |
+| entloss                 | 0.0         |
+| entropy                 | 2.8047702   |
+| explained_variance_t... | -0.0327     |
+| meankl                  | 0.00910468  |
+| optimgain               | 0.027325671 |
+| surrgain                | 0.027325671 |
+-----------------------------------------
+********** Iteration 8 ************
+Optimizing Policy...
+sampling
+done in 0.583 seconds
+computegrad
+done in 0.004 seconds
+conjugate_gradient
+      iter residual norm  soln norm
+         0     0.0333          0
+         1     0.0325     0.0141
+         2     0.0437     0.0918
+         3    0.00403      0.111
+         4    0.00288      0.158
+         5    0.00419      0.251
+         6    0.00403      0.436
+         7    0.00593      0.675
+         8    0.00451      0.688
+         9    0.00893      0.755
+        10    0.00111      0.773
 done in 0.013 seconds
-Expected: 0.038 Actual: 0.034
+Expected: 0.029 Actual: 0.024
+Stepsize OK!
+vf
+done in 0.019 seconds
+-----------------------------------------
+| EpLenMean               | 150         |
+| EpRewMean               | -9.92       |
+| EpThisIter              | 7           |
+| EpisodesSoFar           | 61          |
+| TimeElapsed             | 6.33        |
+| TimestepsSoFar          | 9216        |
+| entloss                 | 0.0         |
+| entropy                 | 2.8057353   |
+| explained_variance_t... | 0.0201      |
+| meankl                  | 0.007980948 |
+| optimgain               | 0.023582328 |
+| surrgain                | 0.023582328 |
+-----------------------------------------
+********** Iteration 9 ************
+Optimizing Policy...
+sampling
+Eval num_timesteps=9216, episode_reward=-0.53 +/- 8.76
+Episode length: 150.00 +/- 0.00
+New best mean reward!
+done in 1.147 seconds
+computegrad
+done in 0.004 seconds
+conjugate_gradient
+      iter residual norm  soln norm
+         0      0.185          0
+         1     0.0713     0.0213
+         2     0.0105      0.117
+         3     0.0492      0.145
+         4    0.00555      0.183
+         5    0.00312      0.239
+         6    0.00321      0.456
+         7     0.0027      0.512
+         8    0.00323      0.518
+         9    0.00534      0.627
+        10     0.0219      0.742
+done in 0.013 seconds
+Expected: 0.037 Actual: 0.037
 Stepsize OK!
 vf
 done in 0.021 seconds
 -----------------------------------------
 | EpLenMean               | 150         |
-| EpRewMean               | -16.1       |
-| EpThisIter              | 7           |
-| EpisodesSoFar           | 54          |
-| TimeElapsed             | 5.41        |
-| TimestepsSoFar          | 8192        |
-| entloss                 | 0.0         |
-| entropy                 | 2.8238804   |
-| explained_variance_t... | 0.0493      |
-| meankl                  | 0.009785575 |
-| optimgain               | 0.03369589  |
-| surrgain                | 0.03369589  |
------------------------------------------
-********** Iteration 8 ************
-Optimizing Policy...
-sampling
-done in 0.580 seconds
-computegrad
-done in 0.003 seconds
-conjugate_gradient
-      iter residual norm  soln norm
-         0     0.0173          0
-         1     0.0342     0.0156
-         2    0.00789      0.103
-         3     0.0597      0.175
-         4    0.00588       0.25
-         5    0.00411      0.402
-         6    0.00248      0.513
-         7    0.00573      0.635
-         8    0.00707      0.648
-         9    0.00246       0.81
-        10     0.0165      0.872
-done in 0.013 seconds
-Expected: 0.032 Actual: 0.046
-Stepsize OK!
-vf
-done in 0.020 seconds
------------------------------------------
-| EpLenMean               | 150         |
-| EpRewMean               | -15         |
-| EpThisIter              | 7           |
-| EpisodesSoFar           | 61          |
-| TimeElapsed             | 6.03        |
-| TimestepsSoFar          | 9216        |
-| entloss                 | 0.0         |
-| entropy                 | 2.8132405   |
-| explained_variance_t... | 0.0288      |
-| meankl                  | 0.010250864 |
-| optimgain               | 0.04577987  |
-| surrgain                | 0.04577987  |
------------------------------------------
-********** Iteration 9 ************
-Optimizing Policy...
-sampling
-Eval num_timesteps=9216, episode_reward=-4.35 +/- 9.59
-Episode length: 150.00 +/- 0.00
-New best mean reward!
-done in 1.074 seconds
-computegrad
-done in 0.003 seconds
-conjugate_gradient
-      iter residual norm  soln norm
-         0     0.0122          0
-         1     0.0285     0.0221
-         2     0.0111     0.0514
-         3    0.00143     0.0576
-         4    0.00144      0.131
-         5    0.00142      0.191
-         6    0.00126      0.283
-         7    0.00126      0.349
-         8    0.00266      0.356
-         9    0.00198      0.396
-        10   0.000875      0.405
-done in 0.012 seconds
-Expected: 0.018 Actual: 0.016
-Stepsize OK!
-vf
-done in 0.020 seconds
------------------------------------------
-| EpLenMean               | 150         |
-| EpRewMean               | -13.3       |
+| EpRewMean               | -8.1        |
 | EpThisIter              | 7           |
 | EpisodesSoFar           | 68          |
-| TimeElapsed             | 7.15        |
+| TimeElapsed             | 7.52        |
 | TimestepsSoFar          | 10240       |
 | entloss                 | 0.0         |
-| entropy                 | 2.8052285   |
-| explained_variance_t... | -0.0297     |
-| meankl                  | 0.009134547 |
-| optimgain               | 0.015988475 |
-| surrgain                | 0.015988475 |
+| entropy                 | 2.8322423   |
+| explained_variance_t... | -0.0728     |
+| meankl                  | 0.008743992 |
+| optimgain               | 0.036760755 |
+| surrgain                | 0.036760755 |
 -----------------------------------------
 Saving to logs/train_10K_Reacher2Dof-v0/trpo/Reacher2Dof-v0_2
 pybullet build time: Sep  9 2020 17:03:46

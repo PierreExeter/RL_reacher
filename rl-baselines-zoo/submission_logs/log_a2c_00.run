@@ -52,37 +52,37 @@ WARNING:tensorflow:From /home/pierre/bin/anaconda3/envs/reacher_link/lib/python3
 
 WARNING:tensorflow:From /home/pierre/bin/anaconda3/envs/reacher_link/lib/python3.7/site-packages/stable_baselines/a2c/a2c.py:196: The name tf.summary.merge_all is deprecated. Please use tf.compat.v1.summary.merge_all instead.
 
-Log path: logs/train_10K_Reacher2Dof-v0/a2c/Reacher2Dof-v0_3
+Log path: logs/train_10K_Reacher2Dof-v0/a2c/Reacher2Dof-v0_1
 ---------------------------------
-| explained_variance | -0.0642  |
-| fps                | 122      |
+| explained_variance | 0.0197   |
+| fps                | 118      |
 | nupdates           | 1        |
 | policy_entropy     | 2.84     |
 | total_timesteps    | 40       |
-| value_loss         | 1.03     |
+| value_loss         | 0.911    |
 ---------------------------------
 ---------------------------------
 | ep_len_mean        | 150      |
-| ep_reward_mean     | -13.9    |
-| explained_variance | 0.031    |
-| fps                | 2713     |
+| ep_reward_mean     | -15.4    |
+| explained_variance | -0.0141  |
+| fps                | 2592     |
 | nupdates           | 100      |
 | policy_entropy     | 2.84     |
 | total_timesteps    | 4000     |
-| value_loss         | 6.26     |
+| value_loss         | 11.8     |
 ---------------------------------
 ---------------------------------
 | ep_len_mean        | 150      |
-| ep_reward_mean     | -13.1    |
-| explained_variance | 0.0806   |
-| fps                | 3024     |
+| ep_reward_mean     | -15.3    |
+| explained_variance | 0.000449 |
+| fps                | 2942     |
 | nupdates           | 200      |
 | policy_entropy     | 2.84     |
 | total_timesteps    | 8000     |
-| value_loss         | 2.82     |
+| value_loss         | 18.2     |
 ---------------------------------
-Eval num_timesteps=10000, episode_reward=6.96 +/- 12.69
+Eval num_timesteps=10000, episode_reward=4.37 +/- 7.88
 Episode length: 150.00 +/- 0.00
 New best mean reward!
-Saving to logs/train_10K_Reacher2Dof-v0/a2c/Reacher2Dof-v0_3
+Saving to logs/train_10K_Reacher2Dof-v0/a2c/Reacher2Dof-v0_1
 pybullet build time: Sep  9 2020 17:03:46

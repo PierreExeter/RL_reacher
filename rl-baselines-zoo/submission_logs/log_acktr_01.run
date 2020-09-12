@@ -69,13 +69,13 @@ WARNING:tensorflow:From /home/pierre/bin/anaconda3/envs/reacher_link/lib/python3
 WARNING:tensorflow:From /home/pierre/bin/anaconda3/envs/reacher_link/lib/python3.7/site-packages/stable_baselines/acktr/acktr.py:319: The name tf.variables_initializer is deprecated. Please use tf.compat.v1.variables_initializer instead.
 
 ---------------------------------
-| explained_variance | -0.0033  |
-| fps                | 210      |
+| explained_variance | -0.00817 |
+| fps                | 203      |
 | nupdates           | 1        |
 | policy_entropy     | 2.84     |
-| policy_loss        | 0.0097   |
+| policy_loss        | -0.134   |
 | total_timesteps    | 160      |
-| value_loss         | 43       |
+| value_loss         | 44       |
 ---------------------------------
 Saving to logs/train_10K_Reacher2Dof-v0/acktr/Reacher2Dof-v0_2
 pybullet build time: Sep  9 2020 17:03:46

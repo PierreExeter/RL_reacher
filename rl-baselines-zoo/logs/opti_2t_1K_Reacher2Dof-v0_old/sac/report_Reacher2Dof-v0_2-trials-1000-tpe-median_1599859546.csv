@@ -1,3 +1,0 @@
-,number,value,datetime_start,datetime_complete,duration,params_batch_size,params_buffer_size,params_ent_coef,params_gamma,params_learning_starts,params_lr,params_net_arch,params_target_entropy,params_train_freq,state
-0,0,21.262344360351562,2020-09-11 23:25:29.675074,2020-09-11 23:25:46.704521,0 days 00:00:17.029447,32,1000000,auto,0.9999,20000,0.00044161304244992697,big,-100.0,1,COMPLETE
-1,1,37.862091064453125,2020-09-11 23:25:29.677288,2020-09-11 23:25:46.229669,0 days 00:00:16.552381,128,10000,0.1,0.98,10000,7.420429730521695e-05,small,,10,COMPLETE

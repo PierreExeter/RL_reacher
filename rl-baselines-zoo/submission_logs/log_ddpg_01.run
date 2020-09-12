@@ -51,33 +51,33 @@ WARNING:tensorflow:From /home/pierre/bin/anaconda3/envs/reacher_link/lib/python3
 WARNING:tensorflow:From /home/pierre/bin/anaconda3/envs/reacher_link/lib/python3.7/site-packages/stable_baselines/ddpg/ddpg.py:452: The name tf.summary.merge_all is deprecated. Please use tf.compat.v1.summary.merge_all instead.
 
 Log path: logs/train_10K_Reacher2Dof-v0/ddpg/Reacher2Dof-v0_2
-/home/pierre/bin/anaconda3/envs/reacher_link/lib/python3.7/site-packages/stable_baselines/common/callbacks.py:287: UserWarning: Training and eval env are not of the same type<TimeLimit<ReacherBulletEnv2<Reacher2Dof-v0>>> != <stable_baselines.common.vec_env.dummy_vec_env.DummyVecEnv object at 0x7f8a7b281f60>
+/home/pierre/bin/anaconda3/envs/reacher_link/lib/python3.7/site-packages/stable_baselines/common/callbacks.py:287: UserWarning: Training and eval env are not of the same type<TimeLimit<ReacherBulletEnv2<Reacher2Dof-v0>>> != <stable_baselines.common.vec_env.dummy_vec_env.DummyVecEnv object at 0x7fb10f681588>
   "{} != {}".format(self.training_env, self.eval_env))
-Eval num_timesteps=10000, episode_reward=-6.71 +/- 10.74
+Eval num_timesteps=10000, episode_reward=-7.71 +/- 10.10
 Episode length: 150.00 +/- 0.00
 New best mean reward!
 --------------------------------------
-| reference_Q_mean        | -0.808   |
-| reference_Q_std         | 3.42     |
-| reference_action_mean   | 0.652    |
-| reference_action_std    | 0.685    |
-| reference_actor_Q_mean  | -0.328   |
-| reference_actor_Q_std   | 3.17     |
-| rollout/Q_mean          | -0.735   |
-| rollout/actions_mean    | 0.379    |
-| rollout/actions_std     | 0.716    |
+| reference_Q_mean        | 0.649    |
+| reference_Q_std         | 1.2      |
+| reference_action_mean   | 0.275    |
+| reference_action_std    | 0.648    |
+| reference_actor_Q_mean  | 1.01     |
+| reference_actor_Q_std   | 1.25     |
+| rollout/Q_mean          | 0.134    |
+| rollout/actions_mean    | 0.405    |
+| rollout/actions_std     | 0.516    |
 | rollout/episode_steps   | 150      |
 | rollout/episodes        | 66       |
-| rollout/return          | -39.2    |
-| rollout/return_history  | -39.2    |
-| success rate            | 0        |
-| total/duration          | 16.3     |
+| rollout/return          | -2.95    |
+| rollout/return_history  | -2.95    |
+| success rate            | 0.0152   |
+| total/duration          | 17.3     |
 | total/episodes          | 66       |
 | total/epochs            | 1        |
 | total/steps             | 9998     |
-| total/steps_per_second  | 614      |
-| train/loss_actor        | 0.133    |
-| train/loss_critic       | 2.02     |
+| total/steps_per_second  | 579      |
+| train/loss_actor        | -0.815   |
+| train/loss_critic       | 0.269    |
 | train/param_noise_di... | 0        |
 --------------------------------------
 

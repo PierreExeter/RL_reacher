@@ -4,20 +4,28 @@ channels:
   - conda-forge
 dependencies:
   - _libgcc_mutex=0.1=main
+  - astroid=2.4.2=py37_0
   - ca-certificates=2020.7.22=0
   - certifi=2020.6.20=py37_0
+  - isort=5.4.2=py37_0
+  - lazy-object-proxy=1.4.3=py37h7b6447c_0
   - libedit=3.1.20191231=h14c3975_1
   - libffi=3.2.1=hd88cf55_4
   - libgcc-ng=9.1.0=hdf63c60_0
   - libstdcxx-ng=9.1.0=hdf63c60_0
+  - mccabe=0.6.1=py37_1
   - ncurses=6.2=he6710b0_1
   - openssl=1.0.2u=h7b6447c_0
   - pip=20.2.2=py37_0
+  - pylint=2.6.0=py37_0
   - python=3.7.0=h6e4f718_3
   - readline=7.0=h7b6447c_5
   - setuptools=49.6.0=py37_0
+  - six=1.15.0=py_0
   - sqlite=3.33.0=h62c20be_0
   - tk=8.6.10=hbc83047_0
+  - toml=0.10.1=py_0
+  - typed-ast=1.4.1=py37h7b6447c_0
   - wheel=0.35.1=py_0
   - xz=5.2.5=h7b6447c_0
   - zlib=1.2.11=h7b6447c_3
@@ -107,7 +115,6 @@ dependencies:
     - scikit-optimize==0.8.1
     - scipy==1.5.2
     - seaborn==0.11.0
-    - six==1.15.0
     - snowballstemmer==2.0.0
     - sphinx==3.2.1
     - sphinx-autobuild==2020.9.1
@@ -128,10 +135,8 @@ dependencies:
     - tensorflow-gpu==1.15.0
     - termcolor==1.1.0
     - threadpoolctl==2.1.0
-    - toml==0.10.1
     - tornado==6.0.4
     - tqdm==4.48.2
-    - typed-ast==1.4.1
     - typepy==1.1.1
     - urllib3==1.25.10
     - wcwidth==0.2.5

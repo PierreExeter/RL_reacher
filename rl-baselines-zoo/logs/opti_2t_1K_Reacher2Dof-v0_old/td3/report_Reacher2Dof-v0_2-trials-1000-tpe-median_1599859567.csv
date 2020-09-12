@@ -1,3 +1,0 @@
-,number,value,datetime_start,datetime_complete,duration,params_batch_size,params_buffer_size,params_gamma,params_lr,params_noise_std,params_noise_type,params_train_freq,state
-0,0,36.253761291503906,2020-09-11 23:25:49.209804,2020-09-11 23:26:07.277353,0 days 00:00:18.067549,128,100000,0.999,0.0046724662520715434,0.30302077481867185,normal,10,COMPLETE
-1,1,73.77855682373047,2020-09-11 23:25:49.210878,2020-09-11 23:26:07.789884,0 days 00:00:18.579006,512,100000,0.999,0.015788276579617032,0.1079548191076305,ornstein-uhlenbeck,1,COMPLETE

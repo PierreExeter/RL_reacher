@@ -1,3 +1,0 @@
-,number,value,datetime_start,datetime_complete,duration,params_batch_size,params_gamma,params_lr,params_memory_limit,params_noise_std,params_noise_type,params_normalize_observations,params_normalize_returns,state
-0,0,91.03327178955078,2020-09-11 23:25:03.346469,2020-09-11 23:25:23.560160,0 days 00:00:20.213691,32,0.995,0.006403546115682319,10000,0.1949192000384532,adaptive-param,True,False,COMPLETE
-1,1,72.27479553222656,2020-09-11 23:25:03.349391,2020-09-11 23:25:22.006349,0 days 00:00:18.656958,256,0.95,0.0016382404979544559,1000000,0.970027216348324,normal,True,False,COMPLETE
