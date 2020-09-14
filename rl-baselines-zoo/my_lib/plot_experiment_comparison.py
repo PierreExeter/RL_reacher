@@ -13,7 +13,6 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('-f', '--logFolder', help='Log folder', type=str)
     parser.add_argument('-s', '--saveFolder', help='save folder', type=str)
-    parser.add_argument('-e', '--envPaper', help='envPaper', type=str)
     parser.add_argument('-r', '--randomLogFolder', help='random log folder', type=str)
     args = parser.parse_args()
 
@@ -21,7 +20,6 @@ if __name__ == '__main__':
     path_base = args.logFolder  # "logs/train_1M_widowx_reach-v3/"
     save_dir = args.saveFolder   #"experiment_reports/1M_widowx_reach-v3/"
     random_dir = args.randomLogFolder   #"logs/random_policy/widowx_reacher-v5/""
-    appendix = args.envPaper 
     os.makedirs(save_dir, exist_ok=True)
 
     ### GET DATA ###
@@ -34,8 +32,8 @@ if __name__ == '__main__':
     df5 = pd.read_csv(path_base+"sac/all_rewards_smooth.csv")
     df6 = pd.read_csv(path_base+"td3/all_rewards_smooth.csv")
     df7 = pd.read_csv(path_base+"trpo/all_rewards_smooth.csv")
-    df8 = pd.read_csv(path_base+"her_sac/all_rewards_smooth.csv")
-    df9 = pd.read_csv(path_base+"her_td3/all_rewards_smooth.csv")
+    # df8 = pd.read_csv(path_base+"her_sac/all_rewards_smooth.csv")
+    # df9 = pd.read_csv(path_base+"her_td3/all_rewards_smooth.csv")
 
     df_list = [
         df1, 
@@ -45,8 +43,8 @@ if __name__ == '__main__':
         df5, 
         df6, 
         df7,
-        df8,
-        df9
+        # df8,
+        # df9
     ]
 
     df_label = [
@@ -57,8 +55,8 @@ if __name__ == '__main__':
         "SAC",
         "TD3",
         "TRPO",
-        "SAC + HER",
-        "TD3 + HER"
+        # "SAC + HER",
+        # "TD3 + HER"
     ]
 
     ff1 = pd.read_csv(path_base+"/a2c/results_seed_exp.csv")
@@ -68,8 +66,8 @@ if __name__ == '__main__':
     ff5 = pd.read_csv(path_base+"/sac/results_seed_exp.csv")
     ff6 = pd.read_csv(path_base+"/td3/results_seed_exp.csv")
     ff7 = pd.read_csv(path_base+"/trpo/results_seed_exp.csv")
-    ff8 = pd.read_csv(path_base+"/her_sac/results_seed_exp.csv")
-    ff9 = pd.read_csv(path_base+"/her_td3/results_seed_exp.csv")
+    # ff8 = pd.read_csv(path_base+"/her_sac/results_seed_exp.csv")
+    # ff9 = pd.read_csv(path_base+"/her_td3/results_seed_exp.csv")
 
 
     ff_list = [
@@ -80,8 +78,8 @@ if __name__ == '__main__':
         ff5,
         ff6,
         ff7,
-        ff8,
-        ff9
+        # ff8,
+        # ff9
     ]
 
 
@@ -110,7 +108,7 @@ if __name__ == '__main__':
     plt.xlabel(r'Timesteps $t$', fontsize=15)
     ax1.legend(loc='upper center', bbox_to_anchor=(0.5, 1.12), ncol=5, fancybox=True, shadow=True)
 
-    plt.savefig(save_dir+"learning_curves"+appendix+".pdf", bbox_inches='tight', dpi=1000)
+    plt.savefig(save_dir+"learning_curves.pdf", bbox_inches='tight', dpi=1000)
 
 
 
@@ -128,7 +126,7 @@ if __name__ == '__main__':
         plt.legend(loc="lower right")
         plt.ylabel(r'Average return $R_t$', fontsize=15)
         plt.xlabel(r'Timesteps $t$', fontsize=15)
-        plt.savefig(save_dir+lab+appendix+".pdf", bbox_inches='tight', dpi=500)
+        plt.savefig(save_dir+lab+".pdf", bbox_inches='tight', dpi=500)
 
     
 
@@ -165,7 +163,7 @@ if __name__ == '__main__':
         ax.set_xticklabels(df_label, ha='right')
         plt.ylabel(ylab)
         plt.tight_layout()
-        plt.savefig(save_dir+title+appendix+".pdf", dpi=100)
+        plt.savefig(save_dir+title+".pdf", dpi=100)
         # plt.show()
 
     # plot_col('mean success ratio 10mm', 'std success ratio 10mm', "success_10mm.pdf")

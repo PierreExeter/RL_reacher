@@ -1,0 +1,2 @@
+Environment,,,,,,Training,,,,,,Evaluation,,,,,,,,,,,
+env_id,nb_joints,action,obs,reward,random_goal,algo,nb_seeds,nb_train_steps,nb_train_episodes,hyperparams,train_time,nb_eval_steps,nb_eval_episodes,mean_reward,std_reward,success_ratio_50,reach_time_50,success_ratio_20,reach_time_20,success_ratio_10,reach_time_10,success_ratio_5,reach_time_5

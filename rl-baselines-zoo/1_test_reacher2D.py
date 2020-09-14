@@ -30,7 +30,7 @@ print("Observation space: ", env.observation_space)
 # print(env.observation_space.low)    # comment for goalEnv
 
 
-for episode in range(50):
+for episode in range(5000):
     obs = env.reset()             
     rewards = []
     

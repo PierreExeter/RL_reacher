@@ -14,7 +14,7 @@ OrderedDict([('n_envs', 8),
              ('n_timesteps', 1000000.0),
              ('policy', 'MlpPolicy')])
 Using 8 environments
-Overwriting n_timesteps with n=10000
+Overwriting n_timesteps with n=100000
 Creating test environment
 WARNING:tensorflow:From /home/pierre/bin/anaconda3/envs/reacher_link/lib/python3.7/site-packages/stable_baselines/common/tf_util.py:191: The name tf.ConfigProto is deprecated. Please use tf.compat.v1.ConfigProto instead.
 
@@ -55,7 +55,7 @@ WARNING:tensorflow:From /home/pierre/bin/anaconda3/envs/reacher_link/lib/python3
 
 WARNING:tensorflow:From /home/pierre/bin/anaconda3/envs/reacher_link/lib/python3.7/site-packages/stable_baselines/acktr/acktr.py:223: The name tf.summary.merge_all is deprecated. Please use tf.compat.v1.summary.merge_all instead.
 
-Log path: logs/train_10K_Reacher2Dof-v0/acktr/Reacher2Dof-v0_2
+Log path: logs/train_0.1M_Reacher2Dof-v0/acktr/Reacher2Dof-v0_2
 WARNING:tensorflow:From /home/pierre/bin/anaconda3/envs/reacher_link/lib/python3.7/site-packages/stable_baselines/acktr/acktr.py:306: The name tf.global_variables is deprecated. Please use tf.compat.v1.global_variables instead.
 
 WARNING:tensorflow:From /home/pierre/bin/anaconda3/envs/reacher_link/lib/python3.7/site-packages/stable_baselines/acktr/acktr.py:307: The name tf.is_variable_initialized is deprecated. Please use tf.compat.v1.is_variable_initialized instead.
@@ -69,13 +69,102 @@ WARNING:tensorflow:From /home/pierre/bin/anaconda3/envs/reacher_link/lib/python3
 WARNING:tensorflow:From /home/pierre/bin/anaconda3/envs/reacher_link/lib/python3.7/site-packages/stable_baselines/acktr/acktr.py:319: The name tf.variables_initializer is deprecated. Please use tf.compat.v1.variables_initializer instead.
 
 ---------------------------------
-| explained_variance | -0.00817 |
-| fps                | 203      |
+| explained_variance | 0.00427  |
+| fps                | 185      |
 | nupdates           | 1        |
 | policy_entropy     | 2.84     |
-| policy_loss        | -0.134   |
+| policy_loss        | -0.146   |
 | total_timesteps    | 160      |
-| value_loss         | 44       |
+| value_loss         | 40.9     |
 ---------------------------------
-Saving to logs/train_10K_Reacher2Dof-v0/acktr/Reacher2Dof-v0_2
+Eval num_timesteps=10000, episode_reward=-4.07 +/- 10.16
+Episode length: 150.00 +/- 0.00
+New best mean reward!
+---------------------------------
+| ep_len_mean        | 150      |
+| ep_reward_mean     | -13.3    |
+| explained_variance | 0.0578   |
+| fps                | 2541     |
+| nupdates           | 100      |
+| policy_entropy     | 2.85     |
+| policy_loss        | -0.0211  |
+| total_timesteps    | 16000    |
+| value_loss         | 54       |
+---------------------------------
+Eval num_timesteps=20000, episode_reward=2.04 +/- 6.51
+Episode length: 150.00 +/- 0.00
+New best mean reward!
+Eval num_timesteps=30000, episode_reward=-7.32 +/- 6.48
+Episode length: 150.00 +/- 0.00
+---------------------------------
+| ep_len_mean        | 150      |
+| ep_reward_mean     | -10.2    |
+| explained_variance | -0.148   |
+| fps                | 2619     |
+| nupdates           | 200      |
+| policy_entropy     | 2.86     |
+| policy_loss        | -0.0275  |
+| total_timesteps    | 32000    |
+| value_loss         | 22.6     |
+---------------------------------
+Eval num_timesteps=40000, episode_reward=-4.93 +/- 8.37
+Episode length: 150.00 +/- 0.00
+---------------------------------
+| ep_len_mean        | 150      |
+| ep_reward_mean     | -10.9    |
+| explained_variance | -0.129   |
+| fps                | 2708     |
+| nupdates           | 300      |
+| policy_entropy     | 2.87     |
+| policy_loss        | 0.0181   |
+| total_timesteps    | 48000    |
+| value_loss         | 6.73     |
+---------------------------------
+Eval num_timesteps=50000, episode_reward=1.41 +/- 9.52
+Episode length: 150.00 +/- 0.00
+Eval num_timesteps=60000, episode_reward=-7.30 +/- 5.26
+Episode length: 150.00 +/- 0.00
+---------------------------------
+| ep_len_mean        | 150      |
+| ep_reward_mean     | -9.51    |
+| explained_variance | 0.222    |
+| fps                | 2694     |
+| nupdates           | 400      |
+| policy_entropy     | 2.85     |
+| policy_loss        | -0.0319  |
+| total_timesteps    | 64000    |
+| value_loss         | 1.62     |
+---------------------------------
+Eval num_timesteps=70000, episode_reward=3.35 +/- 4.21
+Episode length: 150.00 +/- 0.00
+New best mean reward!
+Eval num_timesteps=80000, episode_reward=-26.69 +/- 34.72
+Episode length: 150.00 +/- 0.00
+---------------------------------
+| ep_len_mean        | 150      |
+| ep_reward_mean     | -19.3    |
+| explained_variance | 0.18     |
+| fps                | 2686     |
+| nupdates           | 500      |
+| policy_entropy     | 2.86     |
+| policy_loss        | -0.0511  |
+| total_timesteps    | 80000    |
+| value_loss         | 84.3     |
+---------------------------------
+Eval num_timesteps=90000, episode_reward=-7.77 +/- 19.85
+Episode length: 150.00 +/- 0.00
+---------------------------------
+| ep_len_mean        | 150      |
+| ep_reward_mean     | -28.6    |
+| explained_variance | 0.342    |
+| fps                | 2723     |
+| nupdates           | 600      |
+| policy_entropy     | 2.86     |
+| policy_loss        | -0.123   |
+| total_timesteps    | 96000    |
+| value_loss         | 42.1     |
+---------------------------------
+Eval num_timesteps=100000, episode_reward=-17.77 +/- 12.37
+Episode length: 150.00 +/- 0.00
+Saving to logs/train_0.1M_Reacher2Dof-v0/acktr/Reacher2Dof-v0_2
 pybullet build time: Sep  9 2020 17:03:46

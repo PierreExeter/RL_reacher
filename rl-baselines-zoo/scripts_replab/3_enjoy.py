@@ -266,7 +266,6 @@ def main():
             dict_log['episode'] = episode
             output_df = output_df.append(dict_log, ignore_index=True)
 
-
         # if not args.no_render:
         #     env.render('human')
 

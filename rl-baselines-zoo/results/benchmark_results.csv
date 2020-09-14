@@ -1,2 +1,0 @@
-Environment,,,,,,Training,,,,,Evaluation,,,
-env_id,nb_joints,action,obs,reward,random_goal,algo,nb_timesteps,nb_episodes,hyperparams,train_time,mean_reward,std_reward,success_ratio,reach_time

@@ -253,6 +253,11 @@ if __name__ == '__main__':
                 print("WARNING: normalization not supported yet for DDPG/DQN")
             env = gym.make(env_id, **env_kwargs)
             env.seed(args.seed)
+
+            # added by Pierre (for some reason, monitoring the training wasn't enabled for DDPG)
+            log_file = os.path.join(log_dir, str(rank)) if log_dir is not None else None
+            env = Monitor(env, log_file)
+            
             if env_wrapper is not None:
                 env = env_wrapper(env)
         else:

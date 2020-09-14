@@ -12,7 +12,7 @@ WARNING:tensorflow:From /home/pierre/bin/anaconda3/envs/reacher_link/lib/python3
 Seed: 0
 OrderedDict([('n_timesteps', 1000000.0), ('policy', 'MlpPolicy')])
 Using 1 environments
-Overwriting n_timesteps with n=10000
+Overwriting n_timesteps with n=100000
 Creating test environment
 WARNING:tensorflow:From /home/pierre/bin/anaconda3/envs/reacher_link/lib/python3.7/site-packages/stable_baselines/common/tf_util.py:191: The name tf.ConfigProto is deprecated. Please use tf.compat.v1.ConfigProto instead.
 
@@ -54,315 +54,3185 @@ WARNING:tensorflow:From /home/pierre/bin/anaconda3/envs/reacher_link/lib/python3
 
 WARNING:tensorflow:From /home/pierre/bin/anaconda3/envs/reacher_link/lib/python3.7/site-packages/stable_baselines/sac/sac.py:314: The name tf.summary.merge_all is deprecated. Please use tf.compat.v1.summary.merge_all instead.
 
-Log path: logs/train_10K_Reacher2Dof-v0/sac/Reacher2Dof-v0_1
-/home/pierre/bin/anaconda3/envs/reacher_link/lib/python3.7/site-packages/stable_baselines/common/callbacks.py:287: UserWarning: Training and eval env are not of the same type<stable_baselines.common.base_class._UnvecWrapper object at 0x7f3837b47208> != <stable_baselines.common.vec_env.dummy_vec_env.DummyVecEnv object at 0x7f3837b47048>
+Log path: logs/train_0.1M_Reacher2Dof-v0/sac/Reacher2Dof-v0_1
+/home/pierre/bin/anaconda3/envs/reacher_link/lib/python3.7/site-packages/stable_baselines/common/callbacks.py:287: UserWarning: Training and eval env are not of the same type<stable_baselines.common.base_class._UnvecWrapper object at 0x7f5910e35358> != <stable_baselines.common.vec_env.dummy_vec_env.DummyVecEnv object at 0x7f5910e350f0>
   "{} != {}".format(self.training_env, self.eval_env))
 -----------------------------------------
 | current_lr              | 0.0003      |
-| ent_coef                | 0.8591376   |
-| ent_coef_loss           | -0.50779766 |
-| entropy                 | 2.5558305   |
-| ep_rewmean              | -12.9       |
+| ent_coef                | 0.8597661   |
+| ent_coef_loss           | -0.5135938  |
+| entropy                 | 2.6279094   |
+| ep_rewmean              | -7.15       |
 | episodes                | 4           |
 | eplenmean               | 150         |
-| fps                     | 441         |
-| mean 100 episode reward | -12.9       |
+| fps                     | 434         |
+| mean 100 episode reward | -7.1        |
 | n_updates               | 501         |
-| policy_loss             | -3.3667953  |
-| qf1_loss                | 0.40125912  |
-| qf2_loss                | 0.40620404  |
+| policy_loss             | -3.1039367  |
+| qf1_loss                | 0.18143809  |
+| qf2_loss                | 0.17995064  |
 | success rate            | 0           |
 | time_elapsed            | 1           |
 | total timesteps         | 600         |
-| value_loss              | 0.05970612  |
+| value_loss              | 0.056157395 |
 -----------------------------------------
 ----------------------------------------
 | current_lr              | 0.0003     |
-| ent_coef                | 0.7179966  |
-| ent_coef_loss           | -1.1111379 |
-| entropy                 | 2.629094   |
-| ep_rewmean              | -10.8      |
+| ent_coef                | 0.7181928  |
+| ent_coef_loss           | -1.104182  |
+| entropy                 | 2.635497   |
+| ep_rewmean              | -5.9       |
 | episodes                | 8          |
 | eplenmean               | 150        |
-| fps                     | 453        |
-| mean 100 episode reward | -10.8      |
+| fps                     | 445        |
+| mean 100 episode reward | -5.9       |
 | n_updates               | 1101       |
-| policy_loss             | -5.8527517 |
-| qf1_loss                | 0.33104938 |
-| qf2_loss                | 0.40294835 |
+| policy_loss             | -5.2224007 |
+| qf1_loss                | 0.36366686 |
+| qf2_loss                | 0.34625185 |
 | success rate            | 0          |
 | time_elapsed            | 2          |
 | total timesteps         | 1200       |
-| value_loss              | 0.15392703 |
+| value_loss              | 0.12241519 |
 ----------------------------------------
 ----------------------------------------
 | current_lr              | 0.0003     |
-| ent_coef                | 0.603119   |
-| ent_coef_loss           | -1.5451908 |
-| entropy                 | 2.5757654  |
-| ep_rewmean              | -8.91      |
+| ent_coef                | 0.6017848  |
+| ent_coef_loss           | -1.600064  |
+| entropy                 | 2.592206   |
+| ep_rewmean              | -6.13      |
 | episodes                | 12         |
 | eplenmean               | 150        |
-| fps                     | 455        |
-| mean 100 episode reward | -8.9       |
+| fps                     | 441        |
+| mean 100 episode reward | -6.1       |
 | n_updates               | 1701       |
-| policy_loss             | -7.628463  |
-| qf1_loss                | 1.218667   |
-| qf2_loss                | 1.1222364  |
+| policy_loss             | -8.868576  |
+| qf1_loss                | 1.516867   |
+| qf2_loss                | 1.5297548  |
 | success rate            | 0          |
-| time_elapsed            | 3          |
+| time_elapsed            | 4          |
 | total timesteps         | 1800       |
-| value_loss              | 0.22113384 |
+| value_loss              | 0.26997697 |
 ----------------------------------------
 ----------------------------------------
 | current_lr              | 0.0003     |
-| ent_coef                | 0.5101341  |
-| ent_coef_loss           | -1.9667165 |
-| entropy                 | 2.480628   |
-| ep_rewmean              | -11.3      |
+| ent_coef                | 0.50695455 |
+| ent_coef_loss           | -2.0325675 |
+| entropy                 | 2.5187085  |
+| ep_rewmean              | -9.81      |
 | episodes                | 16         |
 | eplenmean               | 150        |
-| fps                     | 453        |
-| mean 100 episode reward | -11.3      |
+| fps                     | 449        |
+| mean 100 episode reward | -9.8       |
 | n_updates               | 2301       |
-| policy_loss             | -10.562396 |
-| qf1_loss                | 2.662795   |
-| qf2_loss                | 2.3869972  |
+| policy_loss             | -11.293892 |
+| qf1_loss                | 0.8695247  |
+| qf2_loss                | 0.9045099  |
 | success rate            | 0          |
 | time_elapsed            | 5          |
 | total timesteps         | 2400       |
-| value_loss              | 0.65467834 |
+| value_loss              | 0.40084636 |
 ----------------------------------------
 ----------------------------------------
 | current_lr              | 0.0003     |
-| ent_coef                | 0.4353212  |
-| ent_coef_loss           | -2.0345552 |
-| entropy                 | 2.4727724  |
-| ep_rewmean              | -12.7      |
+| ent_coef                | 0.42935008 |
+| ent_coef_loss           | -2.4519143 |
+| entropy                 | 2.4458594  |
+| ep_rewmean              | -10.6      |
 | episodes                | 20         |
 | eplenmean               | 150        |
 | fps                     | 453        |
-| mean 100 episode reward | -12.7      |
+| mean 100 episode reward | -10.6      |
 | n_updates               | 2901       |
-| policy_loss             | -12.45043  |
-| qf1_loss                | 1.3649645  |
-| qf2_loss                | 1.4777578  |
+| policy_loss             | -11.196062 |
+| qf1_loss                | 1.3928635  |
+| qf2_loss                | 1.4436957  |
 | success rate            | 0          |
 | time_elapsed            | 6          |
 | total timesteps         | 3000       |
-| value_loss              | 0.5489572  |
+| value_loss              | 0.20616633 |
 ----------------------------------------
 ----------------------------------------
 | current_lr              | 0.0003     |
-| ent_coef                | 0.37244388 |
-| ent_coef_loss           | -2.3569746 |
-| entropy                 | 2.4379654  |
-| ep_rewmean              | -12.7      |
+| ent_coef                | 0.36439422 |
+| ent_coef_loss           | -2.4773612 |
+| entropy                 | 2.376679   |
+| ep_rewmean              | -11        |
 | episodes                | 24         |
 | eplenmean               | 150        |
-| fps                     | 454        |
-| mean 100 episode reward | -12.7      |
+| fps                     | 456        |
+| mean 100 episode reward | -11        |
 | n_updates               | 3501       |
-| policy_loss             | -11.141987 |
-| qf1_loss                | 1.2705033  |
-| qf2_loss                | 1.2666299  |
+| policy_loss             | -12.049675 |
+| qf1_loss                | 4.2525105  |
+| qf2_loss                | 4.14076    |
 | success rate            | 0          |
 | time_elapsed            | 7          |
 | total timesteps         | 3600       |
-| value_loss              | 0.70375574 |
+| value_loss              | 0.33144075 |
 ----------------------------------------
 ----------------------------------------
 | current_lr              | 0.0003     |
-| ent_coef                | 0.31674242 |
-| ent_coef_loss           | -2.515809  |
-| entropy                 | 2.3474889  |
-| ep_rewmean              | -15.8      |
+| ent_coef                | 0.30958733 |
+| ent_coef_loss           | -2.8391943 |
+| entropy                 | 2.3472204  |
+| ep_rewmean              | -9.74      |
 | episodes                | 28         |
 | eplenmean               | 150        |
-| fps                     | 452        |
-| mean 100 episode reward | -15.8      |
+| fps                     | 459        |
+| mean 100 episode reward | -9.7       |
 | n_updates               | 4101       |
-| policy_loss             | -11.49547  |
-| qf1_loss                | 6.8268137  |
-| qf2_loss                | 6.8851185  |
+| policy_loss             | -11.633989 |
+| qf1_loss                | 2.2523541  |
+| qf2_loss                | 2.2547843  |
 | success rate            | 0          |
 | time_elapsed            | 9          |
 | total timesteps         | 4200       |
-| value_loss              | 0.91711175 |
+| value_loss              | 0.3020687  |
 ----------------------------------------
 ----------------------------------------
 | current_lr              | 0.0003     |
-| ent_coef                | 0.26658374 |
-| ent_coef_loss           | -3.5092878 |
-| entropy                 | 2.4459968  |
-| ep_rewmean              | -16.3      |
+| ent_coef                | 0.2628867  |
+| ent_coef_loss           | -3.1379766 |
+| entropy                 | 2.3160725  |
+| ep_rewmean              | -10.6      |
 | episodes                | 32         |
 | eplenmean               | 150        |
-| fps                     | 449        |
-| mean 100 episode reward | -16.3      |
+| fps                     | 461        |
+| mean 100 episode reward | -10.6      |
 | n_updates               | 4701       |
-| policy_loss             | -11.890356 |
-| qf1_loss                | 0.9480657  |
-| qf2_loss                | 1.0146964  |
+| policy_loss             | -11.599172 |
+| qf1_loss                | 1.0698051  |
+| qf2_loss                | 1.0852952  |
 | success rate            | 0          |
 | time_elapsed            | 10         |
 | total timesteps         | 4800       |
-| value_loss              | 0.18992427 |
+| value_loss              | 0.17312007 |
+----------------------------------------
+----------------------------------------
+| current_lr              | 0.0003     |
+| ent_coef                | 0.22311407 |
+| ent_coef_loss           | -3.75243   |
+| entropy                 | 2.3208904  |
+| ep_rewmean              | -11        |
+| episodes                | 36         |
+| eplenmean               | 150        |
+| fps                     | 463        |
+| mean 100 episode reward | -11        |
+| n_updates               | 5301       |
+| policy_loss             | -12.219645 |
+| qf1_loss                | 1.9741979  |
+| qf2_loss                | 1.9314736  |
+| success rate            | 0          |
+| time_elapsed            | 11         |
+| total timesteps         | 5400       |
+| value_loss              | 0.27780607 |
 ----------------------------------------
 -----------------------------------------
 | current_lr              | 0.0003      |
-| ent_coef                | 0.22341463  |
-| ent_coef_loss           | -3.247758   |
-| entropy                 | 2.4198406   |
-| ep_rewmean              | -16.4       |
-| episodes                | 36          |
+| ent_coef                | 0.18888082  |
+| ent_coef_loss           | -3.7116542  |
+| entropy                 | 2.2741966   |
+| ep_rewmean              | -10.3       |
+| episodes                | 40          |
 | eplenmean               | 150         |
-| fps                     | 450         |
-| mean 100 episode reward | -16.4       |
-| n_updates               | 5301        |
-| policy_loss             | -13.5119705 |
-| qf1_loss                | 9.487359    |
-| qf2_loss                | 9.252523    |
+| fps                     | 465         |
+| mean 100 episode reward | -10.3       |
+| n_updates               | 5901        |
+| policy_loss             | -12.2862835 |
+| qf1_loss                | 3.3965125   |
+| qf2_loss                | 3.6035004   |
 | success rate            | 0           |
-| time_elapsed            | 11          |
-| total timesteps         | 5400        |
-| value_loss              | 0.60194504  |
+| time_elapsed            | 12          |
+| total timesteps         | 6000        |
+| value_loss              | 0.24634632  |
 -----------------------------------------
 ----------------------------------------
 | current_lr              | 0.0003     |
-| ent_coef                | 0.18818589 |
-| ent_coef_loss           | -3.2995243 |
-| entropy                 | 2.4000275  |
-| ep_rewmean              | -17        |
-| episodes                | 40         |
-| eplenmean               | 150        |
-| fps                     | 450        |
-| mean 100 episode reward | -17        |
-| n_updates               | 5901       |
-| policy_loss             | -12.743405 |
-| qf1_loss                | 3.4437976  |
-| qf2_loss                | 3.2124853  |
-| success rate            | 0          |
-| time_elapsed            | 13         |
-| total timesteps         | 6000       |
-| value_loss              | 0.29397428 |
-----------------------------------------
-----------------------------------------
-| current_lr              | 0.0003     |
-| ent_coef                | 0.16028333 |
-| ent_coef_loss           | -4.427082  |
-| entropy                 | 2.4453104  |
-| ep_rewmean              | -17.9      |
+| ent_coef                | 0.16133142 |
+| ent_coef_loss           | -2.7352448 |
+| entropy                 | 2.2473555  |
+| ep_rewmean              | -9.78      |
 | episodes                | 44         |
 | eplenmean               | 150        |
-| fps                     | 450        |
-| mean 100 episode reward | -17.9      |
+| fps                     | 465        |
+| mean 100 episode reward | -9.8       |
 | n_updates               | 6501       |
-| policy_loss             | -12.869888 |
-| qf1_loss                | 0.64265573 |
-| qf2_loss                | 0.73590106 |
+| policy_loss             | -13.809338 |
+| qf1_loss                | 0.62784797 |
+| qf2_loss                | 0.53375137 |
 | success rate            | 0          |
 | time_elapsed            | 14         |
 | total timesteps         | 6600       |
-| value_loss              | 0.28987622 |
+| value_loss              | 0.22922245 |
 ----------------------------------------
 ----------------------------------------
 | current_lr              | 0.0003     |
-| ent_coef                | 0.13920535 |
-| ent_coef_loss           | -1.819247  |
-| entropy                 | 2.202248   |
-| ep_rewmean              | -21        |
+| ent_coef                | 0.14181696 |
+| ent_coef_loss           | -2.5152273 |
+| entropy                 | 2.2061071  |
+| ep_rewmean              | -11        |
 | episodes                | 48         |
 | eplenmean               | 150        |
-| fps                     | 451        |
-| mean 100 episode reward | -21        |
+| fps                     | 466        |
+| mean 100 episode reward | -11        |
 | n_updates               | 7101       |
-| policy_loss             | -13.663333 |
-| qf1_loss                | 1.9084644  |
-| qf2_loss                | 1.7471468  |
+| policy_loss             | -13.362366 |
+| qf1_loss                | 8.320478   |
+| qf2_loss                | 8.68225    |
 | success rate            | 0          |
 | time_elapsed            | 15         |
 | total timesteps         | 7200       |
-| value_loss              | 0.19927642 |
+| value_loss              | 0.24534297 |
 ----------------------------------------
 ----------------------------------------
 | current_lr              | 0.0003     |
-| ent_coef                | 0.12231466 |
-| ent_coef_loss           | -2.949378  |
-| entropy                 | 2.1531     |
-| ep_rewmean              | -23        |
+| ent_coef                | 0.12821062 |
+| ent_coef_loss           | -0.766227  |
+| entropy                 | 1.9982016  |
+| ep_rewmean              | -11.1      |
 | episodes                | 52         |
 | eplenmean               | 150        |
-| fps                     | 452        |
-| mean 100 episode reward | -23        |
+| fps                     | 467        |
+| mean 100 episode reward | -11.1      |
 | n_updates               | 7701       |
-| policy_loss             | -12.513937 |
-| qf1_loss                | 0.8875022  |
-| qf2_loss                | 0.97179717 |
+| policy_loss             | -12.489807 |
+| qf1_loss                | 0.5201982  |
+| qf2_loss                | 0.5746027  |
 | success rate            | 0          |
-| time_elapsed            | 17         |
+| time_elapsed            | 16         |
 | total timesteps         | 7800       |
-| value_loss              | 0.2349877  |
+| value_loss              | 0.19160737 |
 ----------------------------------------
 ----------------------------------------
 | current_lr              | 0.0003     |
-| ent_coef                | 0.10568747 |
-| ent_coef_loss           | -2.7231221 |
-| entropy                 | 2.20361    |
-| ep_rewmean              | -24.5      |
+| ent_coef                | 0.11283941 |
+| ent_coef_loss           | -2.4948025 |
+| entropy                 | 2.053846   |
+| ep_rewmean              | -11        |
 | episodes                | 56         |
 | eplenmean               | 150        |
-| fps                     | 452        |
-| mean 100 episode reward | -24.5      |
+| fps                     | 465        |
+| mean 100 episode reward | -11        |
 | n_updates               | 8301       |
-| policy_loss             | -13.950462 |
-| qf1_loss                | 1.6200833  |
-| qf2_loss                | 1.5915066  |
+| policy_loss             | -12.548674 |
+| qf1_loss                | 0.9048747  |
+| qf2_loss                | 1.2697287  |
 | success rate            | 0          |
 | time_elapsed            | 18         |
 | total timesteps         | 8400       |
-| value_loss              | 0.14724272 |
+| value_loss              | 0.14467993 |
 ----------------------------------------
 ----------------------------------------
 | current_lr              | 0.0003     |
-| ent_coef                | 0.08902878 |
-| ent_coef_loss           | -3.113461  |
-| entropy                 | 2.0796595  |
-| ep_rewmean              | -25.4      |
+| ent_coef                | 0.09595617 |
+| ent_coef_loss           | -3.2684631 |
+| entropy                 | 2.2583847  |
+| ep_rewmean              | -11.7      |
 | episodes                | 60         |
 | eplenmean               | 150        |
-| fps                     | 451        |
-| mean 100 episode reward | -25.4      |
+| fps                     | 466        |
+| mean 100 episode reward | -11.7      |
 | n_updates               | 8901       |
-| policy_loss             | -11.421019 |
-| qf1_loss                | 1.3269762  |
-| qf2_loss                | 1.5522037  |
+| policy_loss             | -11.836125 |
+| qf1_loss                | 0.5688275  |
+| qf2_loss                | 0.6120822  |
 | success rate            | 0          |
 | time_elapsed            | 19         |
 | total timesteps         | 9000       |
-| value_loss              | 0.1972706  |
+| value_loss              | 0.22794014 |
 ----------------------------------------
 -----------------------------------------
 | current_lr              | 0.0003      |
-| ent_coef                | 0.073767394 |
-| ent_coef_loss           | -4.7983904  |
-| entropy                 | 2.216707    |
-| ep_rewmean              | -25         |
+| ent_coef                | 0.080380574 |
+| ent_coef_loss           | -2.5088015  |
+| entropy                 | 2.102769    |
+| ep_rewmean              | -12.9       |
 | episodes                | 64          |
 | eplenmean               | 150         |
-| fps                     | 450         |
-| mean 100 episode reward | -25         |
+| fps                     | 467         |
+| mean 100 episode reward | -12.9       |
 | n_updates               | 9501        |
-| policy_loss             | -12.191446  |
-| qf1_loss                | 1.4817282   |
-| qf2_loss                | 1.4997096   |
+| policy_loss             | -15.00836   |
+| qf1_loss                | 0.7934667   |
+| qf2_loss                | 0.70418024  |
 | success rate            | 0           |
-| time_elapsed            | 21          |
+| time_elapsed            | 20          |
 | total timesteps         | 9600        |
-| value_loss              | 0.14057004  |
+| value_loss              | 0.11517432  |
 -----------------------------------------
-Eval num_timesteps=10000, episode_reward=5.77 +/- 6.56
+Eval num_timesteps=10000, episode_reward=-4.81 +/- 8.00
 Episode length: 150.00 +/- 0.00
 New best mean reward!
-Saving to logs/train_10K_Reacher2Dof-v0/sac/Reacher2Dof-v0_1
+----------------------------------------
+| current_lr              | 0.0003     |
+| ent_coef                | 0.06533885 |
+| ent_coef_loss           | -3.8469214 |
+| entropy                 | 2.219119   |
+| ep_rewmean              | -13.4      |
+| episodes                | 68         |
+| eplenmean               | 150        |
+| fps                     | 458        |
+| mean 100 episode reward | -13.4      |
+| n_updates               | 10101      |
+| policy_loss             | -12.406448 |
+| qf1_loss                | 2.11042    |
+| qf2_loss                | 2.0627203  |
+| success rate            | 0          |
+| time_elapsed            | 22         |
+| total timesteps         | 10200      |
+| value_loss              | 0.14318667 |
+----------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.053401746 |
+| ent_coef_loss           | -5.1922836  |
+| entropy                 | 2.1217346   |
+| ep_rewmean              | -13.6       |
+| episodes                | 72          |
+| eplenmean               | 150         |
+| fps                     | 458         |
+| mean 100 episode reward | -13.6       |
+| n_updates               | 10701       |
+| policy_loss             | -11.257788  |
+| qf1_loss                | 0.6918387   |
+| qf2_loss                | 0.55177444  |
+| success rate            | 0           |
+| time_elapsed            | 23          |
+| total timesteps         | 10800       |
+| value_loss              | 0.111898035 |
+-----------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.045507826 |
+| ent_coef_loss           | -1.3787999  |
+| entropy                 | 1.8696296   |
+| ep_rewmean              | -13.4       |
+| episodes                | 76          |
+| eplenmean               | 150         |
+| fps                     | 456         |
+| mean 100 episode reward | -13.4       |
+| n_updates               | 11301       |
+| policy_loss             | -10.062147  |
+| qf1_loss                | 0.31608057  |
+| qf2_loss                | 0.3141561   |
+| success rate            | 0           |
+| time_elapsed            | 24          |
+| total timesteps         | 11400       |
+| value_loss              | 0.04823519  |
+-----------------------------------------
+----------------------------------------
+| current_lr              | 0.0003     |
+| ent_coef                | 0.03945326 |
+| ent_coef_loss           | -3.6828241 |
+| entropy                 | 1.7007232  |
+| ep_rewmean              | -12.7      |
+| episodes                | 80         |
+| eplenmean               | 150        |
+| fps                     | 457        |
+| mean 100 episode reward | -12.7      |
+| n_updates               | 11901      |
+| policy_loss             | -13.142998 |
+| qf1_loss                | 0.4676126  |
+| qf2_loss                | 0.36580488 |
+| success rate            | 0          |
+| time_elapsed            | 26         |
+| total timesteps         | 12000      |
+| value_loss              | 0.10811722 |
+----------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.034722876 |
+| ent_coef_loss           | -1.1399767  |
+| entropy                 | 1.7852521   |
+| ep_rewmean              | -12.3       |
+| episodes                | 84          |
+| eplenmean               | 150         |
+| fps                     | 455         |
+| mean 100 episode reward | -12.3       |
+| n_updates               | 12501       |
+| policy_loss             | -11.301702  |
+| qf1_loss                | 0.6974641   |
+| qf2_loss                | 0.6571251   |
+| success rate            | 0           |
+| time_elapsed            | 27          |
+| total timesteps         | 12600       |
+| value_loss              | 0.05894746  |
+-----------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.031607926 |
+| ent_coef_loss           | -2.1823993  |
+| entropy                 | 1.6277547   |
+| ep_rewmean              | -12         |
+| episodes                | 88          |
+| eplenmean               | 150         |
+| fps                     | 454         |
+| mean 100 episode reward | -12         |
+| n_updates               | 13101       |
+| policy_loss             | -11.66306   |
+| qf1_loss                | 0.64892125  |
+| qf2_loss                | 0.73607445  |
+| success rate            | 0           |
+| time_elapsed            | 29          |
+| total timesteps         | 13200       |
+| value_loss              | 0.09104261  |
+-----------------------------------------
+----------------------------------------
+| current_lr              | 0.0003     |
+| ent_coef                | 0.02906567 |
+| ent_coef_loss           | -2.1137702 |
+| entropy                 | 1.7513993  |
+| ep_rewmean              | -11.5      |
+| episodes                | 92         |
+| eplenmean               | 150        |
+| fps                     | 455        |
+| mean 100 episode reward | -11.5      |
+| n_updates               | 13701      |
+| policy_loss             | -10.274928 |
+| qf1_loss                | 0.2695078  |
+| qf2_loss                | 0.27368855 |
+| success rate            | 0          |
+| time_elapsed            | 30         |
+| total timesteps         | 13800      |
+| value_loss              | 0.08237861 |
+----------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.026988968 |
+| ent_coef_loss           | -1.5762552  |
+| entropy                 | 1.5683098   |
+| ep_rewmean              | -11.3       |
+| episodes                | 96          |
+| eplenmean               | 150         |
+| fps                     | 456         |
+| mean 100 episode reward | -11.3       |
+| n_updates               | 14301       |
+| policy_loss             | -10.394057  |
+| qf1_loss                | 0.9623114   |
+| qf2_loss                | 0.9827441   |
+| success rate            | 0           |
+| time_elapsed            | 31          |
+| total timesteps         | 14400       |
+| value_loss              | 0.24386017  |
+-----------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.026028376 |
+| ent_coef_loss           | 2.2401795   |
+| entropy                 | 1.5424516   |
+| ep_rewmean              | -10.7       |
+| episodes                | 100         |
+| eplenmean               | 150         |
+| fps                     | 456         |
+| mean 100 episode reward | -10.7       |
+| n_updates               | 14901       |
+| policy_loss             | -11.322615  |
+| qf1_loss                | 0.39386982  |
+| qf2_loss                | 0.3990032   |
+| success rate            | 0           |
+| time_elapsed            | 32          |
+| total timesteps         | 15000       |
+| value_loss              | 0.07925291  |
+-----------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.025996773 |
+| ent_coef_loss           | -0.54182506 |
+| entropy                 | 1.5535707   |
+| ep_rewmean              | -10.3       |
+| episodes                | 104         |
+| eplenmean               | 150         |
+| fps                     | 456         |
+| mean 100 episode reward | -10.3       |
+| n_updates               | 15501       |
+| policy_loss             | -11.45975   |
+| qf1_loss                | 0.283356    |
+| qf2_loss                | 0.3001288   |
+| success rate            | 0           |
+| time_elapsed            | 34          |
+| total timesteps         | 15600       |
+| value_loss              | 0.089153826 |
+-----------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.027246917 |
+| ent_coef_loss           | 0.42512387  |
+| entropy                 | 1.6049002   |
+| ep_rewmean              | -10         |
+| episodes                | 108         |
+| eplenmean               | 150         |
+| fps                     | 457         |
+| mean 100 episode reward | -10         |
+| n_updates               | 16101       |
+| policy_loss             | -10.882288  |
+| qf1_loss                | 0.5946969   |
+| qf2_loss                | 0.7017281   |
+| success rate            | 0           |
+| time_elapsed            | 35          |
+| total timesteps         | 16200       |
+| value_loss              | 0.11566764  |
+-----------------------------------------
+------------------------------------------
+| current_lr              | 0.0003       |
+| ent_coef                | 0.029602667  |
+| ent_coef_loss           | -0.021030016 |
+| entropy                 | 1.495819     |
+| ep_rewmean              | -9.88        |
+| episodes                | 112          |
+| eplenmean               | 150          |
+| fps                     | 458          |
+| mean 100 episode reward | -9.9         |
+| n_updates               | 16701        |
+| policy_loss             | -11.831486   |
+| qf1_loss                | 0.18092105   |
+| qf2_loss                | 0.16870847   |
+| success rate            | 0            |
+| time_elapsed            | 36           |
+| total timesteps         | 16800        |
+| value_loss              | 0.047813915  |
+------------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.030844606 |
+| ent_coef_loss           | -0.9817941  |
+| entropy                 | 1.5053573   |
+| ep_rewmean              | -8.71       |
+| episodes                | 116         |
+| eplenmean               | 150         |
+| fps                     | 457         |
+| mean 100 episode reward | -8.7        |
+| n_updates               | 17301       |
+| policy_loss             | -13.334278  |
+| qf1_loss                | 0.3440161   |
+| qf2_loss                | 0.39525765  |
+| success rate            | 0           |
+| time_elapsed            | 38          |
+| total timesteps         | 17400       |
+| value_loss              | 0.06407222  |
+-----------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.030469852 |
+| ent_coef_loss           | -0.47399268 |
+| entropy                 | 1.3260059   |
+| ep_rewmean              | -8.26       |
+| episodes                | 120         |
+| eplenmean               | 150         |
+| fps                     | 457         |
+| mean 100 episode reward | -8.3        |
+| n_updates               | 17901       |
+| policy_loss             | -13.579534  |
+| qf1_loss                | 0.2667301   |
+| qf2_loss                | 0.27960324  |
+| success rate            | 0           |
+| time_elapsed            | 39          |
+| total timesteps         | 18000       |
+| value_loss              | 0.07635448  |
+-----------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.029640628 |
+| ent_coef_loss           | 1.8084217   |
+| entropy                 | 1.2870134   |
+| ep_rewmean              | -7.62       |
+| episodes                | 124         |
+| eplenmean               | 150         |
+| fps                     | 456         |
+| mean 100 episode reward | -7.6        |
+| n_updates               | 18501       |
+| policy_loss             | -13.342989  |
+| qf1_loss                | 0.504068    |
+| qf2_loss                | 0.41322654  |
+| success rate            | 0           |
+| time_elapsed            | 40          |
+| total timesteps         | 18600       |
+| value_loss              | 0.11010694  |
+-----------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.027890658 |
+| ent_coef_loss           | -2.410562   |
+| entropy                 | 1.4387267   |
+| ep_rewmean              | -7.71       |
+| episodes                | 128         |
+| eplenmean               | 150         |
+| fps                     | 455         |
+| mean 100 episode reward | -7.7        |
+| n_updates               | 19101       |
+| policy_loss             | -12.94066   |
+| qf1_loss                | 0.23882747  |
+| qf2_loss                | 0.25246224  |
+| success rate            | 0           |
+| time_elapsed            | 42          |
+| total timesteps         | 19200       |
+| value_loss              | 0.05932162  |
+-----------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.025584852 |
+| ent_coef_loss           | 0.90532494  |
+| entropy                 | 1.5756483   |
+| ep_rewmean              | -7.33       |
+| episodes                | 132         |
+| eplenmean               | 150         |
+| fps                     | 455         |
+| mean 100 episode reward | -7.3        |
+| n_updates               | 19701       |
+| policy_loss             | -10.123199  |
+| qf1_loss                | 0.8857532   |
+| qf2_loss                | 0.9056076   |
+| success rate            | 0           |
+| time_elapsed            | 43          |
+| total timesteps         | 19800       |
+| value_loss              | 0.062444128 |
+-----------------------------------------
+Eval num_timesteps=20000, episode_reward=6.80 +/- 10.51
+Episode length: 150.00 +/- 0.00
+New best mean reward!
+----------------------------------------
+| current_lr              | 0.0003     |
+| ent_coef                | 0.02281514 |
+| ent_coef_loss           | -1.72503   |
+| entropy                 | 1.2372794  |
+| ep_rewmean              | -6.77      |
+| episodes                | 136        |
+| eplenmean               | 150        |
+| fps                     | 452        |
+| mean 100 episode reward | -6.8       |
+| n_updates               | 20301      |
+| policy_loss             | -11.549774 |
+| qf1_loss                | 0.24050857 |
+| qf2_loss                | 0.197385   |
+| success rate            | 0          |
+| time_elapsed            | 45         |
+| total timesteps         | 20400      |
+| value_loss              | 0.06921564 |
+----------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.021129537 |
+| ent_coef_loss           | 0.8732891   |
+| entropy                 | 1.3847127   |
+| ep_rewmean              | -6.64       |
+| episodes                | 140         |
+| eplenmean               | 150         |
+| fps                     | 452         |
+| mean 100 episode reward | -6.6        |
+| n_updates               | 20901       |
+| policy_loss             | -11.302575  |
+| qf1_loss                | 0.21939097  |
+| qf2_loss                | 0.38509446  |
+| success rate            | 0           |
+| time_elapsed            | 46          |
+| total timesteps         | 21000       |
+| value_loss              | 0.18885365  |
+-----------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.020162849 |
+| ent_coef_loss           | -0.8820096  |
+| entropy                 | 1.3509992   |
+| ep_rewmean              | -6.57       |
+| episodes                | 144         |
+| eplenmean               | 150         |
+| fps                     | 449         |
+| mean 100 episode reward | -6.6        |
+| n_updates               | 21501       |
+| policy_loss             | -10.885148  |
+| qf1_loss                | 1.4481593   |
+| qf2_loss                | 1.4917206   |
+| success rate            | 0           |
+| time_elapsed            | 47          |
+| total timesteps         | 21600       |
+| value_loss              | 0.081419684 |
+-----------------------------------------
+----------------------------------------
+| current_lr              | 0.0003     |
+| ent_coef                | 0.01910505 |
+| ent_coef_loss           | -1.0683229 |
+| entropy                 | 1.431119   |
+| ep_rewmean              | -5.54      |
+| episodes                | 148        |
+| eplenmean               | 150        |
+| fps                     | 450        |
+| mean 100 episode reward | -5.5       |
+| n_updates               | 22101      |
+| policy_loss             | -11.074847 |
+| qf1_loss                | 0.63849914 |
+| qf2_loss                | 0.7167022  |
+| success rate            | 0          |
+| time_elapsed            | 49         |
+| total timesteps         | 22200      |
+| value_loss              | 0.05385252 |
+----------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.018937867 |
+| ent_coef_loss           | 1.3764366   |
+| entropy                 | 1.3729725   |
+| ep_rewmean              | -5.01       |
+| episodes                | 152         |
+| eplenmean               | 150         |
+| fps                     | 451         |
+| mean 100 episode reward | -5          |
+| n_updates               | 22701       |
+| policy_loss             | -9.829958   |
+| qf1_loss                | 0.20045373  |
+| qf2_loss                | 0.17405924  |
+| success rate            | 0           |
+| time_elapsed            | 50          |
+| total timesteps         | 22800       |
+| value_loss              | 0.06703367  |
+-----------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.01894423  |
+| ent_coef_loss           | -1.4437325  |
+| entropy                 | 1.5541545   |
+| ep_rewmean              | -4.92       |
+| episodes                | 156         |
+| eplenmean               | 150         |
+| fps                     | 450         |
+| mean 100 episode reward | -4.9        |
+| n_updates               | 23301       |
+| policy_loss             | -8.768651   |
+| qf1_loss                | 0.09024328  |
+| qf2_loss                | 0.13457137  |
+| success rate            | 0           |
+| time_elapsed            | 51          |
+| total timesteps         | 23400       |
+| value_loss              | 0.093958616 |
+-----------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.018683933 |
+| ent_coef_loss           | -2.4929934  |
+| entropy                 | 1.5089458   |
+| ep_rewmean              | -4.58       |
+| episodes                | 160         |
+| eplenmean               | 150         |
+| fps                     | 449         |
+| mean 100 episode reward | -4.6        |
+| n_updates               | 23901       |
+| policy_loss             | -8.770907   |
+| qf1_loss                | 0.53403634  |
+| qf2_loss                | 0.5099655   |
+| success rate            | 0           |
+| time_elapsed            | 53          |
+| total timesteps         | 24000       |
+| value_loss              | 0.13736078  |
+-----------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.01824546  |
+| ent_coef_loss           | -1.4383745  |
+| entropy                 | 1.3876386   |
+| ep_rewmean              | -3.84       |
+| episodes                | 164         |
+| eplenmean               | 150         |
+| fps                     | 449         |
+| mean 100 episode reward | -3.8        |
+| n_updates               | 24501       |
+| policy_loss             | -8.272615   |
+| qf1_loss                | 1.1146287   |
+| qf2_loss                | 1.1144524   |
+| success rate            | 0           |
+| time_elapsed            | 54          |
+| total timesteps         | 24600       |
+| value_loss              | 0.107817486 |
+-----------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.017576106 |
+| ent_coef_loss           | -1.7408475  |
+| entropy                 | 1.494756    |
+| ep_rewmean              | -3.16       |
+| episodes                | 168         |
+| eplenmean               | 150         |
+| fps                     | 448         |
+| mean 100 episode reward | -3.2        |
+| n_updates               | 25101       |
+| policy_loss             | -8.632732   |
+| qf1_loss                | 0.25435513  |
+| qf2_loss                | 0.27516186  |
+| success rate            | 0           |
+| time_elapsed            | 56          |
+| total timesteps         | 25200       |
+| value_loss              | 0.08347056  |
+-----------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.016391193 |
+| ent_coef_loss           | 0.39657807  |
+| entropy                 | 1.4506034   |
+| ep_rewmean              | -2.62       |
+| episodes                | 172         |
+| eplenmean               | 150         |
+| fps                     | 448         |
+| mean 100 episode reward | -2.6        |
+| n_updates               | 25701       |
+| policy_loss             | -8.170961   |
+| qf1_loss                | 0.62073535  |
+| qf2_loss                | 0.62760496  |
+| success rate            | 0           |
+| time_elapsed            | 57          |
+| total timesteps         | 25800       |
+| value_loss              | 0.04228668  |
+-----------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.015660444 |
+| ent_coef_loss           | -0.84386677 |
+| entropy                 | 1.3840429   |
+| ep_rewmean              | -2.56       |
+| episodes                | 176         |
+| eplenmean               | 150         |
+| fps                     | 448         |
+| mean 100 episode reward | -2.6        |
+| n_updates               | 26301       |
+| policy_loss             | -7.75044    |
+| qf1_loss                | 0.23391947  |
+| qf2_loss                | 0.19651735  |
+| success rate            | 0           |
+| time_elapsed            | 58          |
+| total timesteps         | 26400       |
+| value_loss              | 0.17894846  |
+-----------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.014788078 |
+| ent_coef_loss           | 0.7499075   |
+| entropy                 | 1.4679673   |
+| ep_rewmean              | -2.73       |
+| episodes                | 180         |
+| eplenmean               | 150         |
+| fps                     | 448         |
+| mean 100 episode reward | -2.7        |
+| n_updates               | 26901       |
+| policy_loss             | -7.4485245  |
+| qf1_loss                | 1.5084176   |
+| qf2_loss                | 1.6190782   |
+| success rate            | 0           |
+| time_elapsed            | 60          |
+| total timesteps         | 27000       |
+| value_loss              | 0.20937869  |
+-----------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.013772691 |
+| ent_coef_loss           | -0.99439585 |
+| entropy                 | 1.4082652   |
+| ep_rewmean              | -2.4        |
+| episodes                | 184         |
+| eplenmean               | 150         |
+| fps                     | 447         |
+| mean 100 episode reward | -2.4        |
+| n_updates               | 27501       |
+| policy_loss             | -7.1088734  |
+| qf1_loss                | 0.20880863  |
+| qf2_loss                | 0.23719475  |
+| success rate            | 0           |
+| time_elapsed            | 61          |
+| total timesteps         | 27600       |
+| value_loss              | 0.09504214  |
+-----------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.01260469  |
+| ent_coef_loss           | 0.6191416   |
+| entropy                 | 1.2388572   |
+| ep_rewmean              | -2.52       |
+| episodes                | 188         |
+| eplenmean               | 150         |
+| fps                     | 448         |
+| mean 100 episode reward | -2.5        |
+| n_updates               | 28101       |
+| policy_loss             | -6.9585953  |
+| qf1_loss                | 1.2931923   |
+| qf2_loss                | 1.2980436   |
+| success rate            | 0           |
+| time_elapsed            | 62          |
+| total timesteps         | 28200       |
+| value_loss              | 0.041790888 |
+-----------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.011710885 |
+| ent_coef_loss           | -2.1026938  |
+| entropy                 | 1.227742    |
+| ep_rewmean              | -2.93       |
+| episodes                | 192         |
+| eplenmean               | 150         |
+| fps                     | 448         |
+| mean 100 episode reward | -2.9        |
+| n_updates               | 28701       |
+| policy_loss             | -6.04823    |
+| qf1_loss                | 0.33866137  |
+| qf2_loss                | 0.4651985   |
+| success rate            | 0           |
+| time_elapsed            | 64          |
+| total timesteps         | 28800       |
+| value_loss              | 0.056756586 |
+-----------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.009975719 |
+| ent_coef_loss           | -0.12298405 |
+| entropy                 | 0.96317136  |
+| ep_rewmean              | -2.85       |
+| episodes                | 196         |
+| eplenmean               | 150         |
+| fps                     | 449         |
+| mean 100 episode reward | -2.8        |
+| n_updates               | 29301       |
+| policy_loss             | -6.0363226  |
+| qf1_loss                | 0.2586804   |
+| qf2_loss                | 0.23364455  |
+| success rate            | 0           |
+| time_elapsed            | 65          |
+| total timesteps         | 29400       |
+| value_loss              | 0.04343722  |
+-----------------------------------------
+Eval num_timesteps=30000, episode_reward=-13.62 +/- 8.95
+Episode length: 150.00 +/- 0.00
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.009420789 |
+| ent_coef_loss           | 1.4034656   |
+| entropy                 | 1.0201128   |
+| ep_rewmean              | -3.37       |
+| episodes                | 200         |
+| eplenmean               | 150         |
+| fps                     | 447         |
+| mean 100 episode reward | -3.4        |
+| n_updates               | 29901       |
+| policy_loss             | -6.1729994  |
+| qf1_loss                | 0.5467977   |
+| qf2_loss                | 0.50979483  |
+| success rate            | 0           |
+| time_elapsed            | 67          |
+| total timesteps         | 30000       |
+| value_loss              | 0.036766984 |
+-----------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.009466933 |
+| ent_coef_loss           | 1.4280653   |
+| entropy                 | 0.86133754  |
+| ep_rewmean              | -3.68       |
+| episodes                | 204         |
+| eplenmean               | 150         |
+| fps                     | 447         |
+| mean 100 episode reward | -3.7        |
+| n_updates               | 30501       |
+| policy_loss             | -5.704997   |
+| qf1_loss                | 0.14079344  |
+| qf2_loss                | 0.12740335  |
+| success rate            | 0           |
+| time_elapsed            | 68          |
+| total timesteps         | 30600       |
+| value_loss              | 0.05376017  |
+-----------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.009181951 |
+| ent_coef_loss           | -1.9756615  |
+| entropy                 | 0.7744721   |
+| ep_rewmean              | -3.9        |
+| episodes                | 208         |
+| eplenmean               | 150         |
+| fps                     | 448         |
+| mean 100 episode reward | -3.9        |
+| n_updates               | 31101       |
+| policy_loss             | -5.733235   |
+| qf1_loss                | 0.15776575  |
+| qf2_loss                | 0.15138978  |
+| success rate            | 0           |
+| time_elapsed            | 69          |
+| total timesteps         | 31200       |
+| value_loss              | 0.018238235 |
+-----------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.008311297 |
+| ent_coef_loss           | -0.5203256  |
+| entropy                 | 0.78909725  |
+| ep_rewmean              | -4.24       |
+| episodes                | 212         |
+| eplenmean               | 150         |
+| fps                     | 448         |
+| mean 100 episode reward | -4.2        |
+| n_updates               | 31701       |
+| policy_loss             | -4.688006   |
+| qf1_loss                | 0.11309104  |
+| qf2_loss                | 0.09206655  |
+| success rate            | 0           |
+| time_elapsed            | 70          |
+| total timesteps         | 31800       |
+| value_loss              | 0.039238386 |
+-----------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.008136256 |
+| ent_coef_loss           | 2.1380682   |
+| entropy                 | 0.6782236   |
+| ep_rewmean              | -4.61       |
+| episodes                | 216         |
+| eplenmean               | 150         |
+| fps                     | 449         |
+| mean 100 episode reward | -4.6        |
+| n_updates               | 32301       |
+| policy_loss             | -3.827878   |
+| qf1_loss                | 0.38147774  |
+| qf2_loss                | 0.49409825  |
+| success rate            | 0           |
+| time_elapsed            | 72          |
+| total timesteps         | 32400       |
+| value_loss              | 0.19029385  |
+-----------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.007809997 |
+| ent_coef_loss           | -0.4075031  |
+| entropy                 | 0.6252876   |
+| ep_rewmean              | -4.46       |
+| episodes                | 220         |
+| eplenmean               | 150         |
+| fps                     | 449         |
+| mean 100 episode reward | -4.5        |
+| n_updates               | 32901       |
+| policy_loss             | -3.6450512  |
+| qf1_loss                | 0.3907618   |
+| qf2_loss                | 0.3876254   |
+| success rate            | 0           |
+| time_elapsed            | 73          |
+| total timesteps         | 33000       |
+| value_loss              | 0.08481813  |
+-----------------------------------------
+------------------------------------------
+| current_lr              | 0.0003       |
+| ent_coef                | 0.0075674565 |
+| ent_coef_loss           | -1.0572846   |
+| entropy                 | 0.5625266    |
+| ep_rewmean              | -4.59        |
+| episodes                | 224          |
+| eplenmean               | 150          |
+| fps                     | 449          |
+| mean 100 episode reward | -4.6         |
+| n_updates               | 33501        |
+| policy_loss             | -4.0315857   |
+| qf1_loss                | 0.11587474   |
+| qf2_loss                | 0.08471675   |
+| success rate            | 0            |
+| time_elapsed            | 74           |
+| total timesteps         | 33600        |
+| value_loss              | 0.044419818  |
+------------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.007675602 |
+| ent_coef_loss           | 0.19871959  |
+| entropy                 | 0.6781024   |
+| ep_rewmean              | -4.94       |
+| episodes                | 228         |
+| eplenmean               | 150         |
+| fps                     | 449         |
+| mean 100 episode reward | -4.9        |
+| n_updates               | 34101       |
+| policy_loss             | -4.315271   |
+| qf1_loss                | 0.071808405 |
+| qf2_loss                | 0.07316343  |
+| success rate            | 0           |
+| time_elapsed            | 76          |
+| total timesteps         | 34200       |
+| value_loss              | 0.019597653 |
+-----------------------------------------
+------------------------------------------
+| current_lr              | 0.0003       |
+| ent_coef                | 0.0078817075 |
+| ent_coef_loss           | -2.9986606   |
+| entropy                 | 0.89349496   |
+| ep_rewmean              | -4.73        |
+| episodes                | 232          |
+| eplenmean               | 150          |
+| fps                     | 448          |
+| mean 100 episode reward | -4.7         |
+| n_updates               | 34701        |
+| policy_loss             | -3.2305355   |
+| qf1_loss                | 0.113316625  |
+| qf2_loss                | 0.10677351   |
+| success rate            | 0            |
+| time_elapsed            | 77           |
+| total timesteps         | 34800        |
+| value_loss              | 0.027513726  |
+------------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.007528557 |
+| ent_coef_loss           | 1.5017524   |
+| entropy                 | 0.6935698   |
+| ep_rewmean              | -5.22       |
+| episodes                | 236         |
+| eplenmean               | 150         |
+| fps                     | 449         |
+| mean 100 episode reward | -5.2        |
+| n_updates               | 35301       |
+| policy_loss             | -3.0175228  |
+| qf1_loss                | 0.13411921  |
+| qf2_loss                | 0.09890981  |
+| success rate            | 0           |
+| time_elapsed            | 78          |
+| total timesteps         | 35400       |
+| value_loss              | 0.04833275  |
+-----------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.007708003 |
+| ent_coef_loss           | 3.301943    |
+| entropy                 | 0.94726443  |
+| ep_rewmean              | -5.21       |
+| episodes                | 240         |
+| eplenmean               | 150         |
+| fps                     | 449         |
+| mean 100 episode reward | -5.2        |
+| n_updates               | 35901       |
+| policy_loss             | -3.2356665  |
+| qf1_loss                | 0.12038882  |
+| qf2_loss                | 0.1252832   |
+| success rate            | 0           |
+| time_elapsed            | 80          |
+| total timesteps         | 36000       |
+| value_loss              | 0.057502523 |
+-----------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.007972737 |
+| ent_coef_loss           | 5.7303743   |
+| entropy                 | 1.0647864   |
+| ep_rewmean              | -5.21       |
+| episodes                | 244         |
+| eplenmean               | 150         |
+| fps                     | 449         |
+| mean 100 episode reward | -5.2        |
+| n_updates               | 36501       |
+| policy_loss             | -2.3601384  |
+| qf1_loss                | 0.31310123  |
+| qf2_loss                | 0.34989944  |
+| success rate            | 0           |
+| time_elapsed            | 81          |
+| total timesteps         | 36600       |
+| value_loss              | 0.05797203  |
+-----------------------------------------
+------------------------------------------
+| current_lr              | 0.0003       |
+| ent_coef                | 0.0078710485 |
+| ent_coef_loss           | 0.030663192  |
+| entropy                 | 0.8119998    |
+| ep_rewmean              | -5.42        |
+| episodes                | 248          |
+| eplenmean               | 150          |
+| fps                     | 449          |
+| mean 100 episode reward | -5.4         |
+| n_updates               | 37101        |
+| policy_loss             | -2.4413028   |
+| qf1_loss                | 0.15006162   |
+| qf2_loss                | 0.16785379   |
+| success rate            | 0            |
+| time_elapsed            | 82           |
+| total timesteps         | 37200        |
+| value_loss              | 0.031272326  |
+------------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.008037685 |
+| ent_coef_loss           | 1.3883053   |
+| entropy                 | 0.8433672   |
+| ep_rewmean              | -5.61       |
+| episodes                | 252         |
+| eplenmean               | 150         |
+| fps                     | 448         |
+| mean 100 episode reward | -5.6        |
+| n_updates               | 37701       |
+| policy_loss             | -1.6466944  |
+| qf1_loss                | 0.16459835  |
+| qf2_loss                | 0.1613119   |
+| success rate            | 0           |
+| time_elapsed            | 84          |
+| total timesteps         | 37800       |
+| value_loss              | 0.06751449  |
+-----------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.008559202 |
+| ent_coef_loss           | -0.9807308  |
+| entropy                 | 1.0424159   |
+| ep_rewmean              | -5.93       |
+| episodes                | 256         |
+| eplenmean               | 150         |
+| fps                     | 448         |
+| mean 100 episode reward | -5.9        |
+| n_updates               | 38301       |
+| policy_loss             | -1.0015988  |
+| qf1_loss                | 0.3548829   |
+| qf2_loss                | 0.3408737   |
+| success rate            | 0           |
+| time_elapsed            | 85          |
+| total timesteps         | 38400       |
+| value_loss              | 0.026852049 |
+-----------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.008668709 |
+| ent_coef_loss           | 0.69146454  |
+| entropy                 | 1.1200068   |
+| ep_rewmean              | -5.78       |
+| episodes                | 260         |
+| eplenmean               | 150         |
+| fps                     | 447         |
+| mean 100 episode reward | -5.8        |
+| n_updates               | 38901       |
+| policy_loss             | -1.35635    |
+| qf1_loss                | 0.09593101  |
+| qf2_loss                | 0.14218858  |
+| success rate            | 0           |
+| time_elapsed            | 87          |
+| total timesteps         | 39000       |
+| value_loss              | 0.034967177 |
+-----------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.009286877 |
+| ent_coef_loss           | 0.15592806  |
+| entropy                 | 1.1753266   |
+| ep_rewmean              | -5.88       |
+| episodes                | 264         |
+| eplenmean               | 150         |
+| fps                     | 448         |
+| mean 100 episode reward | -5.9        |
+| n_updates               | 39501       |
+| policy_loss             | -1.4564996  |
+| qf1_loss                | 0.21851832  |
+| qf2_loss                | 0.24772522  |
+| success rate            | 0           |
+| time_elapsed            | 88          |
+| total timesteps         | 39600       |
+| value_loss              | 0.11469703  |
+-----------------------------------------
+Eval num_timesteps=40000, episode_reward=-4.00 +/- 11.13
+Episode length: 150.00 +/- 0.00
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.008482471 |
+| ent_coef_loss           | -2.2534606  |
+| entropy                 | 0.9379337   |
+| ep_rewmean              | -5.66       |
+| episodes                | 268         |
+| eplenmean               | 150         |
+| fps                     | 446         |
+| mean 100 episode reward | -5.7        |
+| n_updates               | 40101       |
+| policy_loss             | -0.8732811  |
+| qf1_loss                | 0.119718954 |
+| qf2_loss                | 0.12668039  |
+| success rate            | 0           |
+| time_elapsed            | 89          |
+| total timesteps         | 40200       |
+| value_loss              | 0.016701207 |
+-----------------------------------------
+------------------------------------------
+| current_lr              | 0.0003       |
+| ent_coef                | 0.0079012485 |
+| ent_coef_loss           | 1.8004471    |
+| entropy                 | 1.0277185    |
+| ep_rewmean              | -5.57        |
+| episodes                | 272          |
+| eplenmean               | 150          |
+| fps                     | 447          |
+| mean 100 episode reward | -5.6         |
+| n_updates               | 40701        |
+| policy_loss             | -0.8716261   |
+| qf1_loss                | 0.12113592   |
+| qf2_loss                | 0.08312049   |
+| success rate            | 0            |
+| time_elapsed            | 91           |
+| total timesteps         | 40800        |
+| value_loss              | 0.050186045  |
+------------------------------------------
+------------------------------------------
+| current_lr              | 0.0003       |
+| ent_coef                | 0.0073931753 |
+| ent_coef_loss           | -2.7094057   |
+| entropy                 | 0.91125035   |
+| ep_rewmean              | -5.57        |
+| episodes                | 276          |
+| eplenmean               | 150          |
+| fps                     | 447          |
+| mean 100 episode reward | -5.6         |
+| n_updates               | 41301        |
+| policy_loss             | -0.31554258  |
+| qf1_loss                | 0.08855355   |
+| qf2_loss                | 0.13347597   |
+| success rate            | 0            |
+| time_elapsed            | 92           |
+| total timesteps         | 41400        |
+| value_loss              | 0.049156886  |
+------------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.006861104 |
+| ent_coef_loss           | -0.13065636 |
+| entropy                 | 0.98897076  |
+| ep_rewmean              | -5.38       |
+| episodes                | 280         |
+| eplenmean               | 150         |
+| fps                     | 448         |
+| mean 100 episode reward | -5.4        |
+| n_updates               | 41901       |
+| policy_loss             | -0.16239808 |
+| qf1_loss                | 0.39289665  |
+| qf2_loss                | 0.31127417  |
+| success rate            | 0           |
+| time_elapsed            | 93          |
+| total timesteps         | 42000       |
+| value_loss              | 0.021300038 |
+-----------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.006734635 |
+| ent_coef_loss           | 0.6615521   |
+| entropy                 | 0.8537299   |
+| ep_rewmean              | -6.04       |
+| episodes                | 284         |
+| eplenmean               | 150         |
+| fps                     | 448         |
+| mean 100 episode reward | -6          |
+| n_updates               | 42501       |
+| policy_loss             | 0.27125755  |
+| qf1_loss                | 0.289259    |
+| qf2_loss                | 0.26572502  |
+| success rate            | 0           |
+| time_elapsed            | 94          |
+| total timesteps         | 42600       |
+| value_loss              | 0.047741998 |
+-----------------------------------------
+------------------------------------------
+| current_lr              | 0.0003       |
+| ent_coef                | 0.007056373  |
+| ent_coef_loss           | -0.042582273 |
+| entropy                 | 1.0618902    |
+| ep_rewmean              | -5.79        |
+| episodes                | 288          |
+| eplenmean               | 150          |
+| fps                     | 449          |
+| mean 100 episode reward | -5.8         |
+| n_updates               | 43101        |
+| policy_loss             | 0.03634783   |
+| qf1_loss                | 0.18173881   |
+| qf2_loss                | 0.17720112   |
+| success rate            | 0            |
+| time_elapsed            | 96           |
+| total timesteps         | 43200        |
+| value_loss              | 0.027203016  |
+------------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.007336306 |
+| ent_coef_loss           | 0.11594635  |
+| entropy                 | 0.73895496  |
+| ep_rewmean              | -5.51       |
+| episodes                | 292         |
+| eplenmean               | 150         |
+| fps                     | 449         |
+| mean 100 episode reward | -5.5        |
+| n_updates               | 43701       |
+| policy_loss             | 0.31092715  |
+| qf1_loss                | 0.08390929  |
+| qf2_loss                | 0.12578182  |
+| success rate            | 0           |
+| time_elapsed            | 97          |
+| total timesteps         | 43800       |
+| value_loss              | 0.04560387  |
+-----------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.007818447 |
+| ent_coef_loss           | 0.7833968   |
+| entropy                 | 0.92511123  |
+| ep_rewmean              | -5.27       |
+| episodes                | 296         |
+| eplenmean               | 150         |
+| fps                     | 449         |
+| mean 100 episode reward | -5.3        |
+| n_updates               | 44301       |
+| policy_loss             | 0.81862134  |
+| qf1_loss                | 0.12202017  |
+| qf2_loss                | 0.09823138  |
+| success rate            | 0           |
+| time_elapsed            | 98          |
+| total timesteps         | 44400       |
+| value_loss              | 0.034669418 |
+-----------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.008289634 |
+| ent_coef_loss           | 0.5268483   |
+| entropy                 | 1.1950679   |
+| ep_rewmean              | -4.82       |
+| episodes                | 300         |
+| eplenmean               | 150         |
+| fps                     | 450         |
+| mean 100 episode reward | -4.8        |
+| n_updates               | 44901       |
+| policy_loss             | 0.5689359   |
+| qf1_loss                | 0.18671185  |
+| qf2_loss                | 0.17733622  |
+| success rate            | 0           |
+| time_elapsed            | 99          |
+| total timesteps         | 45000       |
+| value_loss              | 0.043242306 |
+-----------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.009032748 |
+| ent_coef_loss           | 0.85389435  |
+| entropy                 | 1.1152859   |
+| ep_rewmean              | -4.87       |
+| episodes                | 304         |
+| eplenmean               | 150         |
+| fps                     | 450         |
+| mean 100 episode reward | -4.9        |
+| n_updates               | 45501       |
+| policy_loss             | 0.85295045  |
+| qf1_loss                | 0.1291626   |
+| qf2_loss                | 0.24935798  |
+| success rate            | 0           |
+| time_elapsed            | 101         |
+| total timesteps         | 45600       |
+| value_loss              | 0.06740214  |
+-----------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.009536739 |
+| ent_coef_loss           | -0.92796534 |
+| entropy                 | 1.1772319   |
+| ep_rewmean              | -4.81       |
+| episodes                | 308         |
+| eplenmean               | 150         |
+| fps                     | 450         |
+| mean 100 episode reward | -4.8        |
+| n_updates               | 46101       |
+| policy_loss             | 0.6584898   |
+| qf1_loss                | 0.13581604  |
+| qf2_loss                | 0.17333299  |
+| success rate            | 0           |
+| time_elapsed            | 102         |
+| total timesteps         | 46200       |
+| value_loss              | 0.042968392 |
+-----------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.010005475 |
+| ent_coef_loss           | 0.44527712  |
+| entropy                 | 1.0265738   |
+| ep_rewmean              | -4.43       |
+| episodes                | 312         |
+| eplenmean               | 150         |
+| fps                     | 450         |
+| mean 100 episode reward | -4.4        |
+| n_updates               | 46701       |
+| policy_loss             | 0.8721064   |
+| qf1_loss                | 0.14770497  |
+| qf2_loss                | 0.25810954  |
+| success rate            | 0           |
+| time_elapsed            | 103         |
+| total timesteps         | 46800       |
+| value_loss              | 0.040382408 |
+-----------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.010291956 |
+| ent_coef_loss           | 1.0154146   |
+| entropy                 | 1.2797      |
+| ep_rewmean              | -5.02       |
+| episodes                | 316         |
+| eplenmean               | 150         |
+| fps                     | 451         |
+| mean 100 episode reward | -5          |
+| n_updates               | 47301       |
+| policy_loss             | 1.0573723   |
+| qf1_loss                | 0.5218065   |
+| qf2_loss                | 0.51374507  |
+| success rate            | 0           |
+| time_elapsed            | 105         |
+| total timesteps         | 47400       |
+| value_loss              | 0.022532532 |
+-----------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.010748213 |
+| ent_coef_loss           | 0.34371623  |
+| entropy                 | 1.2391527   |
+| ep_rewmean              | -5.37       |
+| episodes                | 320         |
+| eplenmean               | 150         |
+| fps                     | 451         |
+| mean 100 episode reward | -5.4        |
+| n_updates               | 47901       |
+| policy_loss             | 0.99151564  |
+| qf1_loss                | 0.13244042  |
+| qf2_loss                | 0.1513086   |
+| success rate            | 0           |
+| time_elapsed            | 106         |
+| total timesteps         | 48000       |
+| value_loss              | 0.017294856 |
+-----------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.010631598 |
+| ent_coef_loss           | 1.4470205   |
+| entropy                 | 1.1510047   |
+| ep_rewmean              | -5.51       |
+| episodes                | 324         |
+| eplenmean               | 150         |
+| fps                     | 451         |
+| mean 100 episode reward | -5.5        |
+| n_updates               | 48501       |
+| policy_loss             | 0.72354364  |
+| qf1_loss                | 0.352126    |
+| qf2_loss                | 0.3083502   |
+| success rate            | 0           |
+| time_elapsed            | 107         |
+| total timesteps         | 48600       |
+| value_loss              | 0.07251155  |
+-----------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.010214595 |
+| ent_coef_loss           | -3.418056   |
+| entropy                 | 1.2097783   |
+| ep_rewmean              | -4.99       |
+| episodes                | 328         |
+| eplenmean               | 150         |
+| fps                     | 451         |
+| mean 100 episode reward | -5          |
+| n_updates               | 49101       |
+| policy_loss             | 1.4394655   |
+| qf1_loss                | 0.059680585 |
+| qf2_loss                | 0.06685005  |
+| success rate            | 0           |
+| time_elapsed            | 108         |
+| total timesteps         | 49200       |
+| value_loss              | 0.021549493 |
+-----------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.010275524 |
+| ent_coef_loss           | -0.26568535 |
+| entropy                 | 1.0852926   |
+| ep_rewmean              | -4.79       |
+| episodes                | 332         |
+| eplenmean               | 150         |
+| fps                     | 452         |
+| mean 100 episode reward | -4.8        |
+| n_updates               | 49701       |
+| policy_loss             | 0.8842972   |
+| qf1_loss                | 0.51596606  |
+| qf2_loss                | 0.5795797   |
+| success rate            | 0           |
+| time_elapsed            | 110         |
+| total timesteps         | 49800       |
+| value_loss              | 0.06487638  |
+-----------------------------------------
+Eval num_timesteps=50000, episode_reward=4.57 +/- 4.17
+Episode length: 150.00 +/- 0.00
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.01028192  |
+| ent_coef_loss           | 0.3085161   |
+| entropy                 | 1.0752927   |
+| ep_rewmean              | -4.36       |
+| episodes                | 336         |
+| eplenmean               | 150         |
+| fps                     | 451         |
+| mean 100 episode reward | -4.4        |
+| n_updates               | 50301       |
+| policy_loss             | 0.7716702   |
+| qf1_loss                | 0.05068532  |
+| qf2_loss                | 0.046249714 |
+| success rate            | 0           |
+| time_elapsed            | 111         |
+| total timesteps         | 50400       |
+| value_loss              | 0.024423514 |
+-----------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.010244511 |
+| ent_coef_loss           | -0.16154629 |
+| entropy                 | 1.2961763   |
+| ep_rewmean              | -4.26       |
+| episodes                | 340         |
+| eplenmean               | 150         |
+| fps                     | 451         |
+| mean 100 episode reward | -4.3        |
+| n_updates               | 50901       |
+| policy_loss             | 1.518543    |
+| qf1_loss                | 0.28774437  |
+| qf2_loss                | 0.2847665   |
+| success rate            | 0           |
+| time_elapsed            | 112         |
+| total timesteps         | 51000       |
+| value_loss              | 0.024490243 |
+-----------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.010835701 |
+| ent_coef_loss           | -1.4164598  |
+| entropy                 | 1.306831    |
+| ep_rewmean              | -4.34       |
+| episodes                | 344         |
+| eplenmean               | 150         |
+| fps                     | 451         |
+| mean 100 episode reward | -4.3        |
+| n_updates               | 51501       |
+| policy_loss             | 1.0463932   |
+| qf1_loss                | 0.0810231   |
+| qf2_loss                | 0.11532988  |
+| success rate            | 0           |
+| time_elapsed            | 114         |
+| total timesteps         | 51600       |
+| value_loss              | 0.06558225  |
+-----------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.010926847 |
+| ent_coef_loss           | 2.7650461   |
+| entropy                 | 1.1793385   |
+| ep_rewmean              | -4.28       |
+| episodes                | 348         |
+| eplenmean               | 150         |
+| fps                     | 451         |
+| mean 100 episode reward | -4.3        |
+| n_updates               | 52101       |
+| policy_loss             | 1.0380355   |
+| qf1_loss                | 0.3340208   |
+| qf2_loss                | 0.3391884   |
+| success rate            | 0           |
+| time_elapsed            | 115         |
+| total timesteps         | 52200       |
+| value_loss              | 0.042049684 |
+-----------------------------------------
+------------------------------------------
+| current_lr              | 0.0003       |
+| ent_coef                | 0.0110754315 |
+| ent_coef_loss           | -2.9047089   |
+| entropy                 | 1.2973219    |
+| ep_rewmean              | -4.18        |
+| episodes                | 352          |
+| eplenmean               | 150          |
+| fps                     | 451          |
+| mean 100 episode reward | -4.2         |
+| n_updates               | 52701        |
+| policy_loss             | 1.556721     |
+| qf1_loss                | 0.13089162   |
+| qf2_loss                | 0.199052     |
+| success rate            | 0            |
+| time_elapsed            | 116          |
+| total timesteps         | 52800        |
+| value_loss              | 0.01655735   |
+------------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.011093381 |
+| ent_coef_loss           | -0.7034881  |
+| entropy                 | 1.4523847   |
+| ep_rewmean              | -3.73       |
+| episodes                | 356         |
+| eplenmean               | 150         |
+| fps                     | 451         |
+| mean 100 episode reward | -3.7        |
+| n_updates               | 53301       |
+| policy_loss             | 1.4845624   |
+| qf1_loss                | 0.11467506  |
+| qf2_loss                | 0.11580187  |
+| success rate            | 0           |
+| time_elapsed            | 118         |
+| total timesteps         | 53400       |
+| value_loss              | 0.033751413 |
+-----------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.010282072 |
+| ent_coef_loss           | -1.9575665  |
+| entropy                 | 1.3480659   |
+| ep_rewmean              | -3.81       |
+| episodes                | 360         |
+| eplenmean               | 150         |
+| fps                     | 451         |
+| mean 100 episode reward | -3.8        |
+| n_updates               | 53901       |
+| policy_loss             | 1.657381    |
+| qf1_loss                | 0.13605717  |
+| qf2_loss                | 0.20336172  |
+| success rate            | 0           |
+| time_elapsed            | 119         |
+| total timesteps         | 54000       |
+| value_loss              | 0.06626694  |
+-----------------------------------------
+----------------------------------------
+| current_lr              | 0.0003     |
+| ent_coef                | 0.0094294  |
+| ent_coef_loss           | 0.9236725  |
+| entropy                 | 1.1132598  |
+| ep_rewmean              | -3.16      |
+| episodes                | 364        |
+| eplenmean               | 150        |
+| fps                     | 451        |
+| mean 100 episode reward | -3.2       |
+| n_updates               | 54501      |
+| policy_loss             | 1.4274025  |
+| qf1_loss                | 0.0674588  |
+| qf2_loss                | 0.07505994 |
+| success rate            | 0          |
+| time_elapsed            | 121        |
+| total timesteps         | 54600      |
+| value_loss              | 0.04522417 |
+----------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.009504924 |
+| ent_coef_loss           | -1.0810076  |
+| entropy                 | 1.3545845   |
+| ep_rewmean              | -3.47       |
+| episodes                | 368         |
+| eplenmean               | 150         |
+| fps                     | 450         |
+| mean 100 episode reward | -3.5        |
+| n_updates               | 55101       |
+| policy_loss             | 1.50795     |
+| qf1_loss                | 0.093096115 |
+| qf2_loss                | 0.102470055 |
+| success rate            | 0           |
+| time_elapsed            | 122         |
+| total timesteps         | 55200       |
+| value_loss              | 0.040437214 |
+-----------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.009790896 |
+| ent_coef_loss           | -2.19386    |
+| entropy                 | 1.271808    |
+| ep_rewmean              | -3.79       |
+| episodes                | 372         |
+| eplenmean               | 150         |
+| fps                     | 450         |
+| mean 100 episode reward | -3.8        |
+| n_updates               | 55701       |
+| policy_loss             | 0.8169862   |
+| qf1_loss                | 0.059487686 |
+| qf2_loss                | 0.078238    |
+| success rate            | 0           |
+| time_elapsed            | 123         |
+| total timesteps         | 55800       |
+| value_loss              | 0.02465423  |
+-----------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.009433749 |
+| ent_coef_loss           | 2.234024    |
+| entropy                 | 1.1388452   |
+| ep_rewmean              | -3.8        |
+| episodes                | 376         |
+| eplenmean               | 150         |
+| fps                     | 450         |
+| mean 100 episode reward | -3.8        |
+| n_updates               | 56301       |
+| policy_loss             | 0.7341517   |
+| qf1_loss                | 0.0608354   |
+| qf2_loss                | 0.050450742 |
+| success rate            | 0           |
+| time_elapsed            | 125         |
+| total timesteps         | 56400       |
+| value_loss              | 0.0262261   |
+-----------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.009120585 |
+| ent_coef_loss           | -3.4401379  |
+| entropy                 | 1.3257482   |
+| ep_rewmean              | -4.32       |
+| episodes                | 380         |
+| eplenmean               | 150         |
+| fps                     | 450         |
+| mean 100 episode reward | -4.3        |
+| n_updates               | 56901       |
+| policy_loss             | 1.1283944   |
+| qf1_loss                | 0.08504936  |
+| qf2_loss                | 0.11045296  |
+| success rate            | 0           |
+| time_elapsed            | 126         |
+| total timesteps         | 57000       |
+| value_loss              | 0.037814535 |
+-----------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.008371384 |
+| ent_coef_loss           | -3.5263705  |
+| entropy                 | 1.2892764   |
+| ep_rewmean              | -3.99       |
+| episodes                | 384         |
+| eplenmean               | 150         |
+| fps                     | 450         |
+| mean 100 episode reward | -4          |
+| n_updates               | 57501       |
+| policy_loss             | 1.4382044   |
+| qf1_loss                | 0.109338395 |
+| qf2_loss                | 0.07909886  |
+| success rate            | 0           |
+| time_elapsed            | 127         |
+| total timesteps         | 57600       |
+| value_loss              | 0.053881247 |
+-----------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.007732926 |
+| ent_coef_loss           | -1.7284533  |
+| entropy                 | 1.2045178   |
+| ep_rewmean              | -3.88       |
+| episodes                | 388         |
+| eplenmean               | 150         |
+| fps                     | 450         |
+| mean 100 episode reward | -3.9        |
+| n_updates               | 58101       |
+| policy_loss             | 1.5856183   |
+| qf1_loss                | 0.09963408  |
+| qf2_loss                | 0.11502809  |
+| success rate            | 0           |
+| time_elapsed            | 129         |
+| total timesteps         | 58200       |
+| value_loss              | 0.027564164 |
+-----------------------------------------
+------------------------------------------
+| current_lr              | 0.0003       |
+| ent_coef                | 0.0073670563 |
+| ent_coef_loss           | 0.16867638   |
+| entropy                 | 0.9049531    |
+| ep_rewmean              | -3.66        |
+| episodes                | 392          |
+| eplenmean               | 150          |
+| fps                     | 450          |
+| mean 100 episode reward | -3.7         |
+| n_updates               | 58701        |
+| policy_loss             | 1.3447266    |
+| qf1_loss                | 0.17882156   |
+| qf2_loss                | 0.18228328   |
+| success rate            | 0            |
+| time_elapsed            | 130          |
+| total timesteps         | 58800        |
+| value_loss              | 0.05543319   |
+------------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.006863791 |
+| ent_coef_loss           | -0.2741257  |
+| entropy                 | 0.97799736  |
+| ep_rewmean              | -3.86       |
+| episodes                | 396         |
+| eplenmean               | 150         |
+| fps                     | 450         |
+| mean 100 episode reward | -3.9        |
+| n_updates               | 59301       |
+| policy_loss             | 1.1183592   |
+| qf1_loss                | 0.027977867 |
+| qf2_loss                | 0.036773935 |
+| success rate            | 0           |
+| time_elapsed            | 131         |
+| total timesteps         | 59400       |
+| value_loss              | 0.023334077 |
+-----------------------------------------
+Eval num_timesteps=60000, episode_reward=6.07 +/- 14.33
+Episode length: 150.00 +/- 0.00
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.006608572 |
+| ent_coef_loss           | 0.78464735  |
+| entropy                 | 0.8277761   |
+| ep_rewmean              | -3.66       |
+| episodes                | 400         |
+| eplenmean               | 150         |
+| fps                     | 449         |
+| mean 100 episode reward | -3.7        |
+| n_updates               | 59901       |
+| policy_loss             | 0.8681375   |
+| qf1_loss                | 0.07759337  |
+| qf2_loss                | 0.08288951  |
+| success rate            | 0           |
+| time_elapsed            | 133         |
+| total timesteps         | 60000       |
+| value_loss              | 0.048055045 |
+-----------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.006869203 |
+| ent_coef_loss           | -1.1707218  |
+| entropy                 | 1.0782461   |
+| ep_rewmean              | -3.36       |
+| episodes                | 404         |
+| eplenmean               | 150         |
+| fps                     | 449         |
+| mean 100 episode reward | -3.4        |
+| n_updates               | 60501       |
+| policy_loss             | 1.3263978   |
+| qf1_loss                | 0.067397974 |
+| qf2_loss                | 0.07836983  |
+| success rate            | 0           |
+| time_elapsed            | 134         |
+| total timesteps         | 60600       |
+| value_loss              | 0.036330625 |
+-----------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.006773062 |
+| ent_coef_loss           | 1.551995    |
+| entropy                 | 0.90818524  |
+| ep_rewmean              | -3.45       |
+| episodes                | 408         |
+| eplenmean               | 150         |
+| fps                     | 449         |
+| mean 100 episode reward | -3.5        |
+| n_updates               | 61101       |
+| policy_loss             | 1.4969926   |
+| qf1_loss                | 0.042933952 |
+| qf2_loss                | 0.05957187  |
+| success rate            | 0           |
+| time_elapsed            | 136         |
+| total timesteps         | 61200       |
+| value_loss              | 0.040814348 |
+-----------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.007097005 |
+| ent_coef_loss           | -0.57171506 |
+| entropy                 | 0.9526002   |
+| ep_rewmean              | -3.43       |
+| episodes                | 412         |
+| eplenmean               | 150         |
+| fps                     | 449         |
+| mean 100 episode reward | -3.4        |
+| n_updates               | 61701       |
+| policy_loss             | 1.405897    |
+| qf1_loss                | 0.048821002 |
+| qf2_loss                | 0.09100874  |
+| success rate            | 0           |
+| time_elapsed            | 137         |
+| total timesteps         | 61800       |
+| value_loss              | 0.027851745 |
+-----------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.007594246 |
+| ent_coef_loss           | 0.9520519   |
+| entropy                 | 1.0023633   |
+| ep_rewmean              | -2.76       |
+| episodes                | 416         |
+| eplenmean               | 150         |
+| fps                     | 449         |
+| mean 100 episode reward | -2.8        |
+| n_updates               | 62301       |
+| policy_loss             | 1.2157257   |
+| qf1_loss                | 0.07428352  |
+| qf2_loss                | 0.06526694  |
+| success rate            | 0           |
+| time_elapsed            | 138         |
+| total timesteps         | 62400       |
+| value_loss              | 0.059377924 |
+-----------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.008283423 |
+| ent_coef_loss           | 0.6502859   |
+| entropy                 | 0.9682794   |
+| ep_rewmean              | -2.34       |
+| episodes                | 420         |
+| eplenmean               | 150         |
+| fps                     | 449         |
+| mean 100 episode reward | -2.3        |
+| n_updates               | 62901       |
+| policy_loss             | 1.2460274   |
+| qf1_loss                | 0.083085954 |
+| qf2_loss                | 0.05851726  |
+| success rate            | 0           |
+| time_elapsed            | 140         |
+| total timesteps         | 63000       |
+| value_loss              | 0.023953937 |
+-----------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.008167905 |
+| ent_coef_loss           | -0.07759535 |
+| entropy                 | 1.125788    |
+| ep_rewmean              | -2.21       |
+| episodes                | 424         |
+| eplenmean               | 150         |
+| fps                     | 449         |
+| mean 100 episode reward | -2.2        |
+| n_updates               | 63501       |
+| policy_loss             | 1.739599    |
+| qf1_loss                | 0.048664585 |
+| qf2_loss                | 0.094545454 |
+| success rate            | 0           |
+| time_elapsed            | 141         |
+| total timesteps         | 63600       |
+| value_loss              | 0.04669012  |
+-----------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.00839468  |
+| ent_coef_loss           | -0.4442154  |
+| entropy                 | 1.0860822   |
+| ep_rewmean              | -2.33       |
+| episodes                | 428         |
+| eplenmean               | 150         |
+| fps                     | 449         |
+| mean 100 episode reward | -2.3        |
+| n_updates               | 64101       |
+| policy_loss             | 2.2713718   |
+| qf1_loss                | 0.04814443  |
+| qf2_loss                | 0.045414247 |
+| success rate            | 0           |
+| time_elapsed            | 142         |
+| total timesteps         | 64200       |
+| value_loss              | 0.02457676  |
+-----------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.008155876 |
+| ent_coef_loss           | 3.6367712   |
+| entropy                 | 0.92843986  |
+| ep_rewmean              | -2.47       |
+| episodes                | 432         |
+| eplenmean               | 150         |
+| fps                     | 449         |
+| mean 100 episode reward | -2.5        |
+| n_updates               | 64701       |
+| policy_loss             | 1.9864969   |
+| qf1_loss                | 0.14069241  |
+| qf2_loss                | 0.10860069  |
+| success rate            | 0           |
+| time_elapsed            | 144         |
+| total timesteps         | 64800       |
+| value_loss              | 0.027591582 |
+-----------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.008277401 |
+| ent_coef_loss           | -3.097834   |
+| entropy                 | 1.0331721   |
+| ep_rewmean              | -2.43       |
+| episodes                | 436         |
+| eplenmean               | 150         |
+| fps                     | 450         |
+| mean 100 episode reward | -2.4        |
+| n_updates               | 65301       |
+| policy_loss             | 1.8029847   |
+| qf1_loss                | 0.11814281  |
+| qf2_loss                | 0.098474726 |
+| success rate            | 0           |
+| time_elapsed            | 145         |
+| total timesteps         | 65400       |
+| value_loss              | 0.013437811 |
+-----------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.008365035 |
+| ent_coef_loss           | 0.53764933  |
+| entropy                 | 1.018723    |
+| ep_rewmean              | -2.45       |
+| episodes                | 440         |
+| eplenmean               | 150         |
+| fps                     | 450         |
+| mean 100 episode reward | -2.5        |
+| n_updates               | 65901       |
+| policy_loss             | 1.4501904   |
+| qf1_loss                | 0.07561964  |
+| qf2_loss                | 0.0332164   |
+| success rate            | 0           |
+| time_elapsed            | 146         |
+| total timesteps         | 66000       |
+| value_loss              | 0.027571071 |
+-----------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.008057971 |
+| ent_coef_loss           | 2.0338078   |
+| entropy                 | 1.0017985   |
+| ep_rewmean              | -2.49       |
+| episodes                | 444         |
+| eplenmean               | 150         |
+| fps                     | 450         |
+| mean 100 episode reward | -2.5        |
+| n_updates               | 66501       |
+| policy_loss             | 1.5115788   |
+| qf1_loss                | 0.1212272   |
+| qf2_loss                | 0.14346936  |
+| success rate            | 0           |
+| time_elapsed            | 147         |
+| total timesteps         | 66600       |
+| value_loss              | 0.022120237 |
+-----------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.008166873 |
+| ent_coef_loss           | 0.66656995  |
+| entropy                 | 1.0629559   |
+| ep_rewmean              | -1.92       |
+| episodes                | 448         |
+| eplenmean               | 150         |
+| fps                     | 450         |
+| mean 100 episode reward | -1.9        |
+| n_updates               | 67101       |
+| policy_loss             | 2.2880378   |
+| qf1_loss                | 0.040175065 |
+| qf2_loss                | 0.045673303 |
+| success rate            | 0           |
+| time_elapsed            | 149         |
+| total timesteps         | 67200       |
+| value_loss              | 0.033523045 |
+-----------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.008029786 |
+| ent_coef_loss           | 4.1441836   |
+| entropy                 | 1.1327242   |
+| ep_rewmean              | -1.88       |
+| episodes                | 452         |
+| eplenmean               | 150         |
+| fps                     | 450         |
+| mean 100 episode reward | -1.9        |
+| n_updates               | 67701       |
+| policy_loss             | 2.230908    |
+| qf1_loss                | 0.22333872  |
+| qf2_loss                | 0.22060446  |
+| success rate            | 0           |
+| time_elapsed            | 150         |
+| total timesteps         | 67800       |
+| value_loss              | 0.038871694 |
+-----------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.008344136 |
+| ent_coef_loss           | 0.8800535   |
+| entropy                 | 1.0423508   |
+| ep_rewmean              | -1.02       |
+| episodes                | 456         |
+| eplenmean               | 150         |
+| fps                     | 449         |
+| mean 100 episode reward | -1          |
+| n_updates               | 68301       |
+| policy_loss             | 1.8973328   |
+| qf1_loss                | 0.052966937 |
+| qf2_loss                | 0.07789187  |
+| success rate            | 0           |
+| time_elapsed            | 152         |
+| total timesteps         | 68400       |
+| value_loss              | 0.027884757 |
+-----------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.008227168 |
+| ent_coef_loss           | 0.8963896   |
+| entropy                 | 0.8853813   |
+| ep_rewmean              | -0.603      |
+| episodes                | 460         |
+| eplenmean               | 150         |
+| fps                     | 449         |
+| mean 100 episode reward | -0.6        |
+| n_updates               | 68901       |
+| policy_loss             | 1.615305    |
+| qf1_loss                | 0.109330975 |
+| qf2_loss                | 0.18398643  |
+| success rate            | 0           |
+| time_elapsed            | 153         |
+| total timesteps         | 69000       |
+| value_loss              | 0.04563071  |
+-----------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.007957677 |
+| ent_coef_loss           | 2.9782257   |
+| entropy                 | 0.9176191   |
+| ep_rewmean              | -0.898      |
+| episodes                | 464         |
+| eplenmean               | 150         |
+| fps                     | 449         |
+| mean 100 episode reward | -0.9        |
+| n_updates               | 69501       |
+| policy_loss             | 1.8947043   |
+| qf1_loss                | 0.02944288  |
+| qf2_loss                | 0.03592992  |
+| success rate            | 0           |
+| time_elapsed            | 154         |
+| total timesteps         | 69600       |
+| value_loss              | 0.057136796 |
+-----------------------------------------
+Eval num_timesteps=70000, episode_reward=11.93 +/- 10.48
+Episode length: 150.00 +/- 0.00
+New best mean reward!
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.008400527 |
+| ent_coef_loss           | -1.7207202  |
+| entropy                 | 1.2223675   |
+| ep_rewmean              | -0.521      |
+| episodes                | 468         |
+| eplenmean               | 150         |
+| fps                     | 448         |
+| mean 100 episode reward | -0.5        |
+| n_updates               | 70101       |
+| policy_loss             | 1.5768911   |
+| qf1_loss                | 0.049747907 |
+| qf2_loss                | 0.051720068 |
+| success rate            | 0           |
+| time_elapsed            | 156         |
+| total timesteps         | 70200       |
+| value_loss              | 0.020178938 |
+-----------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.008553257 |
+| ent_coef_loss           | -0.2933613  |
+| entropy                 | 1.0689554   |
+| ep_rewmean              | -0.229      |
+| episodes                | 472         |
+| eplenmean               | 150         |
+| fps                     | 447         |
+| mean 100 episode reward | -0.2        |
+| n_updates               | 70701       |
+| policy_loss             | 1.9891776   |
+| qf1_loss                | 0.050409272 |
+| qf2_loss                | 0.054057628 |
+| success rate            | 0           |
+| time_elapsed            | 158         |
+| total timesteps         | 70800       |
+| value_loss              | 0.03043213  |
+-----------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.009061245 |
+| ent_coef_loss           | -2.9946465  |
+| entropy                 | 1.0754561   |
+| ep_rewmean              | -0.144      |
+| episodes                | 476         |
+| eplenmean               | 150         |
+| fps                     | 447         |
+| mean 100 episode reward | -0.1        |
+| n_updates               | 71301       |
+| policy_loss             | 2.4030194   |
+| qf1_loss                | 0.04216498  |
+| qf2_loss                | 0.053661756 |
+| success rate            | 0           |
+| time_elapsed            | 159         |
+| total timesteps         | 71400       |
+| value_loss              | 0.018893676 |
+-----------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.008821561 |
+| ent_coef_loss           | 0.7762711   |
+| entropy                 | 1.0219474   |
+| ep_rewmean              | 0.295       |
+| episodes                | 480         |
+| eplenmean               | 150         |
+| fps                     | 447         |
+| mean 100 episode reward | 0.3         |
+| n_updates               | 71901       |
+| policy_loss             | 1.9257423   |
+| qf1_loss                | 0.10831128  |
+| qf2_loss                | 0.11510775  |
+| success rate            | 0           |
+| time_elapsed            | 160         |
+| total timesteps         | 72000       |
+| value_loss              | 0.03221722  |
+-----------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.008923964 |
+| ent_coef_loss           | 1.6937647   |
+| entropy                 | 1.0804554   |
+| ep_rewmean              | 0.661       |
+| episodes                | 484         |
+| eplenmean               | 150         |
+| fps                     | 448         |
+| mean 100 episode reward | 0.7         |
+| n_updates               | 72501       |
+| policy_loss             | 1.7997458   |
+| qf1_loss                | 0.105245665 |
+| qf2_loss                | 0.06449011  |
+| success rate            | 0           |
+| time_elapsed            | 162         |
+| total timesteps         | 72600       |
+| value_loss              | 0.044222593 |
+-----------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.009024245 |
+| ent_coef_loss           | 0.6830727   |
+| entropy                 | 1.044781    |
+| ep_rewmean              | 0.625       |
+| episodes                | 488         |
+| eplenmean               | 150         |
+| fps                     | 448         |
+| mean 100 episode reward | 0.6         |
+| n_updates               | 73101       |
+| policy_loss             | 2.1299505   |
+| qf1_loss                | 0.04596509  |
+| qf2_loss                | 0.04220908  |
+| success rate            | 0           |
+| time_elapsed            | 163         |
+| total timesteps         | 73200       |
+| value_loss              | 0.032892596 |
+-----------------------------------------
+----------------------------------------
+| current_lr              | 0.0003     |
+| ent_coef                | 0.00914026 |
+| ent_coef_loss           | 0.92730635 |
+| entropy                 | 1.0301285  |
+| ep_rewmean              | 0.85       |
+| episodes                | 492        |
+| eplenmean               | 150        |
+| fps                     | 448        |
+| mean 100 episode reward | 0.8        |
+| n_updates               | 73701      |
+| policy_loss             | 1.4543312  |
+| qf1_loss                | 0.13815162 |
+| qf2_loss                | 0.1208386  |
+| success rate            | 0          |
+| time_elapsed            | 164        |
+| total timesteps         | 73800      |
+| value_loss              | 0.04688829 |
+----------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.008960954 |
+| ent_coef_loss           | -2.1650052  |
+| entropy                 | 1.1077756   |
+| ep_rewmean              | 0.8         |
+| episodes                | 496         |
+| eplenmean               | 150         |
+| fps                     | 448         |
+| mean 100 episode reward | 0.8         |
+| n_updates               | 74301       |
+| policy_loss             | 2.3470378   |
+| qf1_loss                | 0.092574045 |
+| qf2_loss                | 0.08151594  |
+| success rate            | 0           |
+| time_elapsed            | 166         |
+| total timesteps         | 74400       |
+| value_loss              | 0.035723932 |
+-----------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.009175277 |
+| ent_coef_loss           | -0.8586453  |
+| entropy                 | 0.8439161   |
+| ep_rewmean              | 0.504       |
+| episodes                | 500         |
+| eplenmean               | 150         |
+| fps                     | 448         |
+| mean 100 episode reward | 0.5         |
+| n_updates               | 74901       |
+| policy_loss             | 1.7896221   |
+| qf1_loss                | 0.11734578  |
+| qf2_loss                | 0.10156573  |
+| success rate            | 0           |
+| time_elapsed            | 167         |
+| total timesteps         | 75000       |
+| value_loss              | 0.046906874 |
+-----------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.008861866 |
+| ent_coef_loss           | -1.6132717  |
+| entropy                 | 1.233978    |
+| ep_rewmean              | 0.513       |
+| episodes                | 504         |
+| eplenmean               | 150         |
+| fps                     | 448         |
+| mean 100 episode reward | 0.5         |
+| n_updates               | 75501       |
+| policy_loss             | 2.2275581   |
+| qf1_loss                | 0.14158763  |
+| qf2_loss                | 0.19696157  |
+| success rate            | 0           |
+| time_elapsed            | 168         |
+| total timesteps         | 75600       |
+| value_loss              | 0.021371942 |
+-----------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.008773072 |
+| ent_coef_loss           | -2.6047363  |
+| entropy                 | 0.94988394  |
+| ep_rewmean              | 0.669       |
+| episodes                | 508         |
+| eplenmean               | 150         |
+| fps                     | 448         |
+| mean 100 episode reward | 0.7         |
+| n_updates               | 76101       |
+| policy_loss             | 1.8994821   |
+| qf1_loss                | 0.06216616  |
+| qf2_loss                | 0.062800124 |
+| success rate            | 0           |
+| time_elapsed            | 169         |
+| total timesteps         | 76200       |
+| value_loss              | 0.08444105  |
+-----------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.0087338   |
+| ent_coef_loss           | -3.5973063  |
+| entropy                 | 1.0452092   |
+| ep_rewmean              | 0.758       |
+| episodes                | 512         |
+| eplenmean               | 150         |
+| fps                     | 448         |
+| mean 100 episode reward | 0.8         |
+| n_updates               | 76701       |
+| policy_loss             | 2.7439516   |
+| qf1_loss                | 0.7263486   |
+| qf2_loss                | 0.7018786   |
+| success rate            | 0           |
+| time_elapsed            | 171         |
+| total timesteps         | 76800       |
+| value_loss              | 0.042624947 |
+-----------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.008333515 |
+| ent_coef_loss           | -1.8365035  |
+| entropy                 | 0.8516243   |
+| ep_rewmean              | 0.932       |
+| episodes                | 516         |
+| eplenmean               | 150         |
+| fps                     | 448         |
+| mean 100 episode reward | 0.9         |
+| n_updates               | 77301       |
+| policy_loss             | 2.433238    |
+| qf1_loss                | 0.11358343  |
+| qf2_loss                | 0.16107492  |
+| success rate            | 0           |
+| time_elapsed            | 172         |
+| total timesteps         | 77400       |
+| value_loss              | 0.031921692 |
+-----------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.008569742 |
+| ent_coef_loss           | -1.0312011  |
+| entropy                 | 0.9850829   |
+| ep_rewmean              | 0.574       |
+| episodes                | 520         |
+| eplenmean               | 150         |
+| fps                     | 448         |
+| mean 100 episode reward | 0.6         |
+| n_updates               | 77901       |
+| policy_loss             | 2.2992206   |
+| qf1_loss                | 0.071113646 |
+| qf2_loss                | 0.07161263  |
+| success rate            | 0           |
+| time_elapsed            | 173         |
+| total timesteps         | 78000       |
+| value_loss              | 0.03382993  |
+-----------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.008661527 |
+| ent_coef_loss           | -3.0850937  |
+| entropy                 | 0.9016089   |
+| ep_rewmean              | 0.358       |
+| episodes                | 524         |
+| eplenmean               | 150         |
+| fps                     | 449         |
+| mean 100 episode reward | 0.4         |
+| n_updates               | 78501       |
+| policy_loss             | 1.6767013   |
+| qf1_loss                | 0.0812071   |
+| qf2_loss                | 0.061333418 |
+| success rate            | 0           |
+| time_elapsed            | 174         |
+| total timesteps         | 78600       |
+| value_loss              | 0.023416098 |
+-----------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.008642018 |
+| ent_coef_loss           | -1.0250752  |
+| entropy                 | 1.2519177   |
+| ep_rewmean              | 0.747       |
+| episodes                | 528         |
+| eplenmean               | 150         |
+| fps                     | 449         |
+| mean 100 episode reward | 0.7         |
+| n_updates               | 79101       |
+| policy_loss             | 3.1503494   |
+| qf1_loss                | 0.045095187 |
+| qf2_loss                | 0.06663479  |
+| success rate            | 0           |
+| time_elapsed            | 176         |
+| total timesteps         | 79200       |
+| value_loss              | 0.029196145 |
+-----------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.008287097 |
+| ent_coef_loss           | -0.38983926 |
+| entropy                 | 1.0300252   |
+| ep_rewmean              | 1.14        |
+| episodes                | 532         |
+| eplenmean               | 150         |
+| fps                     | 449         |
+| mean 100 episode reward | 1.1         |
+| n_updates               | 79701       |
+| policy_loss             | 1.9533105   |
+| qf1_loss                | 0.053459696 |
+| qf2_loss                | 0.0731493   |
+| success rate            | 0           |
+| time_elapsed            | 177         |
+| total timesteps         | 79800       |
+| value_loss              | 0.042637154 |
+-----------------------------------------
+Eval num_timesteps=80000, episode_reward=2.44 +/- 14.02
+Episode length: 150.00 +/- 0.00
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.007777583 |
+| ent_coef_loss           | -3.3936749  |
+| entropy                 | 1.0205169   |
+| ep_rewmean              | 1.11        |
+| episodes                | 536         |
+| eplenmean               | 150         |
+| fps                     | 448         |
+| mean 100 episode reward | 1.1         |
+| n_updates               | 80301       |
+| policy_loss             | 3.3690925   |
+| qf1_loss                | 0.21627446  |
+| qf2_loss                | 0.33387226  |
+| success rate            | 0           |
+| time_elapsed            | 179         |
+| total timesteps         | 80400       |
+| value_loss              | 0.038850565 |
+-----------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.007864843 |
+| ent_coef_loss           | -0.84766513 |
+| entropy                 | 0.69610715  |
+| ep_rewmean              | 0.631       |
+| episodes                | 540         |
+| eplenmean               | 150         |
+| fps                     | 448         |
+| mean 100 episode reward | 0.6         |
+| n_updates               | 80901       |
+| policy_loss             | 2.4433694   |
+| qf1_loss                | 0.040808447 |
+| qf2_loss                | 0.044366375 |
+| success rate            | 0           |
+| time_elapsed            | 180         |
+| total timesteps         | 81000       |
+| value_loss              | 0.050571613 |
+-----------------------------------------
+------------------------------------------
+| current_lr              | 0.0003       |
+| ent_coef                | 0.0076621817 |
+| ent_coef_loss           | -2.0464182   |
+| entropy                 | 0.9180194    |
+| ep_rewmean              | 0.869        |
+| episodes                | 544          |
+| eplenmean               | 150          |
+| fps                     | 448          |
+| mean 100 episode reward | 0.9          |
+| n_updates               | 81501        |
+| policy_loss             | 2.250402     |
+| qf1_loss                | 0.051111326  |
+| qf2_loss                | 0.07700379   |
+| success rate            | 0            |
+| time_elapsed            | 181          |
+| total timesteps         | 81600        |
+| value_loss              | 0.0463818    |
+------------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.007601423 |
+| ent_coef_loss           | -2.7038639  |
+| entropy                 | 0.8602835   |
+| ep_rewmean              | 0.685       |
+| episodes                | 548         |
+| eplenmean               | 150         |
+| fps                     | 448         |
+| mean 100 episode reward | 0.7         |
+| n_updates               | 82101       |
+| policy_loss             | 2.2746341   |
+| qf1_loss                | 0.11508091  |
+| qf2_loss                | 0.10089007  |
+| success rate            | 0           |
+| time_elapsed            | 183         |
+| total timesteps         | 82200       |
+| value_loss              | 0.024591874 |
+-----------------------------------------
+------------------------------------------
+| current_lr              | 0.0003       |
+| ent_coef                | 0.0073110955 |
+| ent_coef_loss           | 3.3901315    |
+| entropy                 | 0.86166996   |
+| ep_rewmean              | 0.81         |
+| episodes                | 552          |
+| eplenmean               | 150          |
+| fps                     | 448          |
+| mean 100 episode reward | 0.8          |
+| n_updates               | 82701        |
+| policy_loss             | 1.6856961    |
+| qf1_loss                | 0.035920206  |
+| qf2_loss                | 0.042671617  |
+| success rate            | 0            |
+| time_elapsed            | 184          |
+| total timesteps         | 82800        |
+| value_loss              | 0.056177966  |
+------------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.007375292 |
+| ent_coef_loss           | 1.4446084   |
+| entropy                 | 0.7673825   |
+| ep_rewmean              | 0.226       |
+| episodes                | 556         |
+| eplenmean               | 150         |
+| fps                     | 448         |
+| mean 100 episode reward | 0.2         |
+| n_updates               | 83301       |
+| policy_loss             | 2.3583384   |
+| qf1_loss                | 0.06298268  |
+| qf2_loss                | 0.07236454  |
+| success rate            | 0           |
+| time_elapsed            | 185         |
+| total timesteps         | 83400       |
+| value_loss              | 0.04463587  |
+-----------------------------------------
+------------------------------------------
+| current_lr              | 0.0003       |
+| ent_coef                | 0.0077896714 |
+| ent_coef_loss           | -0.90344     |
+| entropy                 | 0.72852194   |
+| ep_rewmean              | 0.301        |
+| episodes                | 560          |
+| eplenmean               | 150          |
+| fps                     | 449          |
+| mean 100 episode reward | 0.3          |
+| n_updates               | 83901        |
+| policy_loss             | 1.8149865    |
+| qf1_loss                | 0.10559617   |
+| qf2_loss                | 0.10512631   |
+| success rate            | 0            |
+| time_elapsed            | 187          |
+| total timesteps         | 84000        |
+| value_loss              | 0.041817114  |
+------------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.00839414  |
+| ent_coef_loss           | 1.9664413   |
+| entropy                 | 0.9118116   |
+| ep_rewmean              | 0.756       |
+| episodes                | 564         |
+| eplenmean               | 150         |
+| fps                     | 449         |
+| mean 100 episode reward | 0.8         |
+| n_updates               | 84501       |
+| policy_loss             | 2.1569374   |
+| qf1_loss                | 0.04000415  |
+| qf2_loss                | 0.038019635 |
+| success rate            | 0           |
+| time_elapsed            | 188         |
+| total timesteps         | 84600       |
+| value_loss              | 0.031301696 |
+-----------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.007988956 |
+| ent_coef_loss           | -0.09216839 |
+| entropy                 | 0.8765776   |
+| ep_rewmean              | 0.833       |
+| episodes                | 568         |
+| eplenmean               | 150         |
+| fps                     | 449         |
+| mean 100 episode reward | 0.8         |
+| n_updates               | 85101       |
+| policy_loss             | 2.4251723   |
+| qf1_loss                | 0.5708655   |
+| qf2_loss                | 0.5443127   |
+| success rate            | 0           |
+| time_elapsed            | 189         |
+| total timesteps         | 85200       |
+| value_loss              | 0.051641826 |
+-----------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.007914899 |
+| ent_coef_loss           | -3.0233688  |
+| entropy                 | 0.7728299   |
+| ep_rewmean              | 0.878       |
+| episodes                | 572         |
+| eplenmean               | 150         |
+| fps                     | 449         |
+| mean 100 episode reward | 0.9         |
+| n_updates               | 85701       |
+| policy_loss             | 2.523527    |
+| qf1_loss                | 0.03211362  |
+| qf2_loss                | 0.07214126  |
+| success rate            | 0           |
+| time_elapsed            | 190         |
+| total timesteps         | 85800       |
+| value_loss              | 0.052898202 |
+-----------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.007825444 |
+| ent_coef_loss           | -0.19538084 |
+| entropy                 | 0.70539224  |
+| ep_rewmean              | 0.96        |
+| episodes                | 576         |
+| eplenmean               | 150         |
+| fps                     | 449         |
+| mean 100 episode reward | 1           |
+| n_updates               | 86301       |
+| policy_loss             | 1.681233    |
+| qf1_loss                | 0.040743448 |
+| qf2_loss                | 0.038151886 |
+| success rate            | 0           |
+| time_elapsed            | 192         |
+| total timesteps         | 86400       |
+| value_loss              | 0.024276897 |
+-----------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.007859816 |
+| ent_coef_loss           | 0.36653692  |
+| entropy                 | 0.82497966  |
+| ep_rewmean              | 1.1         |
+| episodes                | 580         |
+| eplenmean               | 150         |
+| fps                     | 449         |
+| mean 100 episode reward | 1.1         |
+| n_updates               | 86901       |
+| policy_loss             | 1.9227207   |
+| qf1_loss                | 0.03296072  |
+| qf2_loss                | 0.024911433 |
+| success rate            | 0           |
+| time_elapsed            | 193         |
+| total timesteps         | 87000       |
+| value_loss              | 0.04395992  |
+-----------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.007959821 |
+| ent_coef_loss           | 0.9560009   |
+| entropy                 | 0.7915117   |
+| ep_rewmean              | 1.13        |
+| episodes                | 584         |
+| eplenmean               | 150         |
+| fps                     | 449         |
+| mean 100 episode reward | 1.1         |
+| n_updates               | 87501       |
+| policy_loss             | 1.8765814   |
+| qf1_loss                | 0.06059604  |
+| qf2_loss                | 0.061259016 |
+| success rate            | 0           |
+| time_elapsed            | 194         |
+| total timesteps         | 87600       |
+| value_loss              | 0.025236463 |
+-----------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.008215105 |
+| ent_coef_loss           | 1.7023797   |
+| entropy                 | 0.8650418   |
+| ep_rewmean              | 1.04        |
+| episodes                | 588         |
+| eplenmean               | 150         |
+| fps                     | 449         |
+| mean 100 episode reward | 1           |
+| n_updates               | 88101       |
+| policy_loss             | 2.2222552   |
+| qf1_loss                | 0.0655555   |
+| qf2_loss                | 0.0823789   |
+| success rate            | 0           |
+| time_elapsed            | 196         |
+| total timesteps         | 88200       |
+| value_loss              | 0.026495375 |
+-----------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.008247361 |
+| ent_coef_loss           | -0.30466717 |
+| entropy                 | 0.8101663   |
+| ep_rewmean              | 0.559       |
+| episodes                | 592         |
+| eplenmean               | 150         |
+| fps                     | 449         |
+| mean 100 episode reward | 0.6         |
+| n_updates               | 88701       |
+| policy_loss             | 2.3022046   |
+| qf1_loss                | 0.06858499  |
+| qf2_loss                | 0.08413978  |
+| success rate            | 0           |
+| time_elapsed            | 197         |
+| total timesteps         | 88800       |
+| value_loss              | 0.027809063 |
+-----------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.008196164 |
+| ent_coef_loss           | -0.97490484 |
+| entropy                 | 0.98703337  |
+| ep_rewmean              | 0.815       |
+| episodes                | 596         |
+| eplenmean               | 150         |
+| fps                     | 449         |
+| mean 100 episode reward | 0.8         |
+| n_updates               | 89301       |
+| policy_loss             | 1.7375832   |
+| qf1_loss                | 0.06419189  |
+| qf2_loss                | 0.07852934  |
+| success rate            | 0           |
+| time_elapsed            | 198         |
+| total timesteps         | 89400       |
+| value_loss              | 0.041223846 |
+-----------------------------------------
+Eval num_timesteps=90000, episode_reward=-1.65 +/- 4.20
+Episode length: 150.00 +/- 0.00
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.008234986 |
+| ent_coef_loss           | 1.8394536   |
+| entropy                 | 1.147609    |
+| ep_rewmean              | 0.793       |
+| episodes                | 600         |
+| eplenmean               | 150         |
+| fps                     | 448         |
+| mean 100 episode reward | 0.8         |
+| n_updates               | 89901       |
+| policy_loss             | 1.4450073   |
+| qf1_loss                | 0.05780362  |
+| qf2_loss                | 0.07440013  |
+| success rate            | 0           |
+| time_elapsed            | 200         |
+| total timesteps         | 90000       |
+| value_loss              | 0.029286869 |
+-----------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.007871803 |
+| ent_coef_loss           | 1.0454533   |
+| entropy                 | 0.9517081   |
+| ep_rewmean              | 0.816       |
+| episodes                | 604         |
+| eplenmean               | 150         |
+| fps                     | 448         |
+| mean 100 episode reward | 0.8         |
+| n_updates               | 90501       |
+| policy_loss             | 1.7173216   |
+| qf1_loss                | 0.6277108   |
+| qf2_loss                | 0.60028166  |
+| success rate            | 0           |
+| time_elapsed            | 201         |
+| total timesteps         | 90600       |
+| value_loss              | 0.034530748 |
+-----------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.00746007  |
+| ent_coef_loss           | 0.014916778 |
+| entropy                 | 1.0124137   |
+| ep_rewmean              | 1.46        |
+| episodes                | 608         |
+| eplenmean               | 150         |
+| fps                     | 449         |
+| mean 100 episode reward | 1.5         |
+| n_updates               | 91101       |
+| policy_loss             | 2.2002301   |
+| qf1_loss                | 0.04431391  |
+| qf2_loss                | 0.08131322  |
+| success rate            | 0           |
+| time_elapsed            | 203         |
+| total timesteps         | 91200       |
+| value_loss              | 0.025303995 |
+-----------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.007339126 |
+| ent_coef_loss           | -0.7032401  |
+| entropy                 | 0.8169037   |
+| ep_rewmean              | 1.57        |
+| episodes                | 612         |
+| eplenmean               | 150         |
+| fps                     | 448         |
+| mean 100 episode reward | 1.6         |
+| n_updates               | 91701       |
+| policy_loss             | 0.33024293  |
+| qf1_loss                | 0.091471925 |
+| qf2_loss                | 0.0581386   |
+| success rate            | 0           |
+| time_elapsed            | 204         |
+| total timesteps         | 91800       |
+| value_loss              | 0.039919436 |
+-----------------------------------------
+------------------------------------------
+| current_lr              | 0.0003       |
+| ent_coef                | 0.0072200773 |
+| ent_coef_loss           | 0.5423111    |
+| entropy                 | 0.9898171    |
+| ep_rewmean              | 1.31         |
+| episodes                | 616          |
+| eplenmean               | 150          |
+| fps                     | 449          |
+| mean 100 episode reward | 1.3          |
+| n_updates               | 92301        |
+| policy_loss             | 1.3772132    |
+| qf1_loss                | 0.042139724  |
+| qf2_loss                | 0.047431428  |
+| success rate            | 0            |
+| time_elapsed            | 205          |
+| total timesteps         | 92400        |
+| value_loss              | 0.032038283  |
+------------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.007293668 |
+| ent_coef_loss           | 3.1164885   |
+| entropy                 | 0.9142333   |
+| ep_rewmean              | 1.53        |
+| episodes                | 620         |
+| eplenmean               | 150         |
+| fps                     | 449         |
+| mean 100 episode reward | 1.5         |
+| n_updates               | 92901       |
+| policy_loss             | 1.0519625   |
+| qf1_loss                | 0.10287686  |
+| qf2_loss                | 0.10696596  |
+| success rate            | 0           |
+| time_elapsed            | 207         |
+| total timesteps         | 93000       |
+| value_loss              | 0.028123312 |
+-----------------------------------------
+------------------------------------------
+| current_lr              | 0.0003       |
+| ent_coef                | 0.0074441503 |
+| ent_coef_loss           | 3.2426891    |
+| entropy                 | 0.78229177   |
+| ep_rewmean              | 1.63         |
+| episodes                | 624          |
+| eplenmean               | 150          |
+| fps                     | 449          |
+| mean 100 episode reward | 1.6          |
+| n_updates               | 93501        |
+| policy_loss             | 1.538959     |
+| qf1_loss                | 0.054507382  |
+| qf2_loss                | 0.06852761   |
+| success rate            | 0            |
+| time_elapsed            | 208          |
+| total timesteps         | 93600        |
+| value_loss              | 0.052071314  |
+------------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.007415263 |
+| ent_coef_loss           | 0.3487633   |
+| entropy                 | 0.7475915   |
+| ep_rewmean              | 1.4         |
+| episodes                | 628         |
+| eplenmean               | 150         |
+| fps                     | 449         |
+| mean 100 episode reward | 1.4         |
+| n_updates               | 94101       |
+| policy_loss             | 0.23678905  |
+| qf1_loss                | 0.13561119  |
+| qf2_loss                | 0.14755182  |
+| success rate            | 0           |
+| time_elapsed            | 209         |
+| total timesteps         | 94200       |
+| value_loss              | 0.04362946  |
+-----------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.007567085 |
+| ent_coef_loss           | -1.6388018  |
+| entropy                 | 0.9385507   |
+| ep_rewmean              | 1.42        |
+| episodes                | 632         |
+| eplenmean               | 150         |
+| fps                     | 449         |
+| mean 100 episode reward | 1.4         |
+| n_updates               | 94701       |
+| policy_loss             | 1.369205    |
+| qf1_loss                | 0.056397203 |
+| qf2_loss                | 0.08714332  |
+| success rate            | 0           |
+| time_elapsed            | 210         |
+| total timesteps         | 94800       |
+| value_loss              | 0.039105408 |
+-----------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.007829973 |
+| ent_coef_loss           | 1.2382098   |
+| entropy                 | 0.9651667   |
+| ep_rewmean              | 1.35        |
+| episodes                | 636         |
+| eplenmean               | 150         |
+| fps                     | 449         |
+| mean 100 episode reward | 1.4         |
+| n_updates               | 95301       |
+| policy_loss             | 1.7583547   |
+| qf1_loss                | 0.02938491  |
+| qf2_loss                | 0.031085528 |
+| success rate            | 0           |
+| time_elapsed            | 212         |
+| total timesteps         | 95400       |
+| value_loss              | 0.019975878 |
+-----------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.007988552 |
+| ent_coef_loss           | -2.1771753  |
+| entropy                 | 0.9304885   |
+| ep_rewmean              | 1.75        |
+| episodes                | 640         |
+| eplenmean               | 150         |
+| fps                     | 449         |
+| mean 100 episode reward | 1.7         |
+| n_updates               | 95901       |
+| policy_loss             | 1.6240933   |
+| qf1_loss                | 0.0722786   |
+| qf2_loss                | 0.068432495 |
+| success rate            | 0           |
+| time_elapsed            | 213         |
+| total timesteps         | 96000       |
+| value_loss              | 0.017893251 |
+-----------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.008070876 |
+| ent_coef_loss           | -0.321818   |
+| entropy                 | 0.88396573  |
+| ep_rewmean              | 1.91        |
+| episodes                | 644         |
+| eplenmean               | 150         |
+| fps                     | 449         |
+| mean 100 episode reward | 1.9         |
+| n_updates               | 96501       |
+| policy_loss             | 1.0181365   |
+| qf1_loss                | 0.13535495  |
+| qf2_loss                | 0.14392589  |
+| success rate            | 0           |
+| time_elapsed            | 214         |
+| total timesteps         | 96600       |
+| value_loss              | 0.03937331  |
+-----------------------------------------
+------------------------------------------
+| current_lr              | 0.0003       |
+| ent_coef                | 0.0080543365 |
+| ent_coef_loss           | 0.2206505    |
+| entropy                 | 0.9889767    |
+| ep_rewmean              | 1.44         |
+| episodes                | 648          |
+| eplenmean               | 150          |
+| fps                     | 449          |
+| mean 100 episode reward | 1.4          |
+| n_updates               | 97101        |
+| policy_loss             | 1.6254668    |
+| qf1_loss                | 0.037337385  |
+| qf2_loss                | 0.045856092  |
+| success rate            | 0            |
+| time_elapsed            | 216          |
+| total timesteps         | 97200        |
+| value_loss              | 0.02013729   |
+------------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.008401937 |
+| ent_coef_loss           | 3.591       |
+| entropy                 | 0.9414817   |
+| ep_rewmean              | 1.38        |
+| episodes                | 652         |
+| eplenmean               | 150         |
+| fps                     | 449         |
+| mean 100 episode reward | 1.4         |
+| n_updates               | 97701       |
+| policy_loss             | 0.8262167   |
+| qf1_loss                | 0.03043403  |
+| qf2_loss                | 0.041554395 |
+| success rate            | 0           |
+| time_elapsed            | 217         |
+| total timesteps         | 97800       |
+| value_loss              | 0.022264518 |
+-----------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.008671582 |
+| ent_coef_loss           | -2.5102024  |
+| entropy                 | 1.1119075   |
+| ep_rewmean              | 1.49        |
+| episodes                | 656         |
+| eplenmean               | 150         |
+| fps                     | 449         |
+| mean 100 episode reward | 1.5         |
+| n_updates               | 98301       |
+| policy_loss             | 1.7429943   |
+| qf1_loss                | 0.055009227 |
+| qf2_loss                | 0.041988783 |
+| success rate            | 0           |
+| time_elapsed            | 218         |
+| total timesteps         | 98400       |
+| value_loss              | 0.03499686  |
+-----------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.009100147 |
+| ent_coef_loss           | -1.8329848  |
+| entropy                 | 1.051715    |
+| ep_rewmean              | 1.68        |
+| episodes                | 660         |
+| eplenmean               | 150         |
+| fps                     | 449         |
+| mean 100 episode reward | 1.7         |
+| n_updates               | 98901       |
+| policy_loss             | 0.6237638   |
+| qf1_loss                | 0.04418254  |
+| qf2_loss                | 0.04890992  |
+| success rate            | 0           |
+| time_elapsed            | 220         |
+| total timesteps         | 99000       |
+| value_loss              | 0.028399073 |
+-----------------------------------------
+-----------------------------------------
+| current_lr              | 0.0003      |
+| ent_coef                | 0.008922317 |
+| ent_coef_loss           | -1.47387    |
+| entropy                 | 1.1391866   |
+| ep_rewmean              | 1.93        |
+| episodes                | 664         |
+| eplenmean               | 150         |
+| fps                     | 449         |
+| mean 100 episode reward | 1.9         |
+| n_updates               | 99501       |
+| policy_loss             | 1.4880953   |
+| qf1_loss                | 0.1003288   |
+| qf2_loss                | 0.10509514  |
+| success rate            | 0           |
+| time_elapsed            | 221         |
+| total timesteps         | 99600       |
+| value_loss              | 0.023112385 |
+-----------------------------------------
+Eval num_timesteps=100000, episode_reward=2.86 +/- 11.32
+Episode length: 150.00 +/- 0.00
+Saving to logs/train_0.1M_Reacher2Dof-v0/sac/Reacher2Dof-v0_1
 pybullet build time: Sep  9 2020 17:03:46
