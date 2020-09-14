@@ -4,9 +4,9 @@ A benchmark of RL algorithms applied to the Reacher Link environment with 2 to 6
 
 | | | |
 |-|-|-|
-| <img src="imgs/reacher2D.gif"/> | <img src="imgs/reacher2D.gif"/> |
-| <img src="imgs/reacher2D.gif"/> | <img src="imgs/reacher2D.gif"/> |
-| <img src="imgs/reacher2D.gif"/> | <img src="imgs/reacher2D.gif"/> |
+| <img src="imgs/reacher2D.gif"/> | <img src="imgs/reacher2D.gif"/> |<img src="imgs/reacher2D.gif"/> |
+| <img src="imgs/reacher2D.gif"/> | <img src="imgs/reacher2D.gif"/> |<img src="imgs/reacher2D.gif"/> |
+| <img src="imgs/reacher2D.gif"/> | <img src="imgs/reacher2D.gif"/> |<img src="imgs/reacher2D.gif"/> |
 
 
 ## Installation
