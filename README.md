@@ -4,9 +4,8 @@ A benchmark of RL algorithms applied to the Reacher Link environment with 2 to 6
 
 | | | |
 |-|-|-|
-| <img src="imgs/reacher2D.gif"/> | <img src="imgs/reacher2D.gif"/> |<img src="imgs/reacher2D.gif"/> |
-| <img src="imgs/reacher2D.gif"/> | <img src="imgs/reacher2D.gif"/> |<img src="imgs/reacher2D.gif"/> |
-| <img src="imgs/reacher2D.gif"/> | <img src="imgs/reacher2D.gif"/> |<img src="imgs/reacher2D.gif"/> |
+| <img src="imgs/1joint.gif"/> 1 joint | <img src="imgs/2joint.gif"/> 2 joints |<img src="imgs/3joint.gif"/> 3 joints |
+| <img src="imgs/4joint.gif"/> 4 joints | <img src="imgs/5joint.gif"/> 5 joints |<img src="imgs/6joint.gif"/> 6 joints |
 
 
 ## Installation
@@ -22,8 +21,9 @@ pip install -e .   # Install the Pybullet environments locally
 ## Test installation
 
 ```bash
-python test_reacher2D.py
-python rl-baselines-zoo/train.py --algo ppo2 --env Reacher6Dof-v0
+cd rl-baselines-zoo/
+python 1_test_reacher2D.py
+python 2_train.py --algo ppo2 --env Reacher6Dof-v0
 ```
 
 ## Optimise hyperparameters
