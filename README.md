@@ -1,5 +1,5 @@
 # Reinforcement Learning for the Reacher Link environment
-A benchmark of RL algorithms applied to the Reacher Link environment with 2 to 6 joints.
+A benchmark of RL algorithms applied to the Reacher Link environment with 1 to 6 joints.
 
 
 | | | |
