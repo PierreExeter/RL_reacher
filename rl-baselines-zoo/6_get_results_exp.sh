@@ -67,19 +67,19 @@ echo "ENV: ${env}"
 
 # STEP 2: Get the mean of the reward and wall train time of all the seed runs in the experiment
 
-# python my_lib/plot_experiment.py -f ${log_dir}a2c/ --env ${env}
-# python my_lib/plot_experiment.py -f ${log_dir}acktr/ --env ${env}
-# python my_lib/plot_experiment.py -f ${log_dir}ddpg/ --env ${env}
-# python my_lib/plot_experiment.py -f ${log_dir}ppo2/ --env ${env}
-# python my_lib/plot_experiment.py -f ${log_dir}sac/ --env ${env}
-# python my_lib/plot_experiment.py -f ${log_dir}td3/ --env ${env}
-# python my_lib/plot_experiment.py -f ${log_dir}trpo/ --env ${env}
-# python my_lib/plot_experiment.py -f ${log_dir}her_sac/ --env ${env_her}
-# python my_lib/plot_experiment.py -f ${log_dir}her_td3/ --env ${env_her}
+python my_lib/plot_experiment.py -f ${log_dir}a2c/ --env ${env} --nb-seeds ${nb_seeds} -n ${nsteps}
+python my_lib/plot_experiment.py -f ${log_dir}acktr/ --env ${env} --nb-seeds ${nb_seeds} -n ${nsteps}
+python my_lib/plot_experiment.py -f ${log_dir}ddpg/ --env ${env} --nb-seeds ${nb_seeds} -n ${nsteps}
+python my_lib/plot_experiment.py -f ${log_dir}ppo2/ --env ${env} --nb-seeds ${nb_seeds} -n ${nsteps}
+python my_lib/plot_experiment.py -f ${log_dir}sac/ --env ${env} --nb-seeds ${nb_seeds} -n ${nsteps}
+python my_lib/plot_experiment.py -f ${log_dir}td3/ --env ${env} --nb-seeds ${nb_seeds} -n ${nsteps}
+python my_lib/plot_experiment.py -f ${log_dir}trpo/ --env ${env} --nb-seeds ${nb_seeds} -n ${nsteps}
+# python my_lib/plot_experiment.py -f ${log_dir}her_sac/ --env ${env_her} --nb-seeds ${nb_seeds} -n ${nsteps}
+# python my_lib/plot_experiment.py -f ${log_dir}her_td3/ --env ${env_her} --nb-seeds ${nb_seeds} -n ${nsteps}
 
 
 # # STEP 3: Plot learning curves and training stats for writing report
-python my_lib/plot_experiment_comparison.py -f ${log_dir} -s ${save_dir} -r ${log_rand}
+# python my_lib/plot_experiment_comparison.py -f ${log_dir} -s ${save_dir} -r ${log_rand}
  
 ## STEP 4: compare learning curves between 2 envs
 # python my_lib/plot_comp_envs_learning_curves.py -f1 ${log_dir} -f2 ${log_dir2} -s ${save_dir2}

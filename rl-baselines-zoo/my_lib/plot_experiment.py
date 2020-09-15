@@ -1,5 +1,6 @@
 import pandas as pd
 from pathlib import Path
+import yaml
 # import matplotlib.pyplot as plt
 
 # added by Pierre
@@ -53,9 +54,12 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('-f', '--folder', help='Log folder', type=str, default='trained_agents')
     parser.add_argument('-e', '--env', help='env name', type=str)
+    parser.add_argument('-ns', '--nb-seeds', help='number of seeds', type=int)
+    parser.add_argument('-n', help='number of eval steps', type=int)
     args = parser.parse_args()
 
-
+    nb_eval_steps = args.n
+    nb_seeds = args.nb_seeds
     env_id = args.env
     log_dir = args.folder
     print(log_dir)
@@ -89,8 +93,6 @@ if __name__ == '__main__':
 
     df = pd.concat(li, axis=0, ignore_index=True)
 
-    print(df)
-
     # print(df['Eval mean reward'].mean())
     # print(df['Eval mean reward'].std())
     # print(df['Eval std'].mean())
@@ -123,6 +125,118 @@ if __name__ == '__main__':
 
     df_res = pd.DataFrame(d, index=[0])
     df_res.to_csv(log_dir+"results_seed_exp.csv", index=False)
+
+
+    ############### Prepare dataframe for compiling benchmark results
+
+    if env_id == "Reacher1Dof-v0":
+        nb_joints = 1
+        action = "[0.05*T1]"
+        obs = "[target_x, target_y, dist_to_target_x, dist_to_target_y, A1, V1]"
+        reward = "[change in dist to target, electricity_cost, stuck_joint_cost]"
+        random_goal = "Y"
+
+    elif env_id == "Reacher2Dof-v0":
+        nb_joints = 2
+        action = "[0.05*T1, 0.05*T2]"
+        obs = "[target_x, target_y, dist_to_target_x, dist_to_target_y, A1, V1, A2, V2]"
+        reward = "[change in dist to target, electricity_cost, stuck_joint_cost]"
+        random_goal = "Y"
+
+    elif env_id == "Reacher3Dof-v0":
+        nb_joints = 3
+        action = "[0.05*T1, 0.05*T2, 0.05*T3]"
+        obs = "[target_x, target_y, dist_to_target_x, dist_to_target_y, A1, V1, A2, V2, A3, V3]"
+        reward = "[change in dist to target, electricity_cost, stuck_joint_cost]"
+        random_goal = "Y"
+
+    elif env_id == "Reacher4Dof-v0":
+        nb_joints = 4
+        action = "[0.05*T1, 0.05*T2, 0.05*T3, 0.05*T4]"
+        obs = "[target_x, target_y, dist_to_target_x, dist_to_target_y, A1, V1, A2, V2, A3, V3, A4, V4]"
+        reward = "[change in dist to target, electricity_cost, stuck_joint_cost]"
+        random_goal = "Y"
+
+    elif env_id == "Reacher5Dof-v0":
+        nb_joints = 5
+        action = "[0.05*T1, 0.05*T2, 0.05*T3, 0.05*T4, 0.05*T5]"
+        obs = "[target_x, target_y, dist_to_target_x, dist_to_target_y, A1, V1, A2, V2, A3, V3, A4, V4, A5, V5]"
+        reward = "[change in dist to target, electricity_cost, stuck_joint_cost]"
+        random_goal = "Y"
+
+    elif env_id == "Reacher6Dof-v0":
+        nb_joints = 6
+        action = "[0.05*T1, 0.05*T2, 0.05*T3, 0.05*T4, 0.05*T5, 0.05*T6]"
+        obs = "[target_x, target_y, dist_to_target_x, dist_to_target_y, A1, V1, A2, V2, A3, V3, A4, V4, A5, V5, A6, V6]"
+        reward = "[change in dist to target, electricity_cost, stuck_joint_cost]"
+        random_goal = "Y"
+
+    if "a2c" in log_dir:
+        algo = "a2c"
+    elif "acktr" in log_dir:
+        algo = "acktr"
+    elif "ddpg" in log_dir:
+        algo = "ddpg"
+    elif "ppo2" in log_dir:
+        algo = "ppo2"
+    elif "sac" in log_dir:
+        algo = "sac"
+    elif "td3" in log_dir:
+        algo = "td3"
+    elif "trpo" in log_dir:
+        algo = "trpo"
+    
+    # find config.yml (it is the same for all the seeds so selecting any config.yml is fine)
+    for config_path in Path(log_dir).rglob('config.yml'):
+        print(config_path)
+
+    # load hyperparams (I should do it for tuned_hyperparams.yml instead of config.yml in the future)
+    with open(config_path, 'r') as f:
+        hyperparams = yaml.load(f, Loader=yaml.UnsafeLoader)
+
+    benchmark_dict = {
+        'env_id': env_id,
+        'nb_joints': nb_joints,
+        'action': action,
+        'obs': obs,
+        'reward': reward,
+        'random_goal': random_goal,
+        'algo': algo,
+        'nb_seeds': nb_seeds,
+        'nb_train_steps': hyperparams['n_timesteps'],
+        'nb_train_episodes': hyperparams['n_timesteps'] / 150,  # make more robust
+        'hyperparams': [hyperparams],
+        'mean_train_time(s)': df['Train walltime (s)'].mean(),
+        'std_train_time(s)': df['Train walltime (s)'].std(),
+        'nb_eval_steps': nb_eval_steps,
+        'nb_eval_episodes': nb_eval_steps / 150,  # make more robust
+        'mean_return': df['Eval mean reward'].mean(),
+        'std_return': df['Eval mean reward'].std(),
+        'mean_SR_50': df['success ratio 50mm'].mean(),
+        'std_SR_50': df['success ratio 50mm'].std(),
+        'mean_RT_50': df['Average reach time 50mm'].mean(),
+        'std_RT_50': df['Average reach time 50mm'].std(),
+        'mean_SR_20': df['success ratio 20mm'].mean(),
+        'std_SR_20': df['success ratio 20mm'].std(),
+        'mean_RT_20': df['Average reach time 20mm'].mean(),
+        'std_RT_20': df['Average reach time 20mm'].std(),
+        'mean_SR_10': df['success ratio 10mm'].mean(),
+        'std_SR_10': df['success ratio 10mm'].std(),
+        'mean_RT_10': df['Average reach time 10mm'].mean(),
+        'std_RT_10': df['Average reach time 10mm'].std(),
+        'mean_SR_0': df['success ratio 5mm'].mean(),
+        'std_SR_5': df['success ratio 5mm'].std(),
+        'mean_RT_5': df['Average reach time 5mm'].mean(),
+        'std_RT_5': df['Average reach time 5mm'].std(),
+    }
+
+    df_bench = pd.DataFrame(benchmark_dict, index=[0])
+
+    # add to existing results and save
+    backedup_df = pd.read_csv("results/benchmark_results.csv")
+    appended_df = backedup_df.append(df_bench, ignore_index=True)
+    appended_df.to_csv("results/benchmark_results.csv", index=False)
+
 
     ###############
     # LEARNING CURVES
