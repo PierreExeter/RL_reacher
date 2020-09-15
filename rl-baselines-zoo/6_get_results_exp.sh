@@ -18,41 +18,41 @@ echo "ENV: ${env}"
 # + plot
 
 
-# for ((i=1;i<${nb_seeds}+1;i+=1))
-# do
-#     echo "A2C $i"
-#     python 3_enjoy.py --algo a2c --env ${env} -f ${log_dir} --exp-id $i --no-render -n ${nsteps}
-#     python my_lib/plot_1seed.py -f ${log_dir}a2c/${env}_$i/
+for ((i=1;i<${nb_seeds}+1;i+=1))
+do
+    echo "A2C $i"
+    python 3_enjoy.py --algo a2c --env ${env} -f ${log_dir} --exp-id $i --no-render -n ${nsteps}
+    python my_lib/plot_1seed.py -f ${log_dir}a2c/${env}_$i/
 
-#     echo "ACKTR $i"
-#     python 3_enjoy.py --algo acktr --env ${env} -f ${log_dir} --exp-id $i --no-render -n ${nsteps}
-#     python my_lib/plot_1seed.py -f ${log_dir}acktr/${env}_$i/
+    echo "ACKTR $i"
+    python 3_enjoy.py --algo acktr --env ${env} -f ${log_dir} --exp-id $i --no-render -n ${nsteps}
+    python my_lib/plot_1seed.py -f ${log_dir}acktr/${env}_$i/
 
-    # echo "DDPG $i"
-    # python 3_enjoy.py --algo ddpg --env ${env} -f ${log_dir} --exp-id $i --no-render -n ${nsteps}
-    # python my_lib/plot_1seed.py -f ${log_dir}ddpg/${env}_$i/
+    echo "DDPG $i"
+    python 3_enjoy.py --algo ddpg --env ${env} -f ${log_dir} --exp-id $i --no-render -n ${nsteps}
+    python my_lib/plot_1seed.py -f ${log_dir}ddpg/${env}_$i/
 
-#     echo "PPO2 $i"
-#     python 3_enjoy.py --algo ppo2 --env ${env} -f ${log_dir} --exp-id $i --no-render -n ${nsteps}
-#     python my_lib/plot_1seed.py -f ${log_dir}ppo2/${env}_$i/
+    echo "PPO2 $i"
+    python 3_enjoy.py --algo ppo2 --env ${env} -f ${log_dir} --exp-id $i --no-render -n ${nsteps}
+    python my_lib/plot_1seed.py -f ${log_dir}ppo2/${env}_$i/
 
-#     echo "SAC $i"
-#     python 3_enjoy.py --algo sac --env ${env} -f ${log_dir} --exp-id $i --no-render -n ${nsteps}
-#     python my_lib/plot_1seed.py -f ${log_dir}sac/${env}_$i/
+    echo "SAC $i"
+    python 3_enjoy.py --algo sac --env ${env} -f ${log_dir} --exp-id $i --no-render -n ${nsteps}
+    python my_lib/plot_1seed.py -f ${log_dir}sac/${env}_$i/
 
-#     echo "TD3 $i"
-#     python 3_enjoy.py --algo td3 --env ${env} -f ${log_dir} --exp-id $i --no-render -n ${nsteps}
-#     python my_lib/plot_1seed.py -f ${log_dir}/td3/${env}_$i/
+    echo "TD3 $i"
+    python 3_enjoy.py --algo td3 --env ${env} -f ${log_dir} --exp-id $i --no-render -n ${nsteps}
+    python my_lib/plot_1seed.py -f ${log_dir}/td3/${env}_$i/
 
-#     echo "TRPO $i"
-#     python 3_enjoy.py --algo trpo --env ${env} -f ${log_dir} --exp-id $i --no-render -n ${nsteps}
-#     python my_lib/plot_1seed.py -f ${log_dir}trpo/${env}_$i/
+    echo "TRPO $i"
+    python 3_enjoy.py --algo trpo --env ${env} -f ${log_dir} --exp-id $i --no-render -n ${nsteps}
+    python my_lib/plot_1seed.py -f ${log_dir}trpo/${env}_$i/
 
-#     # echo "HER $i"
-#     # python 3_enjoy.py --algo her --env ${env_her} -f ${log_dir} --exp-id $i --no-render -n ${nsteps}
-#     # python my_lib/plot_1seed.py -f ${log_dir}her/${env_her}_$i/
+    # echo "HER $i"
+    # python 3_enjoy.py --algo her --env ${env_her} -f ${log_dir} --exp-id $i --no-render -n ${nsteps}
+    # python my_lib/plot_1seed.py -f ${log_dir}her/${env_her}_$i/
 
-# done
+done
 
 
 

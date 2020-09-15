@@ -43,8 +43,7 @@ python 2_train.py --algo ppo2 --env Reacher6Dof-v0
 ./6_get_results_exp.sh
 ```
 
-
-TO DO NEXT: add evluation metrics (mean reward, success ratio and reach time)
+The benchmark results are logged in `rl-baselines-zoo/results/benchmark_results.csv`.
 
 
 ## Tested on
