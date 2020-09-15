@@ -21,7 +21,7 @@ do
     echo "DDPG $i"
     python 2_train.py --algo ddpg --env ${env} -n ${nsteps} --seed $i --log-folder ${log_dir} &> submission_logs/log_ddpg_0$i.run
 
-    # echo "PPO2 $i"
+    echo "PPO2 $i"
     python 2_train.py --algo ppo2 --env ${env} -n ${nsteps} --seed $i --log-folder ${log_dir} &> submission_logs/log_ppo2_0$i.run
 
     echo "SAC $i"
